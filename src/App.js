@@ -1,8 +1,11 @@
-import "./App.css";
-import navagator from "./pages/main/navagator"
+import MainPage from "./pages/MainPage";
 
 function App() {
-  return <div><navagator /></div>
+  return(
+    <div>
+      <MainPage />
+    </div>
+  )
 }
 
 export default App;
