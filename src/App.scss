@@ -1,20 +1,32 @@
 .main-container {
-  display: flex;
- 
+  // display: flex;
+  background-color: #f9f8f6;
+
   .main-navigation {
     width: 100%;
     display: flex;
+  }
+
+  .main-content {
+    padding: 1rem;
+    min-height: 40rem;
   }
 }
 
 .navigation-wrap {
   display: flex;
   width: 100%;
+  font-weight: bold;
 
   .navigation-logo {
     flex: 1;
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
+
+    .navigation-logo-img {
+      width: 7.5rem;
+    }
   }
   .navigation-menu {
     margin-top: 1rem;
@@ -24,12 +36,12 @@
     .navigation-item {
       padding: 0 2.5rem;
     }
-  }  
+  }
   .navigation-login {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    
+
     a {
       margin-right: 1rem;
     }
@@ -37,5 +49,10 @@
 
   a {
     text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: rgb(0, 95, 190);
+    font-weight: bold;
   }
 }

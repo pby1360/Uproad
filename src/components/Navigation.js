@@ -6,7 +6,7 @@ const Navigation = () => {
     <section class="navigation-wrap">
       <section class="navigation-logo">
         <article>
-            <Link to="/">업로드</Link>
+          <Link to="/"><img class="navigation-logo-img" src="/assets/uproad_logo2.png" alt="logo" /></Link>
         </article>
       </section>
       <section class="navigation-menu">        
@@ -17,10 +17,13 @@ const Navigation = () => {
           <Link to="/help">컨텐츠</Link>
         </article>
         <article class="navigation-item">
-          <Link to="/help">배우기</Link>
+          <Link to="/help">컨텐츠</Link>
         </article>
         <article class="navigation-item">
-          <Link to="/product">유료서비스</Link>
+          <Link to="/help">커뮤니티</Link>
+        </article>
+        <article class="navigation-item">
+          <Link to="/product">프리미엄</Link>
         </article>
       </section>
       <section class="navigation-login">
