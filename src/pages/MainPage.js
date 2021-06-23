@@ -7,12 +7,13 @@ import Help from "./Help";
 
 const MainPage = () => {
   return (
-    <div>
-      <Navigation />
-      {/* <Route path="/" exact={true} component={MainPage} /> */}
-      <Route path="/help" exact={true} component={Help} />
-      <Route path="/product" exact={true} component={Product} />
-      <Route path="/login" exact={true} component={Login} />
+    <div class="main-container">
+      <secition class="main-navigation">
+        <Navigation />
+        <Route path="/help" exact={true} component={Help} />
+        <Route path="/product" exact={true} component={Product} />
+        <Route path="/login" exact={true} component={Login} />
+      </secition>      
     </div>
   )
 }

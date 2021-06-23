@@ -1,0 +1,18 @@
+.main-container {
+  display: flex;
+  justify-content: end;
+ 
+  .main-navigation {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.navigation-wrap {
+  display: flex;
+
+  a {
+    text-decoration: none;
+  }
+}
+

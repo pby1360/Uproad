@@ -7,9 +7,9 @@ const wrapper = {
 
 const Navigation = () => {
   return (
-    <section style={wrapper}>
+    <section class="navigation-wrap">
       <article>
-        <button><Link to="/">메인</Link></button>
+        <Link to="/">메인</Link>
       </article>
       <article>
         <Link to="/help">소개</Link>
