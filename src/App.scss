@@ -1,18 +1,41 @@
 .main-container {
   display: flex;
-  justify-content: end;
  
   .main-navigation {
     width: 100%;
-    text-align: right;
+    display: flex;
   }
 }
 
 .navigation-wrap {
   display: flex;
+  width: 100%;
+
+  .navigation-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .navigation-menu {
+    margin-top: 1rem;
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    .navigation-item {
+      padding: 0 2.5rem;
+    }
+  }  
+  .navigation-login {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    
+    a {
+      margin-right: 1rem;
+    }
+  }
 
   a {
     text-decoration: none;
   }
 }
-
