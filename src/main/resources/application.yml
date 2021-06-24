@@ -10,7 +10,7 @@ spring:
       max-file-size: 50MB
       max-request-size: 50MB
 server:
-  port: 5000 # set port to 5000 for serve on AWS
+  port: 8080 # set port to 5000 for serve on AWS
 logging:
   file:
     name: log/frd-mos.log
