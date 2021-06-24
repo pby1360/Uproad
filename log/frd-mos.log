@@ -34,3 +34,5 @@
 2021-06-25 01:59:08.038  INFO 392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
 2021-06-25 01:59:08.104  INFO 392 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
 2021-06-25 01:59:08.104  INFO 392 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 743 ms
+2021-06-25 01:59:08.411  INFO 392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-06-25 01:59:08.419  INFO 392 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 1.48 seconds (JVM running for 3.195)
