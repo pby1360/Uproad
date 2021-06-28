@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 
-const Help = () => {
+const Home = () => {
+  const baseUrl = "http://localhost:8080";
+
+  useEffect(() => {
+    getHello();
+  }, []);
+
+  async function getHello () {
+    await axios.get(baseUrl + "/api/home")
+    .then(function (response) {
+         // response  
+         console.log(response.data);
+    }).catch(function (error) {
+        // 오류발생시 실행
+    }).then(function() {
+        // 항상 실행
+    });
+  }
   return (
-    <div>메인 페이지 입니다</div>
+    <section>
+      메인 페이지 입니다
+    </section>
   )
 }
 
-export default Help;
+export default Home;

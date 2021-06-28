@@ -8,11 +8,11 @@ import Home from "./Home";
 
 const MainPage = () => {
   return (
-    <div class="main-container">
-      <secition class="main-navigation">
+    <div className="main-container">
+      <section className="main-navigation">
         <Navigation />
-      </secition>
-      <section class="main-content">
+      </section>
+      <section className="main-content">
         <Route path="/" exact={true} component={Home} />
         <Route path="/help" exact={true} component={Help} />
         <Route path="/product" exact={true} component={Product} />

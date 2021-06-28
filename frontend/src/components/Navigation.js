@@ -1,37 +1,38 @@
 import React from "react";
 import { Link } from  "react-router-dom";
+import Button from '@material-ui/core/Button';
 
 const Navigation = () => {
   return (
-    <section class="navigation-wrap">
-      <section class="navigation-logo">
+    <section className="navigation-wrap">
+      <section className="navigation-logo">
         <article>
-          <Link to="/"><img class="navigation-logo-img" src="/assets/uproad_logo2.png" alt="logo" /></Link>
+          <Link to="/"><img className="navigation-logo-img" src="/assets/uproad_logo2.png" alt="logo" /></Link>
         </article>
       </section>
-      <section class="navigation-menu">        
-        <article class="navigation-item">
+      <section className="navigation-menu">        
+        <article className="navigation-item">
           <Link to="/help">소개</Link>
         </article>
-        <article class="navigation-item">
+        <article className="navigation-item">
           <Link to="/help">컨텐츠</Link>
         </article>
-        <article class="navigation-item">
+        <article className="navigation-item">
           <Link to="/help">컨텐츠</Link>
         </article>
-        <article class="navigation-item">
+        <article className="navigation-item">
           <Link to="/help">커뮤니티</Link>
         </article>
-        <article class="navigation-item">
+        <article className="navigation-item">
           <Link to="/product">프리미엄</Link>
         </article>
       </section>
-      <section class="navigation-login">
-        <article class="navigation-item login">
-          <Link to="/login">로그인</Link>
+      <section className="navigation-login">
+        <article className="navigation-item login">
+          <Link to="/login"><Button variant="contained">로그인</Button></Link>
         </article>
-        <article class="navigation-item login">
-          <Link to="/login">회원가입</Link>
+        <article className="navigation-item login">
+          <Link to="/login"><Button variant="contained">회원가입</Button></Link>
         </article>
       </section>
     </section>
