@@ -1,21 +1,25 @@
 .main-container {
   // display: flex;
+  // flex-flow: column;
   background-color: #f9f8f6;
 
   .main-navigation {
-    width: 100%;
+    // width: 100%;
     display: flex;
+    justify-content: center;
   }
 
   .main-content {
-    padding: 1rem;
     min-height: 40rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
   }
 }
 
 .navigation-wrap {
   display: flex;
-  width: 100%;
+  width: 80%;
   font-weight: bold;
 
   .navigation-logo {
@@ -25,25 +29,28 @@
     margin-top: 1rem;
 
     .navigation-logo-img {
-      width: 7.5rem;
+      width: 10rem;
     }
   }
   .navigation-menu {
-    margin-top: 1rem;
-    flex: 4;
+    // margin-top: 1rem;
+    margin: auto 0;
+    flex: 2;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     .navigation-item {
       padding: 0 2.5rem;
     }
   }
   .navigation-login {
-    flex: 1;
+    flex: 2;
     display: flex;
     justify-content: flex-end;
+    margin: auto 0;
 
     button {
       width: 6rem;
+      margin-right: 1rem;
     }
   }
 
@@ -54,5 +61,71 @@
   a:hover {
     color: rgb(0, 95, 190);
     font-weight: bold;
+  }
+}
+
+.home-content-info {
+  display: flex;
+  margin: 2rem 5rem;
+
+  .home-content-info-phrase {
+    flex: 1;
+    margin: 0 1rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+    .buttons {
+      margin: 1rem;
+
+      Button {
+        margin: 0.25rem;
+        background-color: #333;
+        color: white;
+        border-radius: 1rem;
+      }
+    }
+
+    .home-content-card {
+      margin-top: 5rem;
+
+      p {
+        font-weight: bold;
+      }
+
+      .card-item {
+        display: flex;
+        margin-top: 1rem;
+      }
+    }
+  }
+  .home-content-info-img {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+
+    section {
+      display: flex;
+
+      .home-content-info-img-1 {
+        flex: 1;
+        width: 15rem;
+        border-radius: 50%;
+      }
+      .home-content-info-img-2 {
+        flex: 1;
+        width: 20rem;
+        border-radius: 50%;
+      }
+
+      article {
+        flex: 1.1;
+        padding: 1rem;
+      }
+    }
   }
 }
