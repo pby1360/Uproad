@@ -5,6 +5,7 @@ import Login from "./Login";
 import Product from "./Product";
 import Help from "./Help";
 import Home from "./Home";
+import join from "./Join";
 
 const MainPage = () => {
   return (
@@ -17,6 +18,7 @@ const MainPage = () => {
         <Route path="/help" exact={true} component={Help} />
         <Route path="/product" exact={true} component={Product} />
         <Route path="/login" exact={true} component={Login} />
+        <Route path="/join" exact={true} component={join} />
       </section>
     </div>
   )
