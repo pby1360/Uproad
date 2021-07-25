@@ -129,3 +129,41 @@
     }
   }
 }
+
+.join-container {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  .input-form {
+    width: 40rem;
+    // width: 100%;
+
+    .button-sumbit {
+      text-align: end;
+    }
+
+    .input-form-wrap {
+      // border: solid 1px black;
+      // border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1rem;
+
+      .input-items {
+        margin: 1.5rem 0rem;
+        display: flex;
+
+        .input-items-first {
+          flex: 1;
+        }
+        .input-items-second {
+          flex: 2;
+        }
+        .input-items-third {
+          flex: 1;
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}
