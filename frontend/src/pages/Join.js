@@ -9,10 +9,9 @@ const Join = () => {
   async function join (e) {
     e.preventDefault();
     const data = {
-      id: "test",
-      password: "test1234",
+      id: e.target.id.value,
+      password: e.target.password.value,
     }
-    console.log(e.target.id.value);
     await axios.post(baseUrl + "/api/join/join_uproad", data, {
       headers: {
         "Content-Type": "application/json"

@@ -9,6 +9,10 @@ spring:
     multipart:
       max-file-size: 50MB
       max-request-size: 50MB
+jwt:
+  header: Authorization
+  secret: jwtsecretkey
+  # token-validity-in-seconds: 86400
 server:
   port: 8080 # set port to 5000 for serve on AWS
 logging:

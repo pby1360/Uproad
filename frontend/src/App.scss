@@ -1,3 +1,4 @@
+// 메인화면
 .main-container {
   // display: flex;
   // flex-flow: column;
@@ -16,7 +17,7 @@
     padding: 1rem;
   }
 }
-
+// 상단네비게이션
 .navigation-wrap {
   display: flex;
   width: 80%;
@@ -63,7 +64,7 @@
     font-weight: bold;
   }
 }
-
+// 소개
 .home-content-info {
   display: flex;
   margin: 2rem 5rem;
@@ -129,7 +130,7 @@
     }
   }
 }
-
+// 회원가입
 .join-container {
   display: flex;
   align-items: center;
@@ -165,5 +166,28 @@
         }
       }
     }
+  }
+}
+// 로그인
+.login-container {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  width: 30rem;
+  background-color: #f9f8f6;
+  border: '0px solid #000';
+  // boxShadow: theme.shadows[5];
+  .login-btn-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .login-form {
+    padding: 0rem 2rem 2rem 2rem;
+    .login-input {
+      margin: 0.5rem 0;
+    }
+    // .login-btn-submit {
+    // }
   }
 }

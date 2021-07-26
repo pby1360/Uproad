@@ -1,144 +1,81 @@
-2021-07-26 00:00:35.971  INFO 18056 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:00:35.975  INFO 18056 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:00:35.976  INFO 18056 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 00:01:05.596  INFO 18056 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-07-26 00:01:13.915  INFO 5396 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 5396 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:01:13.919  INFO 5396 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:01:14.605  INFO 5396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:01:14.613  INFO 5396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:01:14.614  INFO 5396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:01:14.678  INFO 5396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:01:14.678  INFO 5396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 722 ms
-2021-07-26 00:01:14.976  INFO 5396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:01:14.984  INFO 5396 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 1.437 seconds (JVM running for 3.314)
-2021-07-26 00:01:37.786  INFO 5396 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:01:37.787  INFO 5396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:01:37.788  INFO 5396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 00:01:37.800  WARN 5396 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2021-07-26 00:01:49.305  INFO 5396 --- [http-nio-8080-exec-2] JoinController                           : join
-2021-07-26 00:01:59.994  INFO 5396 --- [http-nio-8080-exec-4] JoinController                           : join
-2021-07-26 00:02:31.774  INFO 5396 --- [http-nio-8080-exec-3] JoinController                           : join
-2021-07-26 00:02:48.668  INFO 5396 --- [http-nio-8080-exec-6] JoinController                           : join
-2021-07-26 00:02:59.757  INFO 5396 --- [http-nio-8080-exec-5] JoinController                           : join
-2021-07-26 00:03:38.478  INFO 5396 --- [http-nio-8080-exec-7] JoinController                           : join
-2021-07-26 00:03:59.826  INFO 5396 --- [http-nio-8080-exec-8] JoinController                           : join
-2021-07-26 00:08:19.811  INFO 5396 --- [http-nio-8080-exec-10] JoinController                           : join
-2021-07-26 00:09:18.652  INFO 5396 --- [http-nio-8080-exec-1] JoinController                           : join
-2021-07-26 00:09:27.200  INFO 5396 --- [http-nio-8080-exec-2] JoinController                           : join
-2021-07-26 00:09:33.817  INFO 5396 --- [http-nio-8080-exec-4] JoinController                           : join
-2021-07-26 00:11:02.984  INFO 5396 --- [http-nio-8080-exec-6] JoinController                           : join
-2021-07-26 00:15:19.033  INFO 5396 --- [http-nio-8080-exec-7] JoinController                           : join
-2021-07-26 00:18:20.425  INFO 15208 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 15208 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:18:20.429  INFO 15208 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:18:21.114  INFO 15208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:18:21.122  INFO 15208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:18:21.122  INFO 15208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:18:21.183  INFO 15208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:18:21.183  INFO 15208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 716 ms
-2021-07-26 00:18:21.479  INFO 15208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:18:21.489  INFO 15208 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 1.431 seconds (JVM running for 3.212)
-2021-07-26 00:18:34.198  INFO 15208 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:18:34.199  INFO 15208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:18:34.200  INFO 15208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 00:18:34.272  WARN 15208 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)
- at [Source: (PushbackInputStream); line: 1, column: 12] (through reference chain: java.util.LinkedHashMap["headers"])]
-2021-07-26 00:19:19.326  INFO 15208 --- [http-nio-8080-exec-2] JoinController                           : join
-2021-07-26 00:19:19.327  INFO 15208 --- [http-nio-8080-exec-2] JoinController                           : data: {id=test, pw=test1234}
-2021-07-26 00:30:56.903  INFO 20804 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 20804 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:30:56.907  INFO 20804 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:30:57.408  INFO 20804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:30:57.446  INFO 20804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:30:57.809  INFO 20804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:30:57.818  INFO 20804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:30:57.819  INFO 20804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:30:57.903  INFO 20804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:30:57.903  INFO 20804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 962 ms
-2021-07-26 00:30:58.028  INFO 20804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:30:58.300  INFO 20804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:30:58.690  INFO 20804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:30:58.697  INFO 20804 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.154 seconds (JVM running for 3.962)
-2021-07-26 00:31:06.081  INFO 20804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:31:06.082  INFO 20804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:31:06.083  INFO 20804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 00:31:06.181  INFO 20804 --- [http-nio-8080-exec-1] JoinController                           : join
-2021-07-26 00:31:06.182  INFO 20804 --- [http-nio-8080-exec-1] JoinController                           : data: com.example.demo.entity.Users@6d46ce44
-2021-07-26 00:31:45.420  INFO 20804 --- [http-nio-8080-exec-2] JoinController                           : join
-2021-07-26 00:31:45.421  INFO 20804 --- [http-nio-8080-exec-2] JoinController                           : id: test
-2021-07-26 00:31:45.421  INFO 20804 --- [http-nio-8080-exec-2] JoinController                           : pw: null
-2021-07-26 00:31:56.350  INFO 20804 --- [http-nio-8080-exec-4] JoinController                           : join
-2021-07-26 00:31:56.351  INFO 20804 --- [http-nio-8080-exec-4] JoinController                           : id: test
-2021-07-26 00:31:56.351  INFO 20804 --- [http-nio-8080-exec-4] JoinController                           : pw: test1234
-2021-07-26 00:33:41.445  INFO 12888 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 12888 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:33:41.449  INFO 12888 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:33:41.927  INFO 12888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:33:41.964  INFO 12888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:33:42.342  INFO 12888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:33:42.354  INFO 12888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:33:42.354  INFO 12888 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:33:42.415  INFO 12888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:33:42.415  INFO 12888 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 929 ms
-2021-07-26 00:33:42.499  INFO 12888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:33:42.716  INFO 12888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:33:43.136  INFO 12888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:33:43.143  INFO 12888 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.071 seconds (JVM running for 3.919)
-2021-07-26 00:35:53.009  INFO 12888 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:35:53.011  INFO 12888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:35:53.013  INFO 12888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-26 00:35:53.134  INFO 12888 --- [http-nio-8080-exec-1] JoinController                           : join
-2021-07-26 00:35:53.134  INFO 12888 --- [http-nio-8080-exec-1] JoinController                           : id: test
-2021-07-26 00:35:53.135  INFO 12888 --- [http-nio-8080-exec-1] JoinController                           : pw: test1234
-2021-07-26 00:35:53.337 ERROR 12888 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.relational.core.conversion.DbActionExecutionException: Failed to execute DbAction.InsertRoot(entity=com.example.demo.entity.Users@3e2ee2dc)] with root cause
+2021-07-27 00:06:26.764  INFO 2988 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 2988 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
+2021-07-27 00:06:26.771  INFO 2988 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
+2021-07-27 00:06:27.333  INFO 2988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-07-27 00:06:27.376  INFO 2988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JDBC repository interfaces.
+2021-07-27 00:06:27.620  INFO 2988 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@20d87335' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:06:27.624  INFO 2988 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:06:27.852  INFO 2988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-27 00:06:27.861  INFO 2988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-27 00:06:27.861  INFO 2988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-27 00:06:27.925  INFO 2988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-27 00:06:27.925  INFO 2988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1112 ms
+2021-07-27 00:06:28.145  INFO 2988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-27 00:06:28.369  INFO 2988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-27 00:06:28.641  INFO 2988 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18e4551, org.springframework.security.web.context.SecurityContextPersistenceFilter@9729a97, org.springframework.security.web.header.HeaderWriterFilter@2120bed, org.springframework.web.filter.CorsFilter@3ea48c37, org.springframework.security.web.authentication.logout.LogoutFilter@3a5e2525, com.example.demo.config.JwtRequestFilter@3fa21d49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36463b09, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@305552d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11e834ad, org.springframework.security.web.session.SessionManagementFilter@99c4993, org.springframework.security.web.access.ExceptionTranslationFilter@22b82ddf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ca546a1]
+2021-07-27 00:06:28.927  INFO 2988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-27 00:06:28.935  INFO 2988 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.552 seconds (JVM running for 4.382)
+2021-07-27 00:06:31.961  INFO 2988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 00:06:31.962  INFO 2988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-27 00:06:31.963  INFO 2988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-07-27 00:06:31.993  WARN 2988 --- [http-nio-8080-exec-1] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:06:37.862  WARN 2988 --- [http-nio-8080-exec-2] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:08:52.738  INFO 21744 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 21744 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
+2021-07-27 00:08:52.741  INFO 21744 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
+2021-07-27 00:08:53.288  INFO 21744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-07-27 00:08:53.331  INFO 21744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JDBC repository interfaces.
+2021-07-27 00:08:53.568  INFO 21744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@358ab600' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:08:53.572  INFO 21744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:08:53.810  INFO 21744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-27 00:08:53.818  INFO 21744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-27 00:08:53.818  INFO 21744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-27 00:08:53.884  INFO 21744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-27 00:08:53.885  INFO 21744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1106 ms
+2021-07-27 00:08:54.104  INFO 21744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-27 00:08:54.325  INFO 21744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-27 00:08:54.595  INFO 21744 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36df4c26, org.springframework.security.web.context.SecurityContextPersistenceFilter@2774dcf4, org.springframework.security.web.header.HeaderWriterFilter@589dfa6f, org.springframework.security.web.csrf.CsrfFilter@99c4993, org.springframework.security.web.authentication.logout.LogoutFilter@27bb4dc5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3ea48c37, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@510da778, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@76828577, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@bb6f3f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c5f29c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d767218, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38732372, org.springframework.security.web.session.SessionManagementFilter@6f8667bb, org.springframework.security.web.access.ExceptionTranslationFilter@729cd862, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1187dc82]
+2021-07-27 00:08:54.902  INFO 21744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-27 00:08:54.910  INFO 21744 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.584 seconds (JVM running for 4.568)
+2021-07-27 00:08:59.470  INFO 21744 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 00:08:59.470  INFO 21744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-27 00:08:59.471  INFO 21744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-07-27 00:09:00.706  WARN 21744 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [1,217] milliseconds.
+2021-07-27 00:10:42.687  INFO 17564 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 17564 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
+2021-07-27 00:10:42.691  INFO 17564 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
+2021-07-27 00:10:43.246  INFO 17564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-07-27 00:10:43.288  INFO 17564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JDBC repository interfaces.
+2021-07-27 00:10:43.515  INFO 17564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@44ed0a8f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:10:43.518  INFO 17564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:10:43.756  INFO 17564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-27 00:10:43.767  INFO 17564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-27 00:10:43.768  INFO 17564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-27 00:10:43.835  INFO 17564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-27 00:10:43.836  INFO 17564 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1106 ms
+2021-07-27 00:10:44.050  INFO 17564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-27 00:10:44.276  INFO 17564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-27 00:10:44.541  INFO 17564 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d8d970e, org.springframework.security.web.context.SecurityContextPersistenceFilter@25218a4d, org.springframework.security.web.header.HeaderWriterFilter@1152900, org.springframework.web.filter.CorsFilter@2fac80a8, org.springframework.security.web.authentication.logout.LogoutFilter@2de3b052, com.example.demo.config.JwtRequestFilter@22ad1bae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56da96b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@634aa81e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6987a133, org.springframework.security.web.session.SessionManagementFilter@7e747037, org.springframework.security.web.access.ExceptionTranslationFilter@63db743d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f179f51]
+2021-07-27 00:10:44.846  INFO 17564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-27 00:10:44.853  INFO 17564 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.557 seconds (JVM running for 4.457)
+2021-07-27 00:10:48.201  INFO 17564 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 00:10:48.201  INFO 17564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-27 00:10:48.202  INFO 17564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-07-27 00:10:48.229  WARN 17564 --- [http-nio-8080-exec-1] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:11:03.099  WARN 17564 --- [http-nio-8080-exec-2] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:11:35.226  WARN 17564 --- [http-nio-8080-exec-3] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:11:43.191  WARN 17564 --- [http-nio-8080-exec-4] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:11:54.396  WARN 17564 --- [http-nio-8080-exec-5] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:12:46.478  WARN 17564 --- [http-nio-8080-exec-6] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:13:04.265  WARN 17564 --- [http-nio-8080-exec-8] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:13:04.526 ERROR 17564 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter] with root cause
 
-java.sql.SQLSyntaxErrorException: Unknown column 'is_new' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1348) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:981) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:328) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.data.jdbc.core.convert.DefaultDataAccessStrategy.insert(DefaultDataAccessStrategy.java:130) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateChangeExecutionContext.executeInsertRoot(JdbcAggregateChangeExecutionContext.java:94) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.execute(AggregateChangeExecutor.java:66) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.lambda$execute$0(AggregateChangeExecutor.java:50) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at org.springframework.data.relational.core.conversion.DefaultAggregateChange.forEachAction(DefaultAggregateChange.java:116) ~[spring-data-relational-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.execute(AggregateChangeExecutor.java:50) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateTemplate.store(JdbcAggregateTemplate.java:339) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateTemplate.save(JdbcAggregateTemplate.java:150) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.save(SimpleJdbcRepository.java:60) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.8.jar:5.3.8]
-	at com.sun.proxy.$Proxy66.save(Unknown Source) ~[na:na]
-	at com.example.demo.controller.JoinController.joinUproad(JoinController.java:39) ~[classes/:na]
+java.lang.ClassNotFoundException: javax.xml.bind.DatatypeConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at io.jsonwebtoken.impl.Base64Codec.decode(Base64Codec.java:26) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtBuilder.signWith(DefaultJwtBuilder.java:99) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.example.demo.config.JwtTokenUtil.doGenerateToken(JwtTokenUtil.java:66) ~[classes/:na]
+	at com.example.demo.config.JwtTokenUtil.generateToken(JwtTokenUtil.java:54) ~[classes/:na]
+	at com.example.demo.controller.JwtAuthenticationController.createAuthenticationToken(JwtAuthenticationController.java:39) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -159,6 +96,50 @@ java.sql.SQLSyntaxErrorException: Unknown column 'is_new' in 'field list'
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at com.example.demo.config.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:71) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.8.jar:5.3.8]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.8.jar:5.3.8]
@@ -190,61 +171,15 @@ java.sql.SQLSyntaxErrorException: Unknown column 'is_new' in 'field list'
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
 
-2021-07-26 00:36:25.545  INFO 12888 --- [http-nio-8080-exec-2] JoinController                           : join
-2021-07-26 00:36:25.546  INFO 12888 --- [http-nio-8080-exec-2] JoinController                           : id: test
-2021-07-26 00:36:25.546  INFO 12888 --- [http-nio-8080-exec-2] JoinController                           : pw: test1234
-2021-07-26 00:36:25.554 ERROR 12888 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.relational.core.conversion.DbActionExecutionException: Failed to execute DbAction.InsertRoot(entity=com.example.demo.entity.Users@1c05497d)] with root cause
+2021-07-27 00:13:18.790  WARN 17564 --- [http-nio-8080-exec-9] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:13:18.888 ERROR 17564 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter] with root cause
 
-java.sql.SQLSyntaxErrorException: Unknown column 'is_new' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1348) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:981) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:328) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.data.jdbc.core.convert.DefaultDataAccessStrategy.insert(DefaultDataAccessStrategy.java:130) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateChangeExecutionContext.executeInsertRoot(JdbcAggregateChangeExecutionContext.java:94) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.execute(AggregateChangeExecutor.java:66) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.lambda$execute$0(AggregateChangeExecutor.java:50) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at org.springframework.data.relational.core.conversion.DefaultAggregateChange.forEachAction(DefaultAggregateChange.java:116) ~[spring-data-relational-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.execute(AggregateChangeExecutor.java:50) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateTemplate.store(JdbcAggregateTemplate.java:339) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateTemplate.save(JdbcAggregateTemplate.java:150) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.save(SimpleJdbcRepository.java:60) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.8.jar:5.3.8]
-	at com.sun.proxy.$Proxy66.save(Unknown Source) ~[na:na]
-	at com.example.demo.controller.JoinController.joinUproad(JoinController.java:39) ~[classes/:na]
+java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter
+	at io.jsonwebtoken.impl.Base64Codec.decode(Base64Codec.java:26) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtBuilder.signWith(DefaultJwtBuilder.java:99) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.example.demo.config.JwtTokenUtil.doGenerateToken(JwtTokenUtil.java:66) ~[classes/:na]
+	at com.example.demo.config.JwtTokenUtil.generateToken(JwtTokenUtil.java:54) ~[classes/:na]
+	at com.example.demo.controller.JwtAuthenticationController.createAuthenticationToken(JwtAuthenticationController.java:39) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -265,6 +200,50 @@ java.sql.SQLSyntaxErrorException: Unknown column 'is_new' in 'field list'
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at com.example.demo.config.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:71) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.8.jar:5.3.8]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.8.jar:5.3.8]
@@ -296,80 +275,15 @@ java.sql.SQLSyntaxErrorException: Unknown column 'is_new' in 'field list'
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
 
-2021-07-26 00:36:39.190  INFO 12888 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-07-26 00:36:40.256  INFO 12888 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 00:36:40.260  INFO 12888 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 00:36:47.685  INFO 17340 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 17340 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:36:47.689  INFO 17340 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:36:48.174  INFO 17340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:36:48.212  INFO 17340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:36:48.579  INFO 17340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:36:48.587  INFO 17340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:36:48.587  INFO 17340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:36:48.661  INFO 17340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:36:48.661  INFO 17340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 936 ms
-2021-07-26 00:36:48.772  INFO 17340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:36:48.990  INFO 17340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:36:49.401  INFO 17340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:36:49.409  INFO 17340 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.098 seconds (JVM running for 4.026)
-2021-07-26 00:37:33.294  INFO 17340 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:37:33.294  INFO 17340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:37:33.295  INFO 17340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 00:37:33.386  INFO 17340 --- [http-nio-8080-exec-1] JoinController                           : join
-2021-07-26 00:37:33.387  INFO 17340 --- [http-nio-8080-exec-1] JoinController                           : id: test
-2021-07-26 00:37:33.387  INFO 17340 --- [http-nio-8080-exec-1] JoinController                           : pw: test1234
-2021-07-26 00:37:33.583 ERROR 17340 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.relational.core.conversion.DbActionExecutionException: Failed to execute DbAction.InsertRoot(entity=com.example.demo.entity.Users@6db95c27)] with root cause
+2021-07-27 00:15:17.394  WARN 17564 --- [http-nio-8080-exec-10] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:15:17.498 ERROR 17564 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter] with root cause
 
-java.sql.SQLSyntaxErrorException: Unknown column 'phone_nnumber' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1348) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:981) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:328) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.data.jdbc.core.convert.DefaultDataAccessStrategy.insert(DefaultDataAccessStrategy.java:130) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateChangeExecutionContext.executeInsertRoot(JdbcAggregateChangeExecutionContext.java:94) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.execute(AggregateChangeExecutor.java:66) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.lambda$execute$0(AggregateChangeExecutor.java:50) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at org.springframework.data.relational.core.conversion.DefaultAggregateChange.forEachAction(DefaultAggregateChange.java:116) ~[spring-data-relational-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.execute(AggregateChangeExecutor.java:50) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateTemplate.store(JdbcAggregateTemplate.java:339) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateTemplate.save(JdbcAggregateTemplate.java:150) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.save(SimpleJdbcRepository.java:60) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.8.jar:5.3.8]
-	at com.sun.proxy.$Proxy69.save(Unknown Source) ~[na:na]
-	at com.example.demo.controller.JoinController.joinUproad(JoinController.java:39) ~[classes/:na]
+java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter
+	at io.jsonwebtoken.impl.Base64Codec.decode(Base64Codec.java:26) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtBuilder.signWith(DefaultJwtBuilder.java:99) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.example.demo.config.JwtTokenUtil.doGenerateToken(JwtTokenUtil.java:66) ~[classes/:na]
+	at com.example.demo.config.JwtTokenUtil.generateToken(JwtTokenUtil.java:54) ~[classes/:na]
+	at com.example.demo.controller.JwtAuthenticationController.createAuthenticationToken(JwtAuthenticationController.java:42) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -390,6 +304,50 @@ java.sql.SQLSyntaxErrorException: Unknown column 'phone_nnumber' in 'field list'
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at com.example.demo.config.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:71) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.8.jar:5.3.8]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.8.jar:5.3.8]
@@ -421,389 +379,15 @@ java.sql.SQLSyntaxErrorException: Unknown column 'phone_nnumber' in 'field list'
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
 
-2021-07-26 00:38:57.886  INFO 22348 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 22348 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:38:57.890  INFO 22348 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:38:58.376  INFO 22348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:38:58.414  INFO 22348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:38:58.796  INFO 22348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:38:58.804  INFO 22348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:38:58.804  INFO 22348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:38:58.875  INFO 22348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:38:58.875  INFO 22348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 947 ms
-2021-07-26 00:38:58.986  INFO 22348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:38:59.203  INFO 22348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:38:59.595  INFO 22348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:38:59.602  INFO 22348 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.082 seconds (JVM running for 3.871)
-2021-07-26 00:39:07.745  INFO 22348 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:39:07.745  INFO 22348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:39:07.748  INFO 22348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-26 00:39:07.856  INFO 22348 --- [http-nio-8080-exec-1] JoinController                           : join
-2021-07-26 00:39:07.856  INFO 22348 --- [http-nio-8080-exec-1] JoinController                           : id: test
-2021-07-26 00:39:07.856  INFO 22348 --- [http-nio-8080-exec-1] JoinController                           : pw: test1234
-2021-07-26 00:51:09.662  INFO 5084 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 5084 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:51:09.667  INFO 5084 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:51:10.183  INFO 5084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:51:10.221  INFO 5084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:51:10.693  INFO 5084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:51:10.702  INFO 5084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:51:10.703  INFO 5084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:51:10.768  INFO 5084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:51:10.769  INFO 5084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1059 ms
-2021-07-26 00:51:10.861  INFO 5084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:51:11.078  INFO 5084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:51:11.249  WARN 5084 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'joinController': Unsatisfied dependency expressed through field 'encoder'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2021-07-26 00:51:11.250  INFO 5084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 00:51:11.256  INFO 5084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 00:51:11.257  INFO 5084 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-07-26 00:51:11.267  INFO 5084 --- [main] ConditionEvaluationReportLoggingListener : 
+2021-07-27 00:18:10.987  WARN 17564 --- [http-nio-8080-exec-1] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:18:11.092 ERROR 17564 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter] with root cause
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-07-26 00:51:11.287 ERROR 5084 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field encoder in com.example.demo.controller.JoinController required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
-
-2021-07-26 00:51:42.462  INFO 18568 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 18568 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:51:42.466  INFO 18568 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:51:42.982  INFO 18568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:51:43.018  INFO 18568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:51:43.429  INFO 18568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:51:43.446  INFO 18568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:51:43.446  INFO 18568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:51:43.513  INFO 18568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:51:43.513  INFO 18568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1003 ms
-2021-07-26 00:51:43.609  INFO 18568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:51:43.837  INFO 18568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:51:44.007  WARN 18568 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'joinController': Unsatisfied dependency expressed through field 'encoder'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2021-07-26 00:51:44.008  INFO 18568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 00:51:44.013  INFO 18568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 00:51:44.016  INFO 18568 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-07-26 00:51:44.026  INFO 18568 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-07-26 00:51:44.044 ERROR 18568 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field encoder in com.example.demo.controller.JoinController required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
-
-2021-07-26 00:54:25.514  INFO 8872 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 8872 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:54:25.518  INFO 8872 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:54:26.151  INFO 8872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:54:26.197  INFO 8872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:54:26.654  INFO 8872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:54:26.676  INFO 8872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:54:26.676  INFO 8872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:54:26.760  INFO 8872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:54:26.760  INFO 8872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1203 ms
-2021-07-26 00:54:26.903  INFO 8872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:54:27.135  INFO 8872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:54:27.593  INFO 8872 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: fb8d5e8d-506f-4578-9412-c4fee515b0e1
-
-2021-07-26 00:54:27.706  INFO 8872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d64a960, org.springframework.security.web.context.SecurityContextPersistenceFilter@75e0a54c, org.springframework.security.web.header.HeaderWriterFilter@e162a35, org.springframework.security.web.csrf.CsrfFilter@36d697ab, org.springframework.security.web.authentication.logout.LogoutFilter@5f935d49, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7bfa1eb5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3321291a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@166ce247, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@379f9555, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bd7439d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ced17f3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d92e8e2, org.springframework.security.web.session.SessionManagementFilter@f849027, org.springframework.security.web.access.ExceptionTranslationFilter@4656fcc5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55fb36de]
-2021-07-26 00:54:27.782  INFO 8872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:54:27.791  INFO 8872 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.675 seconds (JVM running for 4.833)
-2021-07-26 00:54:47.882  INFO 8872 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:54:47.883  INFO 8872 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:54:47.885  INFO 8872 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 00:55:14.658  INFO 8872 --- [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-07-26 00:55:15.782  INFO 8872 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 00:55:15.788  INFO 8872 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 00:55:21.929  INFO 8476 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 8476 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:55:21.933  INFO 8476 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:55:22.456  INFO 8476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:55:22.496  INFO 8476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:55:22.944  INFO 8476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:55:22.952  INFO 8476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:55:22.952  INFO 8476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:55:23.023  INFO 8476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:55:23.023  INFO 8476 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1050 ms
-2021-07-26 00:55:23.149  INFO 8476 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:55:23.374  INFO 8476 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:55:23.799  INFO 8476 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: b2ae40cd-2318-490a-ad5d-da00758ce800
-
-2021-07-26 00:55:23.896  INFO 8476 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5896cb9c, org.springframework.security.web.context.SecurityContextPersistenceFilter@3095d401, org.springframework.security.web.header.HeaderWriterFilter@3d1c52f5, org.springframework.security.web.csrf.CsrfFilter@16e195cf, org.springframework.security.web.authentication.logout.LogoutFilter@7cca31fc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@47eaf55c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@619c3546, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@44b9c7c4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@d49e8c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@687a0e40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33a47707, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@674184d, org.springframework.security.web.session.SessionManagementFilter@67b5e613, org.springframework.security.web.access.ExceptionTranslationFilter@2a7ebe07, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26994c6a]
-2021-07-26 00:55:23.980  INFO 8476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:55:23.991  INFO 8476 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.456 seconds (JVM running for 4.395)
-2021-07-26 00:55:27.578  INFO 8476 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:55:27.579  INFO 8476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:55:27.580  INFO 8476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 00:57:50.914  INFO 20536 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 20536 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:57:50.919  INFO 20536 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:57:51.498  INFO 20536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:57:51.536  INFO 20536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:57:51.976  INFO 20536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:57:51.993  INFO 20536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:57:51.993  INFO 20536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:57:52.061  INFO 20536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:57:52.061  INFO 20536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1091 ms
-2021-07-26 00:57:52.202  INFO 20536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:57:52.427  INFO 20536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:57:52.595  WARN 20536 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'joinController': Unsatisfied dependency expressed through field 'encoder'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2021-07-26 00:57:52.597  INFO 20536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 00:57:52.603  INFO 20536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 00:57:52.605  INFO 20536 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-07-26 00:57:52.613  INFO 20536 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-07-26 00:57:52.633 ERROR 20536 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field encoder in com.example.demo.controller.JoinController required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
-
-2021-07-26 00:58:06.932  INFO 20708 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 20708 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:58:06.936  INFO 20708 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:58:07.523  INFO 20708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:58:07.564  INFO 20708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:58:07.988  INFO 20708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:58:07.999  INFO 20708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:58:08.000  INFO 20708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:58:08.063  INFO 20708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:58:08.063  INFO 20708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1093 ms
-2021-07-26 00:58:08.235  INFO 20708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:58:08.462  INFO 20708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:58:08.659  INFO 20708 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 5f91212b-cb85-4f70-914b-544ff92d1c13
-
-2021-07-26 00:58:08.735  INFO 20708 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a3cf824, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e2c6702, org.springframework.security.web.header.HeaderWriterFilter@629b780f, org.springframework.security.web.csrf.CsrfFilter@1c6e3ff9, org.springframework.security.web.authentication.logout.LogoutFilter@19b9f903, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2c2e3460, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7fc7152e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7c2b6acb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@781c2497, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6734ff92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c91fe86, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28367da7, org.springframework.security.web.session.SessionManagementFilter@609b041c, org.springframework.security.web.access.ExceptionTranslationFilter@9be7319, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56d6a1b1]
-2021-07-26 00:58:08.999  INFO 20708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:58:09.009  INFO 20708 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.46 seconds (JVM running for 4.263)
-2021-07-26 00:58:20.051  INFO 20708 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:58:20.052  INFO 20708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:58:20.053  INFO 20708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 00:59:25.283  INFO 1620 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 1620 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 00:59:25.286  INFO 1620 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 00:59:25.800  INFO 1620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 00:59:25.840  INFO 1620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JDBC repository interfaces.
-2021-07-26 00:59:26.278  INFO 1620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 00:59:26.287  INFO 1620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 00:59:26.287  INFO 1620 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 00:59:26.351  INFO 1620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 00:59:26.352  INFO 1620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1025 ms
-2021-07-26 00:59:26.491  INFO 1620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 00:59:26.711  INFO 1620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 00:59:26.926  INFO 1620 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 43f0c566-f83d-4123-97b3-5844e67539b1
-
-2021-07-26 00:59:27.019  INFO 1620 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@439d545c, org.springframework.security.web.context.SecurityContextPersistenceFilter@474e34e4, org.springframework.security.web.header.HeaderWriterFilter@18c7f6b5, org.springframework.security.web.csrf.CsrfFilter@6a7a1a0d, org.springframework.security.web.authentication.logout.LogoutFilter@538b3c88, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d512652, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7c91fe86, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5a3cf824, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3120495d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fb7ab9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74500e4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c2b6acb, org.springframework.security.web.session.SessionManagementFilter@3af36922, org.springframework.security.web.access.ExceptionTranslationFilter@1c68d0db, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@796c68bf]
-2021-07-26 00:59:27.282  INFO 1620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 00:59:27.290  INFO 1620 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.386 seconds (JVM running for 4.227)
-2021-07-26 00:59:30.332  INFO 1620 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 00:59:30.333  INFO 1620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 00:59:30.334  INFO 1620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 01:00:08.188  INFO 1620 --- [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-07-26 01:00:09.292  INFO 1620 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 01:00:09.297  INFO 1620 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 01:00:16.441  INFO 19952 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 19952 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 01:00:16.443  INFO 19952 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 01:00:16.907  INFO 19952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 01:00:16.942  INFO 19952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JDBC repository interfaces.
-2021-07-26 01:00:17.292  INFO 19952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 01:00:17.299  INFO 19952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 01:00:17.300  INFO 19952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 01:00:17.366  INFO 19952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 01:00:17.367  INFO 19952 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 890 ms
-2021-07-26 01:00:17.492  INFO 19952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 01:00:17.715  INFO 19952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 01:00:17.849  WARN 19952 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'joinController': Unsatisfied dependency expressed through field 'encoder'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2021-07-26 01:00:17.850  INFO 19952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 01:00:17.856  INFO 19952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 01:00:17.858  INFO 19952 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-07-26 01:00:17.867  INFO 19952 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-07-26 01:00:17.883 ERROR 19952 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field encoder in com.example.demo.controller.JoinController required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
-
-2021-07-26 01:00:48.611  INFO 7712 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 7712 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 01:00:48.615  INFO 7712 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 01:00:49.104  INFO 7712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 01:00:49.141  INFO 7712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JDBC repository interfaces.
-2021-07-26 01:00:49.560  INFO 7712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 01:00:49.568  INFO 7712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 01:00:49.568  INFO 7712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 01:00:49.634  INFO 7712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 01:00:49.635  INFO 7712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 983 ms
-2021-07-26 01:00:49.727  INFO 7712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 01:00:49.946  INFO 7712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 01:00:50.376  INFO 7712 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 508eadcd-8896-4948-bb91-9fd214c1e7ab
-
-2021-07-26 01:00:50.466  INFO 7712 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ea75b05, org.springframework.security.web.context.SecurityContextPersistenceFilter@1377b1a0, org.springframework.security.web.header.HeaderWriterFilter@300bb303, org.springframework.security.web.csrf.CsrfFilter@49889154, org.springframework.security.web.authentication.logout.LogoutFilter@43deba42, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d522180, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@e795a1d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@30d5e37c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@18e6b72b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27dbaa33, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@752973de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1da745a2, org.springframework.security.web.session.SessionManagementFilter@d1c5cf2, org.springframework.security.web.access.ExceptionTranslationFilter@455f4483, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1da75dde]
-2021-07-26 01:00:50.537  INFO 7712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 01:00:50.547  INFO 7712 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.302 seconds (JVM running for 4.196)
-2021-07-26 01:00:53.280  INFO 7712 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 01:00:53.280  INFO 7712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 01:00:53.281  INFO 7712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 01:01:36.748  INFO 7712 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-07-26 01:01:37.866  INFO 7712 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 01:01:37.874  INFO 7712 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 01:01:45.139  INFO 19048 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 19048 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 01:01:45.143  INFO 19048 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 01:01:45.699  INFO 19048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 01:01:45.742  INFO 19048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JDBC repository interfaces.
-2021-07-26 01:01:46.130  INFO 19048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 01:01:46.147  INFO 19048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 01:01:46.147  INFO 19048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 01:01:46.213  INFO 19048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 01:01:46.214  INFO 19048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1027 ms
-2021-07-26 01:01:46.335  INFO 19048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 01:01:46.567  INFO 19048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 01:01:47.006  INFO 19048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 01:01:47.015  INFO 19048 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.271 seconds (JVM running for 4.09)
-2021-07-26 01:01:58.692  INFO 19048 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 01:01:58.692  INFO 19048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 01:01:58.693  INFO 19048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-26 01:01:58.797  INFO 19048 --- [http-nio-8080-exec-1] JoinController                           : join
-2021-07-26 01:01:58.797  INFO 19048 --- [http-nio-8080-exec-1] JoinController                           : id: test
-2021-07-26 01:01:58.797  INFO 19048 --- [http-nio-8080-exec-1] JoinController                           : pw: test1234
-2021-07-26 01:02:18.683  INFO 19048 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-07-26 01:02:19.764  INFO 19048 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 01:02:19.770  INFO 19048 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-07-26 01:02:27.125  INFO 15600 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 15600 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 01:02:27.129  INFO 15600 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 01:02:27.640  INFO 15600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 01:02:27.679  INFO 15600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JDBC repository interfaces.
-2021-07-26 01:02:28.078  INFO 15600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 01:02:28.090  INFO 15600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 01:02:28.091  INFO 15600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 01:02:28.157  INFO 15600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 01:02:28.157  INFO 15600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 986 ms
-2021-07-26 01:02:28.284  INFO 15600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 01:02:28.504  INFO 15600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 01:02:28.956  INFO 15600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 01:02:28.968  INFO 15600 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.216 seconds (JVM running for 4.158)
-2021-07-26 01:03:58.654  INFO 21600 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 21600 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
-2021-07-26 01:03:58.657  INFO 21600 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
-2021-07-26 01:03:59.185  INFO 21600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2021-07-26 01:03:59.223  INFO 21600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JDBC repository interfaces.
-2021-07-26 01:03:59.602  INFO 21600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-26 01:03:59.610  INFO 21600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-26 01:03:59.611  INFO 21600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-26 01:03:59.688  INFO 21600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-26 01:03:59.689  INFO 21600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 988 ms
-2021-07-26 01:03:59.804  INFO 21600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-07-26 01:04:00.029  INFO 21600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-07-26 01:04:00.451  INFO 21600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-26 01:04:00.461  INFO 21600 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.192 seconds (JVM running for 4.007)
-2021-07-26 01:04:04.201  INFO 21600 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-26 01:04:04.201  INFO 21600 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-26 01:04:04.202  INFO 21600 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2021-07-26 01:04:04.298  INFO 21600 --- [http-nio-8080-exec-2] JoinController                           : join
-2021-07-26 01:04:04.298  INFO 21600 --- [http-nio-8080-exec-2] JoinController                           : id: test
-2021-07-26 01:04:04.298  INFO 21600 --- [http-nio-8080-exec-2] JoinController                           : pw: test1234
-2021-07-26 01:04:04.592 ERROR 21600 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.relational.core.conversion.DbActionExecutionException: Failed to execute DbAction.InsertRoot(entity=com.example.demo.entity.Users@802177f)] with root cause
-
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'test' for key 'users.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1348) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.25.jar:8.0.25]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:981) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:328) ~[spring-jdbc-5.3.8.jar:5.3.8]
-	at org.springframework.data.jdbc.core.convert.DefaultDataAccessStrategy.insert(DefaultDataAccessStrategy.java:130) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateChangeExecutionContext.executeInsertRoot(JdbcAggregateChangeExecutionContext.java:94) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.execute(AggregateChangeExecutor.java:66) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.lambda$execute$0(AggregateChangeExecutor.java:50) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
-	at org.springframework.data.relational.core.conversion.DefaultAggregateChange.forEachAction(DefaultAggregateChange.java:116) ~[spring-data-relational-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.AggregateChangeExecutor.execute(AggregateChangeExecutor.java:50) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateTemplate.store(JdbcAggregateTemplate.java:339) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.core.JdbcAggregateTemplate.save(JdbcAggregateTemplate.java:150) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.save(SimpleJdbcRepository.java:60) ~[spring-data-jdbc-2.2.1.jar:2.2.1]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.1.jar:2.5.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.8.jar:5.3.8]
-	at com.sun.proxy.$Proxy69.save(Unknown Source) ~[na:na]
-	at com.example.demo.controller.JoinController.joinUproad(JoinController.java:42) ~[classes/:na]
+java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter
+	at io.jsonwebtoken.impl.Base64Codec.decode(Base64Codec.java:26) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtBuilder.signWith(DefaultJwtBuilder.java:99) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.example.demo.config.JwtTokenUtil.doGenerateToken(JwtTokenUtil.java:66) ~[classes/:na]
+	at com.example.demo.config.JwtTokenUtil.generateToken(JwtTokenUtil.java:54) ~[classes/:na]
+	at com.example.demo.controller.JwtAuthenticationController.createAuthenticationToken(JwtAuthenticationController.java:42) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -824,6 +408,50 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'test' for ke
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at com.example.demo.config.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:71) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.8.jar:5.3.8]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.8.jar:5.3.8]
@@ -855,9 +483,87 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'test' for ke
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
 	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
 
-2021-07-26 01:04:15.247  INFO 21600 --- [http-nio-8080-exec-1] JoinController                           : join
-2021-07-26 01:04:15.247  INFO 21600 --- [http-nio-8080-exec-1] JoinController                           : id: test
-2021-07-26 01:04:15.247  INFO 21600 --- [http-nio-8080-exec-1] JoinController                           : pw: test1234
-2021-07-26 01:04:29.846  INFO 21600 --- [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-07-26 01:04:30.961  INFO 21600 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-07-26 01:04:30.969  INFO 21600 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-07-27 00:18:19.524  INFO 17564 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-07-27 00:18:20.629  INFO 17564 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-07-27 00:18:20.635  INFO 17564 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-07-27 00:18:27.840  INFO 4828 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 4828 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
+2021-07-27 00:18:27.841  INFO 4828 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
+2021-07-27 00:18:28.311  INFO 4828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-07-27 00:18:28.348  INFO 4828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JDBC repository interfaces.
+2021-07-27 00:18:28.543  INFO 4828 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@117d32e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:18:28.548  INFO 4828 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:18:28.736  INFO 4828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-27 00:18:28.744  INFO 4828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-27 00:18:28.745  INFO 4828 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-27 00:18:28.817  INFO 4828 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-27 00:18:28.817  INFO 4828 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 936 ms
+2021-07-27 00:18:29.024  INFO 4828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-27 00:18:29.242  INFO 4828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-27 00:18:29.460  INFO 4828 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2df3545d, org.springframework.security.web.context.SecurityContextPersistenceFilter@55adcf9e, org.springframework.security.web.header.HeaderWriterFilter@305b43ca, org.springframework.web.filter.CorsFilter@75ad30c1, org.springframework.security.web.authentication.logout.LogoutFilter@615e83ac, com.example.demo.config.JwtRequestFilter@60990e5c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f5ce33e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66a82a13, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fe8aaeb, org.springframework.security.web.session.SessionManagementFilter@63e4484d, org.springframework.security.web.access.ExceptionTranslationFilter@563317c1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d43a1b7]
+2021-07-27 00:18:29.711  INFO 4828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-27 00:18:29.717  INFO 4828 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.198 seconds (JVM running for 3.904)
+2021-07-27 00:18:32.395  INFO 4828 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 00:18:32.395  INFO 4828 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-27 00:18:32.396  INFO 4828 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-07-27 00:18:32.419  WARN 4828 --- [http-nio-8080-exec-1] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:19:28.386  WARN 4828 --- [http-nio-8080-exec-2] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:24:22.175  WARN 4828 --- [http-nio-8080-exec-4] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:24:26.882  WARN 4828 --- [http-nio-8080-exec-5] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:24:56.205  WARN 4828 --- [http-nio-8080-exec-6] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:24:56.996  WARN 4828 --- [http-nio-8080-exec-7] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:25:35.231  WARN 4828 --- [http-nio-8080-exec-8] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:25:36.035  WARN 4828 --- [http-nio-8080-exec-9] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:25:48.853  WARN 4828 --- [http-nio-8080-exec-10] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:25:56.738  WARN 4828 --- [http-nio-8080-exec-1] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:26:20.484  WARN 4828 --- [http-nio-8080-exec-2] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:26:36.298  WARN 4828 --- [http-nio-8080-exec-4] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:28:34.972  WARN 4828 --- [http-nio-8080-exec-6] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:28:46.256  WARN 4828 --- [http-nio-8080-exec-7] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:30:16.746  WARN 4828 --- [http-nio-8080-exec-9] c.example.demo.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2021-07-27 00:33:26.605  INFO 4828 --- [RMI TCP Connection(22)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-07-27 00:33:27.705  INFO 4828 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-07-27 00:33:27.710  INFO 4828 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-07-27 00:33:35.042  INFO 19968 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 19968 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
+2021-07-27 00:33:35.046  INFO 19968 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
+2021-07-27 00:33:35.594  INFO 19968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-07-27 00:33:35.636  INFO 19968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JDBC repository interfaces.
+2021-07-27 00:33:35.865  INFO 19968 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@235d29d6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:33:35.870  INFO 19968 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:33:36.090  INFO 19968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-27 00:33:36.098  INFO 19968 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-27 00:33:36.098  INFO 19968 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-27 00:33:36.166  INFO 19968 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-27 00:33:36.166  INFO 19968 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1083 ms
+2021-07-27 00:33:36.372  INFO 19968 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-27 00:33:36.595  INFO 19968 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-27 00:33:36.868  INFO 19968 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ba4f370, org.springframework.security.web.context.SecurityContextPersistenceFilter@21be14c2, org.springframework.security.web.header.HeaderWriterFilter@59ec7020, org.springframework.web.filter.CorsFilter@2ba024cb, org.springframework.security.web.authentication.logout.LogoutFilter@6df791a4, com.example.demo.config.JwtRequestFilter@3fa21d49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@83b0d0f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@566fe83c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7af0d91b, org.springframework.security.web.session.SessionManagementFilter@77ccded4, org.springframework.security.web.access.ExceptionTranslationFilter@6b3d9c38, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c17bd0b]
+2021-07-27 00:33:37.148  INFO 19968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-27 00:33:37.156  INFO 19968 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.495 seconds (JVM running for 4.326)
+2021-07-27 00:33:50.874  INFO 19968 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 00:33:50.875  INFO 19968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-27 00:33:50.876  INFO 19968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-07-27 00:36:26.758  INFO 19968 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-07-27 00:36:27.911  INFO 19968 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-07-27 00:36:27.916  INFO 19968 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-07-27 00:36:35.261  INFO 10672 --- [main] com.example.demo.BackendApplication      : Starting BackendApplication using Java 11.0.11 on DESKTOP-HO3T745 with PID 10672 (C:\Users\user\eclipse-workspace\uproad\target\classes started by user in C:\Users\user\eclipse-workspace\uproad)
+2021-07-27 00:36:35.265  INFO 10672 --- [main] com.example.demo.BackendApplication      : No active profile set, falling back to default profiles: default
+2021-07-27 00:36:35.801  INFO 10672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-07-27 00:36:35.842  INFO 10672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JDBC repository interfaces.
+2021-07-27 00:36:36.081  INFO 10672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@53abfc07' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:36:36.086  INFO 10672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-27 00:36:36.303  INFO 10672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-27 00:36:36.313  INFO 10672 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-27 00:36:36.313  INFO 10672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-27 00:36:36.380  INFO 10672 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-27 00:36:36.380  INFO 10672 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1077 ms
+2021-07-27 00:36:36.596  INFO 10672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-27 00:36:36.818  INFO 10672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-27 00:36:37.081  INFO 10672 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7757025d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b322873, org.springframework.security.web.header.HeaderWriterFilter@14a1769d, org.springframework.web.filter.CorsFilter@68fc9167, org.springframework.security.web.authentication.logout.LogoutFilter@6b3d9c38, com.example.demo.config.JwtRequestFilter@22d322f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ad889be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1de7f898, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52c46334, org.springframework.security.web.session.SessionManagementFilter@72a7aa4f, org.springframework.security.web.access.ExceptionTranslationFilter@61808ecd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c5f29c6]
+2021-07-27 00:36:37.393  INFO 10672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-27 00:36:37.400  INFO 10672 --- [main] com.example.demo.BackendApplication      : Started BackendApplication in 2.507 seconds (JVM running for 4.362)
+2021-07-27 00:36:40.362  INFO 10672 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-27 00:36:40.363  INFO 10672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-27 00:36:40.364  INFO 10672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-07-27 00:36:40.472  INFO 10672 --- [http-nio-8080-exec-1] JoinController                           : join
+2021-07-27 00:36:40.472  INFO 10672 --- [http-nio-8080-exec-1] JoinController                           : id: ch1389
+2021-07-27 00:36:40.472  INFO 10672 --- [http-nio-8080-exec-1] JoinController                           : pw: 12345

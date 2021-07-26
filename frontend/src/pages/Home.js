@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -21,25 +21,25 @@ const useStyles = makeStyles({
 
 
 const Home = () => {
-  const baseUrl = "http://localhost:8080";
+  // const baseUrl = "http://localhost:8080";
 
   const classes = useStyles();
 
   useEffect(() => {
-    getHello();
+    // getHello();
   }, []);
 
-  async function getHello () {
-    await axios.get(baseUrl + "/api/home")
-    .then(function (response) {
-         // response  
-         console.log(response.data);
-    }).catch(function (error) {
-        // 오류발생시 실행
-    }).then(function() {
-        // 항상 실행
-    });
-  }
+  // async function getHello () {
+  //   await axios.get(baseUrl + "/api/home")
+  //   .then(function (response) {
+  //        // response  
+  //        console.log(response.data);
+  //   }).catch(function (error) {
+  //       // 오류발생시 실행
+  //   }).then(function() {
+  //       // 항상 실행
+  //   });
+  // }
   return (
     <section>
       <article className="home-content-info">
