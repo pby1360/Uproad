@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Table("USERS")
+@Table("users")
 public class Users implements Persistable<String> {
 	
 	@Id
