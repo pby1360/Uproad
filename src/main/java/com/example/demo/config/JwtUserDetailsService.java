@@ -1,21 +1,31 @@
 package com.example.demo.config;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entity.Users;
+import com.example.demo.repository.UsersRepository;
+
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
+	
+	@Autowired UsersRepository repository;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		if ("user_id".equals(username)) {
-			return new User("user_id", "$2a$10$m/enYHaLsCwH2dKMUAtQp.ksGOA6lq7Fd2pnMb4L.yT4GyeAPRPyS",
-					new ArrayList<>());
+
+		if (repository.existsById(username)) {
+			
+			Users users = repository.findById(username).stream().collect(Collectors.toList()).get(0);
+
+			return new User(users.getId(), users.getPassword(), new ArrayList<>());
 		} else {
 			throw new UsernameNotFoundException("User not found with username: " + username);
 		}

@@ -87,7 +87,7 @@ const Navigation = () => {
         .executeJwtAuthenticationService(e.target.id.value, e.target.password.value)
         .then((response) => {
           console.log(response.data);
-          AuthenticationService.registerSuccessfulLoginForJwt(e.target.id.value,response.data.token)
+          AuthenticationService.registerSuccessfulLoginForJwt(response.data)
         // this.props.history.push(`/welcome/${this.state.username}`)
     }).catch((error) =>{
         console.error(error);

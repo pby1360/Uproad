@@ -16,10 +16,13 @@ class AuthenticationService {
         return axios.get(baseUrl + '/hello');        
     }
 
-    registerSuccessfulLoginForJwt(username, token) {
+    registerSuccessfulLoginForJwt(data) {
         console.log("===registerSuccessfulLoginForJwt===")
-        localStorage.setItem('token', token);
-        localStorage.setItem('authenticatedUser', username);
+        localStorage.setItem('token', data.t);
+        localStorage.setItem('info', JSON.stringify(data.d));
+        localStorage.setItem('id', data.i);
+        localStorage.setItem('name', data.n);
+        localStorage.setItem('expire', data.e);
         // sessionStorage.setItem('authenticatedUser', username)
         //this.setupAxiosInterceptors(this.createJWTToken(token))
         this.setupAxiosInterceptors();

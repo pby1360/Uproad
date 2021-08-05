@@ -1,5 +1,9 @@
 package com.example.demo.controller;
 
+import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,10 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.config.AccessToken;
 import com.example.demo.config.JwtRequest;
 import com.example.demo.config.JwtResponse;
 import com.example.demo.config.JwtTokenUtil;
 import com.example.demo.config.JwtUserDetailsService;
+import com.example.demo.entity.Users;
+import com.example.demo.repository.UsersRepository;
 
 @RestController
 public class JwtAuthenticationController {
@@ -28,20 +35,32 @@ public class JwtAuthenticationController {
 
 	@Autowired
 	private JwtUserDetailsService userDetailsService;
+	
+	@Autowired UsersRepository repository;
+	
+	private long tokenExpire = 10800000;
+	
+	Logger log = LoggerFactory.getILoggerFactory().getLogger("JwtAuthenticationController");
 
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
-		System.out.println(":: createAuthenticationToken");
-		System.out.println(authenticationRequest.getUsername());
-		System.out.println(authenticationRequest.getPassword());
+		
+		log.info("id: " + authenticationRequest.getUsername());
+		log.info("pw: " + authenticationRequest.getPassword());
+		
+		
 		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
 
 		final UserDetails userDetails = userDetailsService
 				.loadUserByUsername(authenticationRequest.getUsername());
 
-		final String token = jwtTokenUtil.generateToken(userDetails);
+		final String accessToken = jwtTokenUtil.generateToken(userDetails);
+		
+		Users user = repository.findById(authenticationRequest.getUsername()).stream().collect(Collectors.toList()).get(0);
+		
+		final AccessToken token = AccessToken.of(user, accessToken, tokenExpire);
 
-		return ResponseEntity.ok(new JwtResponse(token));
+		return ResponseEntity.ok(token);
 	}
 
 	private void authenticate(String username, String password) throws Exception {
