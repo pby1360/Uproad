@@ -4,8 +4,8 @@ const UserHome = () => {
   return (
     <div>
       <section className="user-home-container">
-        <section className="upper-banner">banner</section>
-        <section className="bottom-dashboard">dashboard</section>
+        <section className="top-banner">Banner</section>
+        <section className="bottom-dashboard">User dashboard</section>
       </section>      
     </div>
   )

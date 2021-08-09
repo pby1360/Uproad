@@ -12,9 +12,9 @@
 
   .main-content {
     min-height: 40rem;
-    width: 80%;
+    // width: 80%;
     margin: 0 auto;
-    padding: 1rem;
+    // padding: 1rem;
   }
 }
 // 상단네비게이션
@@ -46,6 +46,54 @@
   }
   .navigation-login {
     flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto 0;
+
+    button {
+      width: 6rem;
+      margin-right: 1rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: rgb(0, 95, 190);
+    font-weight: bold;
+  }
+}
+
+// 상단 로그인 사용자 네비게이션
+.user-navigation-wrap {
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+
+  .user-navigation-menu {
+    // margin-top: 1rem;
+    margin: auto 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .user-navigation-logo-img {
+      width: 7.5rem;
+      padding-left: 1rem;
+    }
+
+    .user-navigation-item {
+      padding: 0 2.5rem 0 0;
+    }
+  }
+  .user-navigation-search {
+    flex: 1;
+  }
+  .user-navigation-login {
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     margin: auto 0;
@@ -195,18 +243,20 @@
 .user-home-container {
   display: flex;
   flex-flow: column;
-  height: 40rem;
+  height: 50rem;
 
-  .upper-banner {
+  .top-banner {
     flex: 2;
-    background-color: #4B4B4B;
-
+    background-color: #4b4b4b;
+    text-align: center;
+    color: #fff;
   }
   .bottom-dashboard {
-    flex: 6;
-    background-color: #F9F9F9;
+    flex: 7;
+    background-color: #f9f9f9;
+    text-align: center;
   }
-} 
+}
 
 //가격
 .price-content-info {
@@ -238,24 +288,18 @@
       text-align: center;
       white-space: pre-line;
     }
-    
+
     .price-select-content {
       margin-bottom: 30px;
       width: 100%;
       background-color: rgb(255, 255, 255);
-      box-shadow: inset 0 0 5px rgba(0, 0, 0 , 0.15);
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15);
       border-radius: 20px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       -webkit-box-align: stretch;
       align-items: stretch;
-
-
-
     }
-
-    
   }
-  
 }
