@@ -13,11 +13,11 @@ import AuthenticationService from "../components/AuthenticationService";
 const main = () => {
   if (AuthenticationService.isUserLoggedIn()) {
     return (
-      <div className="main-container">
-        <section className="main-navigation">
+      <div>
+        <section>
           <UserNavigation />
         </section>
-        <section className="main-content">
+        <section>
           <Route path="/" exact={true} component={userHome} />
         </section>
       </div>

@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: column;
   height: 50rem;
+  position: relative;
 
   .top-banner {
     flex: 2;
@@ -15,6 +16,39 @@
     text-align: center;
   }
   .center-profile {
-    background-color: red;
+    background-color: #fff;
+    position: absolute;
+    left: 5rem;
+    top: 3.5rem;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 3px;
+    box-shadow: 1px 1px #c8c8c8;
+    display: flex;
+    flex-flow: column;
+
+    .user-profile-img {
+      flex: 2;
+      text-align: center;
+      img {
+        width: 7.5rem;
+        border-radius: 50%;
+        box-shadow: 1px 1px 1px #333;
+      }
+    }
+    .user-profile-info {
+      flex: 2;
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+    }
+    .user-profile-buttons {
+      flex: 4;
+      display: flex;
+      flex-flow: column;
+    }
+    .user-profile-date {
+      flex: 1;
+    }
   }
 }

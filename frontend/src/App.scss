@@ -66,53 +66,6 @@
   }
 }
 
-// 상단 로그인 사용자 네비게이션
-.user-navigation-wrap {
-  display: flex;
-  width: 100%;
-  font-weight: bold;
-
-  .user-navigation-menu {
-    // margin-top: 1rem;
-    margin: auto 0;
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    .user-navigation-logo-img {
-      width: 7.5rem;
-      padding-left: 1rem;
-    }
-
-    .user-navigation-item {
-      padding: 0 2.5rem 0 0;
-    }
-  }
-  .user-navigation-search {
-    flex: 1;
-  }
-  .user-navigation-login {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    margin: auto 0;
-
-    button {
-      width: 6rem;
-      margin-right: 1rem;
-    }
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:hover {
-    color: rgb(0, 95, 190);
-    font-weight: bold;
-  }
-}
 // 소개
 .home-content-info {
   display: flex;
