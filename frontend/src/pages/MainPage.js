@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation";
+import UserNavigation from "../components/UserNavigation";
 import { Route } from "react-router-dom";
-// import Login from "./Login";
 import Product from "./Product";
 import Help from "./Help";
 import Home from "./Home";
@@ -14,7 +14,7 @@ const main = () => {
     return (
       <div className="main-container">
         <section className="main-navigation">
-          <Navigation />
+          <UserNavigation />
         </section>
         <section className="main-content">
           <Route path="/" exact={true} component={userHome} />

@@ -2,7 +2,12 @@ import React from "react";
 
 const UserHome = () => {
   return (
-    <div>UserHome 페이지 입니다</div>
+    <div>
+      <section className="user-home-container">
+        <section className="upper-banner">banner</section>
+        <section className="bottom-dashboard">dashboard</section>
+      </section>      
+    </div>
   )
 }
 

@@ -48,9 +48,11 @@ class AuthenticationService {
     }
 
     logout() {
-        //sessionStorage.removeItem('authenticatedUser');
-        localStorage.removeItem("authenticatedUser");
         localStorage.removeItem("token");
+        localStorage.removeItem("info");
+        localStorage.removeItem("id");
+        localStorage.removeItem("name");
+        localStorage.removeItem("expire");
     }
 
     isUserLoggedIn() {

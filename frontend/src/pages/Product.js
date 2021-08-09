@@ -1,8 +1,14 @@
 import React from "react";
 
+function test () {
+  console.log('test');
+};
+console.log('1234');
 const Product = () => {
   return (
-    <div>Product 페이지 입니다</div>
+    <div>Product 페이지 입니다
+      <button onClick={test}>test</button>
+    </div>
   )
 }
 
