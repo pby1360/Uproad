@@ -41,7 +41,7 @@ const UserNavigation = () => {
       </section>
       <section className="user-navigation-search">
         <article>
-        <TextField variant="outlined" size="small" fullWidth></TextField>
+        <TextField className="input" variant="outlined" size="small" fullWidth></TextField>
         </article>
       </section>
       <section className="user-navigation-login">
