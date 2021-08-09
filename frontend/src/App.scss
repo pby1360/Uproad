@@ -132,7 +132,7 @@
     .buttons {
       margin: 1rem;
 
-      Button {
+      button {
         margin: 0.25rem;
         background-color: #333;
         color: white;
@@ -238,23 +238,6 @@
     }
     // .login-btn-submit {
     // }
-  }
-}
-.user-home-container {
-  display: flex;
-  flex-flow: column;
-  height: 50rem;
-
-  .top-banner {
-    flex: 2;
-    background-color: #4b4b4b;
-    text-align: center;
-    color: #fff;
-  }
-  .bottom-dashboard {
-    flex: 7;
-    background-color: #f9f9f9;
-    text-align: center;
   }
 }
 
