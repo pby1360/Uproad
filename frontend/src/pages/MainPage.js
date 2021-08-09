@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import UserNavigation from "../components/UserNavigation";
 import { Route } from "react-router-dom";
 import Product from "./Product";
+import Price from "./Price";
 import Help from "./Help";
 import Home from "./Home";
 import join from "./Join";
@@ -31,6 +32,7 @@ const main = () => {
           <Route path="/" exact={true} component={Home} />
           <Route path="/help" exact={true} component={Help} />
           <Route path="/product" exact={true} component={Product} />
+          <Route path="/price" exact={true} component={Price} />
           <Route path="/join" exact={true} component={join} />
           <Route path="/userhome" exact={true} component={userHome} />
         </section>

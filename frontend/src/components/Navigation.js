@@ -157,6 +157,9 @@ const Navigation = () => {
         <article className="navigation-item">
           <Link to="/product">프리미엄</Link>
         </article>
+        <article className="navigation-item">
+          <Link to="/price">구독료</Link>
+        </article>
       </section>
       <section className="navigation-login">
         <article className="navigation-item login">
