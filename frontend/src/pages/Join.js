@@ -1,10 +1,9 @@
 import React from "react";
 import TextField from '@material-ui/core/TextField';
 import { Button } from "@material-ui/core";
-import axios from "axios";
+import axios from "../components/AxiosInstance";
 
 const Join = () => {
-  const baseUrl = "http://localhost:8080";
 
   async function join (e) {
     e.preventDefault();
@@ -12,7 +11,7 @@ const Join = () => {
       id: e.target.id.value,
       password: e.target.password.value,
     }
-    await axios.post(baseUrl + "/api/join/join_uproad", data, {
+    await axios.post("/api/join/join_uproad", data, {
       headers: {
         "Content-Type": "application/json"
       },

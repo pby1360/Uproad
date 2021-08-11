@@ -1,19 +1,13 @@
-import axios from 'axios'
+import axios from './AxiosInstance.js'
 
-const baseUrl = "http://localhost:8080";
 class AuthenticationService {
   
     // send username, password to the SERVER
     executeJwtAuthenticationService(username, password) {
-        return axios.post(baseUrl + '/authenticate', {
+        return axios.post('/auth/login', {
             username,
             password
         })
-    }
-
-    executeHelloService() {
-        console.log("===executeHelloService===")
-        return axios.get(baseUrl + '/hello');        
     }
 
     registerSuccessfulLoginForJwt(data) {
@@ -23,29 +17,23 @@ class AuthenticationService {
         localStorage.setItem('id', data.i);
         localStorage.setItem('name', data.n);
         localStorage.setItem('expire', data.e);
-        // sessionStorage.setItem('authenticatedUser', username)
-        //this.setupAxiosInterceptors(this.createJWTToken(token))
-        this.setupAxiosInterceptors();
     }
 
-    createJWTToken(token) {
-        return 'Bearer ' + token
-    }
-
-    setupAxiosInterceptors() {
-        axios.interceptors.request.use(
-            config => {
-                const token = localStorage.getItem('token');
-                if (token) {
-                    config.headers['Authorization'] = 'Bearer ' + token;
-                }
-                // config.headers['Content-Type'] = 'application/json';
-                return config;
-            },
-            error => {
-                Promise.reject(error)
-            });
-    }
+    // setupAxiosInterceptors() {
+    //     console.log("===setupAxiosInterceptors===");
+    //     axios.interceptors.request.use(
+    //         config => {
+    //             const token = localStorage.getItem('token');
+    //             if (token) {
+    //                 config.headers['Authorization'] = 'Bearer ' + token;
+    //             }
+    //             // config.headers['Content-Type'] = 'application/json';
+    //             return config;
+    //         },
+    //         error => {
+    //             Promise.reject(error)
+    //         });
+    // }
 
     logout() {
         localStorage.removeItem("token");
@@ -58,12 +46,9 @@ class AuthenticationService {
     isUserLoggedIn() {
         const token = localStorage.getItem('token');
         console.log("===UserloggedInCheck===");
-        console.log(token);
-
         if (token) {
             return true;
         }
-        
         return false;
     }
 

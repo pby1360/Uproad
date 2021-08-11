@@ -5,7 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
-// import axios from "axios";
 import AuthenticationService from "./AuthenticationService";
 
 function getModalStyle() {
@@ -53,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navigation = () => {
-  // const baseUrl = "http://localhost:8080";
   const history = useHistory();
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
@@ -94,27 +92,7 @@ const Navigation = () => {
           }
     }).catch((error) =>{
         console.error(error);
-        // this.setState({showSuccessMessage:false})
-        // this.setState({hasLoginFailed:true})
     })
-    // e.preventDefault();
-    // const data = {
-    //   username: e.target.id.value,
-    //   password: e.target.password.value,
-    // }
-    // console.log(e.target.id.value);
-    // await axios.post(baseUrl + "/authenticate", data, {
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    // }
-    // ) 
-    // .then(function (response) {
-    //      console.log(response.data);
-    // }).catch(function (error) {
-    //   console.error(error);
-    // }).then(function() {
-    // });
   }
 
   const joinBody = (

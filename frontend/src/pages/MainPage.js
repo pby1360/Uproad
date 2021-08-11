@@ -8,6 +8,7 @@ import Help from "./Help";
 import Home from "./Home";
 import join from "./Join";
 import userHome from "./UserHome";
+import explore from "./Explore";
 import AuthenticationService from "../components/AuthenticationService";
 
 const main = () => {
@@ -19,6 +20,7 @@ const main = () => {
         </section>
         <section>
           <Route path="/" exact={true} component={userHome} />
+          <Route path="/explore" exact={true} component={explore} />
         </section>
       </div>
     )

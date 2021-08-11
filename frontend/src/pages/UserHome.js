@@ -4,6 +4,7 @@ import Room from "@material-ui/icons/Room";
 import { Button } from "@material-ui/core";
 
 const UserHome = () => {
+
   return (
     <div className={UserHomeStyles}>
       <section className="user-home-container">

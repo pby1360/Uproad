@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import UserNavigationStyles from "../styles/UserNavigation.scss";
 import { withStyles } from '@material-ui/core/styles';
 import AuthenticationService from "./AuthenticationService";
+// import axios from "./AxiosInstance.js";
 
 const CssTextField = withStyles({
   root: {
@@ -17,7 +18,6 @@ const CssTextField = withStyles({
 })(TextField);
 
 const UserNavigation = () => {
-  // const baseUrl = "http://localhost:8080";
   // const history = useHistory();
 
   const logout = () => {
@@ -37,7 +37,7 @@ const UserNavigation = () => {
             <Link to="/">당신을 위한</Link>
           </article>
           <article className="user-navigation-item">
-            <Link to="/">탐색</Link>
+            <Link to="/explore">탐색</Link>
           </article>
           <article className="user-navigation-item">
             <Link to="/">라이브스트림</Link>

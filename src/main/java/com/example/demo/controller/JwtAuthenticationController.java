@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -37,12 +38,13 @@ public class JwtAuthenticationController {
 	private JwtUserDetailsService userDetailsService;
 	
 	@Autowired UsersRepository repository;
-	
-	private long tokenExpire = 10800000;
+
+	@Value("${jwt.token-validity-in-seconds}")
+	private long tokenExpire;
 	
 	Logger log = LoggerFactory.getILoggerFactory().getLogger("JwtAuthenticationController");
 
-	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
+	@RequestMapping(value = "/auth/login", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
 		
 		log.info("id: " + authenticationRequest.getUsername());
