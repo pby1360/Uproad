@@ -3,6 +3,9 @@ import PriceStyle from "../styles/Price.scss";
 
 
 const Price = () => {
+
+  
+
   return (
     <div className={PriceStyle}>
       <section className="price-content-info">
@@ -14,37 +17,46 @@ const Price = () => {
           <article className="price-select-content">
             <section className="monthly-price-title">
               <section className="title">월 구독료</section>
-              <span className="total-price">7000</span>
+              <span className="total-price">7,000</span>
               <section className="title">원</section>
             </section>
-            <article style={{display: "flex"}}>
-              <article style={{flex: "1"}}>
-                <ul style={{listStyle: "none"}}>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                </ul>
-              </article>
-              <article style={{flex: "1"}}>
-                <ul style={{listStyle: "none"}}>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                </ul>
-              </article>
-              <article style={{flex: "1"}}>
-                <ul style={{listStyle: "none"}}>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
+                <ul className="all-list-content">
+                  <li className="list-content">
+                    <section className="list-content-padding">
+                      <section className="checkbox-background">
+                        <input type="checkbox" id="marketing" className="checkbox-image"></input>
+                      </section>
+                      <section className="sub_title">마케팅</section>
+                  
+                    </section>
+                  </li>
+                  <li className="list-content">
+                  <section className="list-content-padding">
+                    <section className="checkbox-background">
+                        <input type="checkbox" id="name1" className="checkbox-image"></input>
+                      </section>
+                      <section className="sub_title">???</section>
+                    </section>
+                  </li>
+                  <li className="list-content">
+                  <section className="list-content-padding">
+                    <section className="checkbox-background">
+                        <input type="checkbox" id="name2" className="checkbox-image"></input>
+                      </section>
+                      <section className="sub_title">???</section>
+                    </section>
+                  </li>
+                  <li className="list-content">
+                    <section className="list-content-padding">
+                      <section className="checkbox-background">
+                        <input type="checkbox" id="name3" className="checkbox-image"></input>
+                      </section>
+                      <section className="sub_title">???</section>
+                    </section>
+                    </li>
                 </ul>
               </article>
             </article>
-          </article>
-        </article>
       </section>
 
 
