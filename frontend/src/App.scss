@@ -1,20 +1,15 @@
 // 메인화면
 .main-container {
-  // display: flex;
-  // flex-flow: column;
   background-color: #fff;
 
   .main-navigation {
-    // width: 100%;
     display: flex;
     justify-content: center;
   }
 
   .main-content {
     min-height: 40rem;
-    // width: 80%;
     margin: 0 auto;
-    // padding: 1rem;
   }
 }
 // 상단네비게이션
@@ -139,7 +134,7 @@
   flex-flow: column;
 
   .input-form {
-    width: 40rem;
+    width: 50rem;
     // width: 100%;
 
     .button-sumbit {
@@ -156,6 +151,10 @@
         margin: 1.5rem 0rem;
         display: flex;
 
+        .input-items-check {
+          flex: 1;
+          text-align: center;
+        }
         .input-items-first {
           flex: 1;
         }
@@ -163,8 +162,17 @@
           flex: 2;
         }
         .input-items-third {
-          flex: 1;
+          flex: 2;
           padding: 0 1rem;
+
+          .password-passed {
+            font-size: 0.8rem;
+            color: green;
+          }
+          .password-not-passed {
+            font-size: 0.8rem;
+            color: red;
+          }
         }
       }
     }

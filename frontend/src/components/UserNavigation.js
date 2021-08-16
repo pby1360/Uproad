@@ -5,6 +5,8 @@ import TextField from '@material-ui/core/TextField';
 import UserNavigationStyles from "../styles/UserNavigation.scss";
 import { withStyles } from '@material-ui/core/styles';
 import AuthenticationService from "./AuthenticationService";
+import InputAdornment from '@material-ui/core/InputAdornment';
+import Search from '@material-ui/icons/Search';
 // import axios from "./AxiosInstance.js";
 
 const CssTextField = withStyles({
@@ -50,8 +52,15 @@ const UserNavigation = () => {
           <article>
           <CssTextField
             className="search-input"
-            label="검색..."
+            placeholder="검색..."
             variant="outlined"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <Search />
+                </InputAdornment>
+              ),
+            }}
           />
           </article>
         </section>
