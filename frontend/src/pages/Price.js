@@ -51,8 +51,8 @@ const Price = () => {
                         {/* diabled 속성은 체크기능을 비활성화 시킴 */}
                         <Checkbox defaultChecked disabled className="checkbox-image"/>
                       </section>
-                      <section className="sub_title">마케팅</section>
-                  
+                      <section className="item-title">마케팅</section>
+                      <section className="item-descrip">마케팅 관련 설명</section>
                     </section>
                   </li>
                   <li className="list-content">
@@ -63,27 +63,28 @@ const Price = () => {
                         {/* onChange 속성은 체크될 때 마다 checkItem 함수를 호출함 */}
                         <Checkbox icon={<AddBoxOutlinedIcon />} name="item2" value="5000" onChange={checkItem} className="checkbox-image"/>
                       </section>
-                      <section className="sub_title">
-                        second Item
-                      </section>
-                    </section>
-                  </li>
-                  <li className="list-content">
-                  <section className="list-content-padding">
-                    <section className="checkbox-background">
-                        <input type="checkbox" id="name2" className="checkbox-image"></input>
-                      </section>
-                      <section className="sub_title">???</section>
+                      <section className="item-title">second Item</section>
+                      <section className="item-descrip">second Item 관련 설명</section>
                     </section>
                   </li>
                   <li className="list-content">
                     <section className="list-content-padding">
                       <section className="checkbox-background">
-                        <input type="checkbox" id="name3" className="checkbox-image"></input>
+                        <Checkbox icon={<AddBoxOutlinedIcon />} name="item3" value="4000" onChange={checkItem} className="checkbox-image"/>
                       </section>
-                      <section className="sub_title">???</section>
+                      <section className="item-title">third Item</section>
+                      <section className="item-descrip">third Item 관련 설명</section>
                     </section>
-                    </li>
+                  </li>
+                  <li className="list-content">
+                    <section className="list-content-padding">
+                      <section className="checkbox-background">
+                        <Checkbox icon={<AddBoxOutlinedIcon />} name="item3" value="2000" onChange={checkItem} className="checkbox-image"/>
+                      </section>
+                      <section className="item-title">fourth Item</section>
+                      <section className="item-descrip">fourth Item 관련 설명</section>
+                    </section>
+                  </li>
                 </ul>
               </article>
             </article>

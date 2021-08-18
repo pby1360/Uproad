@@ -141,14 +141,20 @@
       // vertical-align: middle;
       // transition-duration: 0.3s;
     }
-    .sub-title {
-      display: flex;
-      color: #0c243b;
-      font-size: 1.2rem;
+    .item-title {
+      color: rgb(12, 36, 59);
+      font-size: 1.3rem;
       font-weight: 900;
       line-height: 1.3;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+    .item-descrip {
+      color: rgb(139, 152, 167);
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.55;
+      margin-bottom: 20px;
     }
   }
 }
