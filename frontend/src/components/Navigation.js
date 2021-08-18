@@ -6,6 +6,7 @@ import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
 import AuthenticationService from "./AuthenticationService";
+import Loading from "./Loading";
 
 function getModalStyle() {
   const top = 50;
@@ -57,7 +58,7 @@ const Navigation = () => {
   const [modalStyle] = React.useState(getModalStyle);
   const [openJoin, setOpenJoin] = React.useState(false);
   const [openLogin, setOpenLogin] = React.useState(false);
-
+  const [isLoading, setLoading] = React.useState(false);
 
   const handleOpenJoin = () => {
     setOpenJoin(true);
@@ -80,19 +81,21 @@ const Navigation = () => {
   };
 
   async function login (e) {
+    setLoading(true);
     e.preventDefault();
     AuthenticationService
         .executeJwtAuthenticationService(e.target.id.value, e.target.password.value)
         .then((response) => {
-          console.log(response.status);
           if (response.status === 200) {
             AuthenticationService.registerSuccessfulLoginForJwt(response.data)
             handleCloseLogin();
-            window.location.reload();
+            window.location.replace(`/userhome/${e.target.id.value}`);
           }
     }).catch((error) =>{
         console.error(error);
-    })
+    }).finally(() => {
+      setLoading(false);
+    });
   }
 
   const joinBody = (
@@ -163,6 +166,7 @@ const Navigation = () => {
       >
         {loginBody}
       </Modal>
+      <Loading active={isLoading} />
     </section>
   )
 }
