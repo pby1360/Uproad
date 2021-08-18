@@ -19,7 +19,7 @@ const main = () => {
           <UserNavigation />
         </section>
         <section>
-          <Route path="/" exact={true} component={userHome} />
+          <Route path="/userhome/:id" exact={true} component={userHome} />
           <Route path="/explore" exact={true} component={explore} />
         </section>
       </div>

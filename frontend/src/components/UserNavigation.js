@@ -20,12 +20,12 @@ const CssTextField = withStyles({
 })(TextField);
 
 const UserNavigation = () => {
-  // const history = useHistory();
+
+  const info = JSON.parse(localStorage.getItem("info"));
 
   const logout = () => {
     AuthenticationService.logout();
-    window.location.reload();
-    // history.push("/");
+    window.location.replace("/");
   }
 
   return (
@@ -33,7 +33,7 @@ const UserNavigation = () => {
       <section className="user-navigation-wrap">
         <section className="user-navigation-menu">
           <article className="user-navigation-item">
-            <Link to="/"><img className="user-navigation-logo-img" src="/assets/uproad_logo3.png" alt="logo" /></Link>
+            <Link to={`/userhome/${info.id}`}><img className="user-navigation-logo-img" src="/assets/uproad_logo3.png" alt="logo" /></Link>
           </article>
           <article className="user-navigation-item">
             <Link to="/">당신을 위한</Link>

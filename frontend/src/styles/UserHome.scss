@@ -23,9 +23,13 @@
 
     .user-tabs {
       flex: 3;
+      .MuiTabs-flexContainer {
+        padding: 0 1rem;
+      }
       .MuiTab-root {
         min-width: 5rem;
         min-height: 1rem;
+        padding: 0.25rem 1rem;
       }
       .Mui-selected {
         background-color: black;
@@ -35,6 +39,15 @@
       }
       .MuiTabs-indicator {
         display: none;
+      }
+      .card-container {
+        display: flex;
+        padding-right: 5rem;
+        .card-item {
+          flex: 1;
+          margin-right: 2rem;
+          min-height: 20rem;
+        }
       }
     }
   }

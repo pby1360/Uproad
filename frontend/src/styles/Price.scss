@@ -91,6 +91,10 @@
       border-right: 0.1rem solid rgba(0, 0, 0, 0.05);
     }
 
+    .list-content:hover {
+      background-color: #e8e8e8;
+    }
+
     .list-content-padding {
       width: 100%;
       min-height: 15rem;

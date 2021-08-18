@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import UserHomeStyles from "../styles/UserHome.scss";
-import { Button } from "@material-ui/core";
+import { Button, Card, CardActions, CardContent } from "@material-ui/core";
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
@@ -10,6 +10,7 @@ import Room from "@material-ui/icons/Room";
 import CreateIcon from '@material-ui/icons/Create';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import axios from "../components/AxiosInstance";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -44,7 +45,21 @@ function a11yProps(index) {
   };
 }
 
-const UserHome = () => {
+const UserHome = ({match}) => {
+  const { id } = match.params;
+
+  useEffect(() => {
+    async function getUser() {
+      await axios.get(`/api/user/${id}`)
+        .then((response) => {
+          // console.log(response);
+        }).catch((error) => {
+          // console.error(error);
+          // alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
+        });
+    }
+    getUser();
+  });
 
   const [value, setValue] = React.useState(0);
 
@@ -62,7 +77,7 @@ const UserHome = () => {
             <section className="user-name">bala un</section>
             <section className="user-job">디자이너</section>
             <section className="user-group">WTM</section>
-            <section className="user-region"><Room/>Icheon, korea, Repulic of</section>
+            <section className="user-region"><Room/>Icheon, korea, Republic of</section>
           </section>
           <section className="user-profile-buttons">
             <Button className="edit-profile" variant="contained" startIcon={<CreateIcon />}>내 프로필 편집</Button>
@@ -89,7 +104,29 @@ const UserHome = () => {
               <Tab label="초안" {...a11yProps(5)} />
             </Tabs>
             <TabPanel value={value} index={0}>
-              Item One
+              <section className="card-container">
+                <Card className="card-item">
+                  <CardContent>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">Learn More</Button>
+                  </CardActions>
+                </Card>
+                <Card className="card-item">
+                  <CardContent>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">Learn More</Button>
+                  </CardActions>
+                </Card>
+                <Card className="card-item">
+                  <CardContent>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">Learn More</Button>
+                  </CardActions>
+                </Card>
+              </section>
             </TabPanel>
             <TabPanel value={value} index={1}>
               Item Two

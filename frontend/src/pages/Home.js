@@ -43,57 +43,57 @@ const Home = () => {
           <article className="home-content-card">
             <p>🔥인기 클래스</p>
             <article className="card-item">
-          <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="/assets/img_card_nail.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h7" component="h2">
-            네일아트 창업
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            소자본 창업 네일아트. 1인사장님 고수익 비법 강의
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          바로가기
-        </Button>
-        <Button size="small" color="primary">
-          나중에 보기
-        </Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="/assets/img_card_hair.png"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            미용실 창업
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            미용실 재료 선정부터 고정지출 줄이기 노하우 강의
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          바로가기
-        </Button>
-        <Button size="small" color="primary">
-          나중에 보기
-        </Button>
-      </CardActions>
-    </Card>
-    </article>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image="/assets/img_card_nail.jpg"
+                    title="Contemplative Reptile"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      네일아트 창업
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      소자본 창업 네일아트. 1인사장님 고수익 비법 강의
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    바로가기
+                  </Button>
+                  <Button size="small" color="primary">
+                    나중에 보기
+                  </Button>
+                </CardActions>
+              </Card>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image="/assets/img_card_hair.png"
+                    title="Contemplative Reptile"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      미용실 창업
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      미용실 재료 선정부터 고정지출 줄이기 노하우 강의
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    바로가기
+                  </Button>
+                  <Button size="small" color="primary">
+                    나중에 보기
+                  </Button>
+                </CardActions>
+              </Card>
+            </article>
           </article>
         </section>
         <section className="home-content-info-img">
