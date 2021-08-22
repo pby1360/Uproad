@@ -15,22 +15,40 @@
     flex-direction: column;
     width: 100%;
     h1 {
-      display: flex;
       color: rgb(12, 36, 59);
-      font-size: 3rem;
+      font-size: 4.5rem;
       font-weight: 800;
       white-space: normal;
-      text-align: center;
-      word-break: keep-all;
+      margin-block-start: 1rem;
+      margin-block-end: 2rem;
     }
     h2 {
       display: flex;
       color: rgb(62, 82, 101);
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       line-height: 0;
       font-weight: 400;
       text-align: center;
       white-space: pre-line;
+    }
+    .button-free{
+      cursor: pointer;
+      overflow: hidden;
+      color: white;
+      height: 4rem;
+      border-radius: 6rem;
+      margin-top: 3rem;
+      background-color: #0c243b;
+      display: inline-flex;
+      position: relative;
+      font-size: 1.2rem;
+      box-sizing: border-box;
+      font-weight: 600;
+      align-items: center;
+      flex-shrink: 0;
+      justify-content: center;
+      box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.15);
+      vertical-align: middle;
     }
     .monthly-price-title {
       width: 100%;
@@ -145,20 +163,99 @@
       // vertical-align: middle;
       // transition-duration: 0.3s;
     }
+    .item-emoji {
+      width: 6rem;
+      height: 6rem;
+      font-size: 4rem;
+    }
+    .item-icon {
+      width: 6rem;
+      height: 6rem;
+    }
     .item-title {
       color: rgb(12, 36, 59);
-      font-size: 1.3rem;
+      font-size: 2rem;
       font-weight: 900;
       line-height: 1.3;
-      margin-top: 10px;
-      margin-bottom: 6px;
+      margin-top: 0.6rem;
+      margin-bottom: 0.4rem;
     }
     .item-descrip {
       color: rgb(139, 152, 167);
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 500;
       line-height: 1.55;
-      margin-bottom: 20px;
+      margin-bottom: 0.4rem;
+    }
+    .item-price-content{
+      font-size: 2rem;
+      font-weight: 600;
+      display: flex;
+      align-items: flex-end;
+    }
+    .item-price{
+      font-family: "Barlow Condensed", sans-serif;
+      color: rgb(12, 36, 59);
+      font-weight: 600;
+      line-height: 1;
+    }
+    .item-price-won{
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .detail-descrip-content{
+      min-height: 240px;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 30px 30px 32px;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.6;
+      list-style: none;
+    }
+    .detail-descrip-title{
+      list-style: none;
+      margin-bottom: 1rem;
+      color: rgb(139, 152, 167);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .detail-descrip{
+      list-style: none;
+      display: flex;
+      margin-bottom: 1rem;
+      -webkit-box-align: center;
+      align-items: center;
+      font-size: inherit;
+      line-height: inherit;
+      font-size: 1.1rem;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+    }
+    .check-icon{
+      color: rgb(0, 158, 116);
+      margin-right: 1rem;
+      display: inline-flex;
+      font-size: 2rem;
+      font-weight: 300;
+      -webkit-box-align: center;
+      align-items: center;
+    }
+    .vat-info {
+      width: 100%;
+      padding: 2rem 2rem;
+      box-sizing: border-box;
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.05);
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgb(99, 114, 131);
+      align-items: center;
     }
   }
 }

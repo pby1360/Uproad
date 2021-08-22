@@ -4,6 +4,11 @@ import PriceStyle from "../styles/Price.scss";
 import Checkbox from '@material-ui/core/Checkbox';
 // UI 컴포넌트에서 AddBox 아이콘 import
 import AddBoxOutlinedIcon from '@material-ui/icons/AddBoxOutlined';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+import Button from '@material-ui/core/Button';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
+import CheckIcon from '@material-ui/icons/Check';
+import { useHistory } from 'react-router-dom';
 
 const Price = () => {
 
@@ -23,6 +28,15 @@ const Price = () => {
     e.target.checked ? setTotal(total + value) : setTotal(total - value);
   }
 
+  const history = useHistory();
+
+  const joinUproad = () => {
+    
+    //회원 가입 시 1달 무료 체험?
+    history.push('/join');
+    //이미 가입하여 1달 무료 체험 하였을 경우 팝업 ??
+  };
+
   return (
     <div className={PriceStyle}>
       <section className="price-content-info">
@@ -30,6 +44,7 @@ const Price = () => {
           <h1>구독료</h1>
           <h2>원하는 카테고리를 선택하세요.</h2>
           <h2>카테고리 갯수에 따라 할인이 적용됩니다.</h2>
+          <Button className="button-free" startIcon={<AssignmentTurnedInIcon />} variant="contained" color="primary" disableElevation onClick={joinUproad}>무료 체험 신청하기</Button>
 
           <article className="price-select-content">
             <section className="monthly-price-title">
@@ -51,9 +66,23 @@ const Price = () => {
                         {/* diabled 속성은 체크기능을 비활성화 시킴 */}
                         <Checkbox defaultChecked disabled className="checkbox-image"/>
                       </section>
+                      <span className="item-emoji">🙋‍♂️</span>
+                      {/*<EmojiPeopleIcon className="item-icon"></EmojiPeopleIcon>*/}
                       <section className="item-title">마케팅</section>
                       <section className="item-descrip">마케팅 관련 설명</section>
+                      <section className="item-price-content">
+                        <section className="item-price">7000</section>
+                        <section className="item-price-won">원</section>
+                      </section>
                     </section>
+                    <ul className="detail-descrip-content">
+                      <li className="detail-descrip-title">주요 기능</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명1</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명2</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명3</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명4</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명5</li>
+                    </ul>
                   </li>
                   <li className="list-content">
                     <section className="list-content-padding">
@@ -61,31 +90,71 @@ const Price = () => {
                         {/* <input type="checkbox" id="name1" className="checkbox-image"></input> */}
                         {/* icon 속성은 import한 아이콘 사용 */}
                         {/* onChange 속성은 체크될 때 마다 checkItem 함수를 호출함 */}
-                        <Checkbox icon={<AddBoxOutlinedIcon />} name="item2" value="5000" onChange={checkItem} className="checkbox-image"/>
+                        <Checkbox icon={<AddBoxOutlinedIcon className="checkbox-icon" /> } name="item2" value="5000" onChange={checkItem} className="checkbox-image"/>
                       </section>
-                      <section className="item-title">second Item</section>
-                      <section className="item-descrip">second Item 관련 설명</section>
+                      <EmojiPeopleIcon className="item-icon"></EmojiPeopleIcon>
+                      <section className="item-title">Item 2</section>
+                      <section className="item-descrip">Item 관련 설명</section>
+                      <section className="item-price-content">
+                        <section className="item-price">5000</section>
+                        <section className="item-price-won">원</section>
+                      </section>
                     </section>
+                    <ul className="detail-descrip-content">
+                      <li className="detail-descrip-title">주요 기능</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명1</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명2</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명3</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명4</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명5</li>
+                    </ul>
                   </li>
                   <li className="list-content">
                     <section className="list-content-padding">
                       <section className="checkbox-background">
                         <Checkbox icon={<AddBoxOutlinedIcon />} name="item3" value="4000" onChange={checkItem} className="checkbox-image"/>
                       </section>
-                      <section className="item-title">third Item</section>
-                      <section className="item-descrip">third Item 관련 설명</section>
+                      <EmojiPeopleIcon className="item-icon"></EmojiPeopleIcon>
+                      <section className="item-title">Item 3</section>
+                      <section className="item-descrip">Item 관련 설명</section>
+                      <section className="item-price-content">
+                        <section className="item-price">4000</section>
+                        <section className="item-price-won">원</section>
+                      </section>
                     </section>
+                    <ul className="detail-descrip-content">
+                      <li className="detail-descrip-title">주요 기능</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명1</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명2</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명3</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명4</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명5</li>
+                    </ul>
                   </li>
                   <li className="list-content">
                     <section className="list-content-padding">
                       <section className="checkbox-background">
                         <Checkbox icon={<AddBoxOutlinedIcon />} name="item3" value="2000" onChange={checkItem} className="checkbox-image"/>
                       </section>
-                      <section className="item-title">fourth Item</section>
-                      <section className="item-descrip">fourth Item 관련 설명</section>
+                      <EmojiPeopleIcon className="item-icon"></EmojiPeopleIcon>
+                      <section className="item-title">Item 4</section>
+                      <section className="item-descrip">Item 관련 설명</section>
+                      <section className="item-price-content">
+                        <section className="item-price">2000</section>
+                        <section className="item-price-won">원</section>
+                      </section>
                     </section>
+                    <ul className="detail-descrip-content">
+                      <li className="detail-descrip-title">주요 기능</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명1</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명2</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명3</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명4</li>
+                      <li className="detail-descrip"><CheckIcon className="check-icon"/>설명5</li>
+                    </ul>
                   </li>
                 </ul>
+                <section className="vat-info">※ 모든 이용요금은 VAT(10%) 별도입니다.</section>
               </article>
             </article>
       </section>
