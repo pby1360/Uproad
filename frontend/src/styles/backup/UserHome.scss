@@ -106,7 +106,8 @@
       display: flex;
       flex-flow: column;
 
-      button {
+      button,
+      a {
         margin-bottom: 0.5rem;
         border-radius: 2rem;
       }

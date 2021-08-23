@@ -1,174 +1,86 @@
-import React from "react";
-import { Link } from  "react-router-dom";
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Modal from '@material-ui/core/Modal';
-import { makeStyles } from '@material-ui/core/styles';
-import { useHistory } from 'react-router-dom';
-import AuthenticationService from "./AuthenticationService";
-import Loading from "./Loading";
-
-function getModalStyle() {
-  const top = 50;
-  const left = 50;
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
+import { makeStyles, Menu, MenuItem } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import NavigationStyle from '../styles/components/Navigation.scss';
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    border: '0px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+  root: {
+    display: 'flex',
   },
-  btnJoinUproad : {
-    backgroundColor: '#035AA6',
-    color: 'white',
-    width: '100%',
-    fontWeight: 'bold',
-    marginBottom: '0.5rem',
-    fontSize: '1.1rem',
-  },
-  btnJoinKakao : {
-    backgroundColor: '#FFDE00',
-    width: '100%',
-    fontWeight: 'bold',
-    marginBottom: '0.5rem',
-    fontSize: '1.1rem',
-  },
-  btnJoinNaver : {
-    backgroundColor: '#00C739',
-    color: 'white',
-    width: '100%',
-    fontWeight: 'bold',
-    fontSize: '1.1rem',
-  },
+  // menuItems: {
+  //   textDecorationLine: 'none',
+  //   textDecoration: 'none',
+  //   textUnderlineOffset: true,
+  // }
 }));
 
 const Navigation = () => {
-  const history = useHistory();
   const classes = useStyles();
-  const [modalStyle] = React.useState(getModalStyle);
-  const [openJoin, setOpenJoin] = React.useState(false);
-  const [openLogin, setOpenLogin] = React.useState(false);
-  const [isLoading, setLoading] = React.useState(false);
 
-  const handleOpenJoin = () => {
-    setOpenJoin(true);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const openMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const closeMenu = (event) => {
+    setAnchorEl(null);
+  };
+  
+  const items = () => {
+    return (
+      <Menu
+        className={classes.root}
+        id="simple-menu"
+        anchorEl={anchorEl}
+        getContentAnchorEl={null}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        transformOrigin={{ vertical: "top", horizontal: "center" }}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={closeMenu}
+        // MenuListProps={{ onMouseLeave: closeMenu }}
+      >
+        <MenuItem>
+          <Link to="/vision">비전</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/help">가치관</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/help">히스토리</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/help">소식</Link>
+        </MenuItem>
+      </Menu>
+    )
   };
 
-  const handleCloseJoin = () => {
-    setOpenJoin(false);
-  };
-  const handleOpenLogin = () => {
-    setOpenLogin(true);
-  };
-
-  const handleCloseLogin = () => {
-    setOpenLogin(false);
-  };
-
-  const joinUproad = () => {
-    handleCloseJoin();
-    history.push('/join');
-  };
-
-  async function login (e) {
-    setLoading(true);
-    e.preventDefault();
-    AuthenticationService
-        .executeJwtAuthenticationService(e.target.id.value, e.target.password.value)
-        .then((response) => {
-          if (response.status === 200) {
-            AuthenticationService.registerSuccessfulLoginForJwt(response.data)
-            handleCloseLogin();
-            window.location.replace(`/userhome/${e.target.id.value}`);
-          }
-    }).catch((error) =>{
-        console.error(error);
-    }).finally(() => {
-      setLoading(false);
-    });
-  }
-
-  const joinBody = (
-    <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">회원가입</h2>
-      <section>
-        <article><Button className={classes.btnJoinUproad} onClick={joinUproad}>uproad 회원가입</Button></article>
-        <article><Button className={classes.btnJoinKakao}>카카오 회원가입</Button></article>
-        <article><Button className={classes.btnJoinNaver}>Naver 회원가입</Button></article>
-      </section>
-    </div>
-  );
-  const loginBody = (
-    <div style={modalStyle} className="login-container">
-      <section className="login-btn-close"><Button onClick={handleCloseLogin}>x</Button></section>
-      <section className="login-form">
-        <h2 id="simple-modal-title">로그인</h2>
-        <form onSubmit={login}>
-          <section className="login-input"><TextField name="id" placeholder="ID를 입력하세요" variant="outlined" size="small" fullWidth></TextField></section>
-          <section className="login-input"><TextField name="password" type="password" placeholder="비밀번호를 입력하세요" variant="outlined" size="small" fullWidth></TextField></section>
-          <section className="login-btn-submit"><Button type="submit" color="primary" fullWidth variant="contained">로그인</Button></section>
-        </form>
-      </section>
-    </div>
-  );
   return (
-    <section className="navigation-wrap">
-      <section className="navigation-logo">
-        <article>
-          <Link to="/"><img className="navigation-logo-img" src="/assets/uproad_logo3.png" alt="logo" /></Link>
-        </article>
+    <div className={NavigationStyle}>
+      {items()}
+      <section className="navigation-bar">
+        <section className="navigation-logo">
+          <Link to="/"><img className="navigation-logo-img" src="/assets/upRoad_log_pink.png" alt="logo" /></Link>
+        </section>
+        <section className="navigation-item">
+          <a onClick={openMenu} className="navigation-item-a" href={false} value="1">업로드 소개</a>
+        </section>
+        <section className="navigation-item">
+          <a onClick={openMenu} className="navigation-item-a" href={false} value="2">챌린지</a>
+        </section>
+        <section className="navigation-item">
+          <a onClick={openMenu} className="navigation-item-a" href={false} value="3">챌린지 가이드</a>
+        </section>
+        <section className="navigation-item">
+          <a className="navigation-item-a" href>스토어</a>
+        </section>
+        <section className="navigation-item">
+          <a className="navigation-item-a" href>마이페이지</a>
+        </section>
       </section>
-      <section className="navigation-menu">        
-        <article className="navigation-item">
-          <Link to="/help">소개</Link>
-        </article>
-        <article className="navigation-item">
-          <Link to="/help">컨텐츠</Link>
-        </article>
-        <article className="navigation-item">
-          <Link to="/product">프리미엄</Link>
-        </article>
-        <article className="navigation-item">
-          <Link to="/price">구독료</Link>
-        </article>
-      </section>
-      <section className="navigation-login">
-        <article className="navigation-item login">
-          <Button variant="outlined" onClick={handleOpenLogin} color="primary">로그인</Button>
-        </article>
-        <article className="navigation-item login">
-          <Button variant="contained" onClick={handleOpenJoin} color="primary">회원가입</Button>
-        </article>
-      </section>
-      <Modal
-        open={openJoin}
-        onClose={handleCloseJoin}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      >
-        {joinBody}
-      </Modal>
-      <Modal
-        open={openLogin}
-        onClose={handleCloseLogin}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      >
-        {loginBody}
-      </Modal>
-      <Loading active={isLoading} />
-    </section>
-  )
-}
+    </div>
+  );
+};
 
 export default Navigation;

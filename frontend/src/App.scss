@@ -1,204 +1,207 @@
-// 메인화면
-.main-container {
-  background-color: #fff;
+// // 메인화면
+// .main-container {
+//   background-color: #fff;
 
-  .main-navigation {
-    display: flex;
-    justify-content: center;
-  }
+//   .main-navigation {
+//     display: flex;
+//     justify-content: center;
+//   }
 
-  .main-content {
-    min-height: 40rem;
-    margin: 0 auto;
-  }
-}
-// 상단네비게이션
-.navigation-wrap {
-  display: flex;
-  width: 80%;
-  font-weight: bold;
+//   .main-content {
+//     min-height: 40rem;
+//     margin: 0 auto;
+//   }
+// }
+// // 상단네비게이션
+// .navigation-wrap {
+//   display: flex;
+//   width: 80%;
+//   font-weight: bold;
 
-  .navigation-logo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+//   .navigation-logo {
+//     flex: 1;
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 1rem;
 
-    .navigation-logo-img {
-      width: 10rem;
-    }
-  }
-  .navigation-menu {
-    // margin-top: 1rem;
-    margin: auto 0;
-    flex: 2;
-    display: flex;
-    word-break: keep-all;
-    justify-content: flex-start;
-    .navigation-item {
-      padding: 0 2.5rem;
-    }
-  }
-  .navigation-login {
-    flex: 2;
-    display: flex;
-    justify-content: flex-end;
-    margin: auto 0;
+//     .navigation-logo-img {
+//       width: 10rem;
+//     }
+//   }
+//   .navigation-menu {
+//     // margin-top: 1rem;
+//     margin: auto 0;
+//     flex: 2;
+//     display: flex;
+//     word-break: keep-all;
+//     justify-content: flex-start;
+//     .navigation-item {
+//       padding: 0 2.5rem;
+//     }
+//   }
+//   .navigation-login {
+//     flex: 2;
+//     display: flex;
+//     justify-content: flex-end;
+//     margin: auto 0;
 
-    button {
-      width: 6rem;
-      margin-right: 1rem;
-    }
-  }
+//     button {
+//       width: 6rem;
+//       margin-right: 1rem;
+//     }
+//   }
 
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:hover {
-    color: rgb(0, 95, 190);
-    font-weight: bold;
-  }
-}
+//   a {
+//     text-decoration: none;
+//     color: black;
+//   }
+//   a:hover {
+//     color: rgb(0, 95, 190);
+//     font-weight: bold;
+//   }
+// }
 
-// 소개
-.home-content-info {
-  display: flex;
-  margin: 2rem 5rem;
-  padding: 0 5rem;
+// // 소개
+// .home-content-info {
+//   display: flex;
+//   margin: 2rem 5rem;
+//   padding: 0 5rem;
 
-  .home-content-info-phrase {
-    flex: 1;
-    margin: 0 1rem;
+//   .home-content-info-phrase {
+//     flex: 1;
+//     margin: 0 1rem;
 
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    p {
-      margin: 0;
-    }
-    .buttons {
-      margin: 1rem;
+//     h1 {
+//       font-size: 2.5rem;
+//       margin: 0;
+//     }
+//     p {
+//       margin: 0;
+//     }
+//     .buttons {
+//       margin: 1rem;
 
-      button {
-        margin: 0.25rem;
-        background-color: #333;
-        color: white;
-        border-radius: 1rem;
-      }
-    }
+//       button {
+//         margin: 0.25rem;
+//         background-color: #333;
+//         color: white;
+//         border-radius: 1rem;
+//       }
+//     }
 
-    .home-content-card {
-      margin-top: 5rem;
+//     .home-content-card {
+//       margin-top: 5rem;
 
-      p {
-        font-weight: bold;
-      }
+//       p {
+//         font-weight: bold;
+//       }
 
-      .card-item {
-        display: flex;
-        margin-top: 1rem;
-      }
-    }
-  }
-  .home-content-info-img {
-    flex: 1;
-    display: flex;
-    flex-flow: column;
+//       .card-item {
+//         display: flex;
+//         margin-top: 1rem;
+//       }
+//     }
+//   }
+//   .home-content-info-img {
+//     flex: 1;
+//     display: flex;
+//     flex-flow: column;
 
-    section {
-      display: flex;
+//     section {
+//       display: flex;
 
-      .home-content-info-img-1 {
-        flex: 1;
-        width: 15rem;
-        border-radius: 50%;
-      }
-      .home-content-info-img-2 {
-        flex: 1;
-        width: 20rem;
-        border-radius: 50%;
-      }
+//       .home-content-info-img-1 {
+//         flex: 1;
+//         width: 15rem;
+//         border-radius: 50%;
+//       }
+//       .home-content-info-img-2 {
+//         flex: 1;
+//         width: 20rem;
+//         border-radius: 50%;
+//       }
 
-      article {
-        flex: 1.1;
-        padding: 1rem;
-      }
-    }
-  }
-}
-// 회원가입
-.join-container {
-  display: flex;
-  align-items: center;
-  flex-flow: column;
+//       article {
+//         flex: 1.1;
+//         padding: 1rem;
+//       }
+//     }
+//   }
+// }
+// // 회원가입
+// .join-container {
+//   display: flex;
+//   align-items: center;
+//   flex-flow: column;
 
-  .input-form {
-    width: 50rem;
-    // width: 100%;
+//   .input-form {
+//     width: 50rem;
+//     // width: 100%;
 
-    .button-sumbit {
-      text-align: end;
-    }
+//     .button-sumbit {
+//       text-align: end;
+//     }
 
-    .input-form-wrap {
-      // border: solid 1px black;
-      // border-radius: 10px;
-      padding: 1rem;
-      margin-top: 1rem;
+//     .input-form-wrap {
+//       // border: solid 1px black;
+//       // border-radius: 10px;
+//       padding: 1rem;
+//       margin-top: 1rem;
 
-      .input-items {
-        margin: 1.5rem 0rem;
-        display: flex;
+//       .input-items {
+//         margin: 1.5rem 0rem;
+//         display: flex;
 
-        .input-items-check {
-          flex: 1;
-          text-align: center;
-        }
-        .input-items-first {
-          flex: 1;
-        }
-        .input-items-second {
-          flex: 2;
-        }
-        .input-items-third {
-          flex: 2;
-          padding: 0 1rem;
+//         .input-items-check {
+//           flex: 1;
+//           text-align: center;
+//         }
+//         .input-items-first {
+//           flex: 1;
+//         }
+//         .input-items-second {
+//           flex: 2;
+//         }
+//         .input-items-third {
+//           flex: 2;
+//           padding: 0 1rem;
 
-          .password-passed {
-            font-size: 0.8rem;
-            color: green;
-          }
-          .password-not-passed {
-            font-size: 0.8rem;
-            color: red;
-          }
-        }
-      }
-    }
-  }
-}
-// 로그인
-.login-container {
-  display: flex;
-  flex-flow: column;
-  position: absolute;
-  width: 30rem;
-  background-color: #f9f8f6;
-  border: '0px solid #000';
-  // boxShadow: theme.shadows[5];
-  .login-btn-close {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-  }
-  .login-form {
-    padding: 0rem 2rem 2rem 2rem;
-    .login-input {
-      margin: 0.5rem 0;
-    }
-    // .login-btn-submit {
-    // }
-  }
+//           .password-passed {
+//             font-size: 0.8rem;
+//             color: green;
+//           }
+//           .password-not-passed {
+//             font-size: 0.8rem;
+//             color: red;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// // 로그인
+// .login-container {
+//   display: flex;
+//   flex-flow: column;
+//   position: absolute;
+//   width: 30rem;
+//   background-color: #f9f8f6;
+//   border: '0px solid #000';
+//   // boxShadow: theme.shadows[5];
+//   .login-btn-close {
+//     display: flex;
+//     justify-content: flex-end;
+//     padding: 0;
+//   }
+//   .login-form {
+//     padding: 0rem 2rem 2rem 2rem;
+//     .login-input {
+//       margin: 0.5rem 0;
+//     }
+//     // .login-btn-submit {
+//     // }
+//   }
+// }
+body {
+  margin: 0px;
 }

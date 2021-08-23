@@ -80,7 +80,7 @@ const UserHome = ({match}) => {
             <section className="user-region"><Room/>Icheon, korea, Republic of</section>
           </section>
           <section className="user-profile-buttons">
-            <Button className="edit-profile" variant="contained" startIcon={<CreateIcon />}>내 프로필 편집</Button>
+            <Button className="edit-profile" href={"/profile/" + id} variant="contained" startIcon={<CreateIcon />}>내 프로필 편집</Button>
             <Button className="edit-availability" variant="contained" startIcon={<MailOutlineIcon />}>가용성 편집</Button>
             <Button className="edit-dummy" variant="contained" startIcon={<PictureAsPdfIcon />}>Adobe Portfolio 시험 사용</Button>
             <section className="following">
