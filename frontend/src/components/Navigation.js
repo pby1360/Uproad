@@ -8,30 +8,30 @@ const Navigation = () => {
     <div className={NavigationStyle}>
       <section className="navigation-bar">
         <section className="navigation-logo">
-          <Link to="/">Uproad</Link>
+          <Link to="/">uproad</Link>
         </section>
         <nav className="navigation-nav">
-          <ul class="clearfix">
+          <ul class="navs">
             <li>
-            <Link to="#">업로드 소개</Link>
-              <ul>
-                <li><Link to="/vision">비전</Link></li>
-                <li><Link to="/help">가치관</Link></li>
-                <li><Link to="/help">히스토리</Link></li>
-                <li><Link to="/help">소식</Link></li>
+            <Link to="#" className="arrow">업로드 소개</Link>
+              <ul className="sub-list">
+                <li><Link to="/vision">비전💎</Link></li>
+                <li><Link to="/help">가치관💬</Link></li>
+                <li><Link to="/help">히스토리📜</Link></li>
+                <li><Link to="/help">소식📰</Link></li>
               </ul>
             </li>
             <li>
-            <Link to="#">챌린지</Link>
-              <ul>
+            <Link to="#" className="arrow">챌린지</Link>
+              <ul className="sub-list">
                 <li><Link to="/vision">무작정 챌린지</Link></li>
                 <li><Link to="/vision">만들기 챌린지</Link></li>
                 <li><Link to="/vision">패키지</Link></li>
               </ul>
             </li>
             <li>
-              <Link to="#">챌린지 가이드</Link>
-              <ul>
+              <Link to="#" className="arrow">챌린지 가이드</Link>
+              <ul className="sub-list">
                 <li><Link to="/vision">참여방법</Link></li>
                 <li><Link to="/vision">참여보상</Link></li>
                 <li><Link to="/vision">자주묻는 질문</Link></li>
@@ -46,7 +46,6 @@ const Navigation = () => {
           <Link to="/">회원가입</Link>
         </section>
       </section>
-      <section className="dropdown"></section>
     </div>
   );
 };

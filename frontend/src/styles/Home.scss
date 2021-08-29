@@ -1,5 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 .home {
+  font-family: 'Nanum Gothic', sans-serif;
   width: 100%;
-  height: 46rem;
+  // height: 46rem;
   background-color: #fafafa;
+
+  .home-greeting {
+    padding: 5rem;
+    text-align: center;
+    
+
+    h1 {
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap');
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 2rem;
+      background: linear-gradient(103.4deg
+        , #d93b3b 0%
+        , #f04d4d 41.33%
+        , rgb(97, 184, 232) 81.99%
+        , #333 98.69%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      // font-weight: bold;
+    }
+
+    .phrase {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #333;
+    } 
+  }
+
+  .home-middle {
+    // height: 20rem;
+    padding: 1.5rem;
+    width: 100%;
+    background: #d93b3b;
+    text-align: center;
+
+    h1 {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .home-img-1 {
+      text-align: center;
+
+      img {
+        border-radius: 10px;
+        // border: solid 20px white;
+        margin-top: 5rem;
+        width: 30rem;
+        // width: 50%;
+      }
+    }    
+  }
+  .home-bottom {
+    width: 100%;
+    min-height: 10rem;
+
+    h1 {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+  }
 }
