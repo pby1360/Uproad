@@ -30,7 +30,32 @@
       font-size: 0.8rem;
       font-weight: bold;
       color: #333;
-    } 
+    }
+
+    .home-btns {
+      margin: 2rem;
+
+      .home-btn-challenge {
+        margin-right: 0.5rem;
+        border-radius: 1rem;
+        width: 11rem;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(103.4deg
+        , #d93b3b 0%
+        , #f04d4d 41.33%
+        , #333 98.69%
+      );
+      }
+      .home-btn-history {
+        font-weight: bold;
+        color: #fff;
+        margin-left: 0.5rem;
+        border-radius: 1rem;
+        width: 11rem;
+        background-color: #333;
+      }
+    }
   }
 
   .home-middle {
@@ -43,6 +68,16 @@
     h1 {
       font-size: 1.5rem;
       color: #fff;
+    }
+
+    .phrase {
+      font-size: 0.8rem;
+      // font-weight: bold;
+      color: #fff;
+    }
+
+    h3 {
+      color: white;
     }
 
     .home-img-1 {
@@ -58,12 +93,17 @@
     }    
   }
   .home-bottom {
+    padding: 1.5rem;
     width: 100%;
-    min-height: 10rem;
+    text-align: center;
+    background-color: #fff;
 
     h1 {
       font-size: 1.5rem;
-      color: #fff;
+      color: #333;
+    }
+    .home-challenges {
+
     }
   }
 }
