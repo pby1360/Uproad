@@ -1,3 +1,70 @@
-.challenge-list {
+$pink: #f04d4d;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.challenge-container {
+  font-family: 'Nanum Gothic', sans-serif;
   background-color: #fafafa;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .challenge-search {
+    width: 80rem;
+    margin-top: 5rem;
+    display: flex;
+
+    .combos {
+      flex: 1;
+      text-align: left;
+      margin-left: 2rem;
+    }
+
+    .search {
+      flex: 1;
+      text-align: right;
+      margin-right: 2rem;
+    }
+  }
+
+  .challenge-active {
+    padding: 1rem;
+    width: 80rem;
+
+    .title {
+      text-align: center;
+      margin: 3rem;
+    }
+    .challenge-list {
+      display: flex;
+      flex-wrap: wrap;
+      .items {
+        // flex: 25%;
+        width: 20rem;
+        // min-width: 25%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .challenge-finished {
+    padding: 1rem;
+    width: 80rem;
+
+    .title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .challenge-list {
+      display: flex;
+      flex-wrap: wrap;
+      .items {
+        // flex: 25%;
+        width: 20rem;
+        // min-width: 25%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
 }

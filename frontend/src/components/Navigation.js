@@ -11,7 +11,7 @@ const Navigation = () => {
           <Link to="/">uproad</Link>
         </section>
         <nav className="navigation-nav">
-          <ul class="navs">
+          <ul className="navs">
             <li>
             <Link to="#" className="arrow">업로드 소개</Link>
               <ul className="sub-list">

@@ -32,10 +32,10 @@ const Home = () => {
             <img src="/assets/img-team.jpg" alt="ceo"></img> 
           </section>
         </article>
-        <article className="home-bottom">
+        {/* <article className="home-bottom">
           <h1>진행중인 챌린지</h1>
           <section className="home-challenges"></section>
-        </article>
+        </article> */}
       </section>
     </div>
   )
