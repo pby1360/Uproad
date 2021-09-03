@@ -15,8 +15,7 @@ const Navigation = () => {
             <li>
             <Link to="#" className="arrow">업로드 소개</Link>
               <ul className="sub-list">
-                <li><Link to="/vision">비전 💎</Link></li>
-                <li><Link to="/help">가치관 💬</Link></li>
+                <li><Link to="/about">가치관 💬</Link></li>
                 <li><Link to="/help">히스토리 📜</Link></li>
                 <li><Link to="/help">소식 📰</Link></li>
               </ul>
