@@ -1,4 +1,4 @@
-$pink: #f04d4d;
+$red: #D93B3B;
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 .about-container {
@@ -12,13 +12,109 @@ $pink: #f04d4d;
     height: 15rem;
     width: 100%;
     align-items: center;
+    display: flex;
+    justify-content: center;
   }
+
   .about-title-text{
     color: rgb(12, 36, 59);
-    font-size: 52px;
-    height: 100%;
-    font-weight: 800;
+    font-size: 3rem;
+    font-weight: bolder;
     white-space: normal;
     text-align: center;
+  }
+
+  .about-text-container{
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-text-emoji-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+
+  .emoji{
+    width: 60rem;
+    font-size: 14rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .text-container{
+    flex-direction: column;
+    width: 40rem;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+  }
+  .about-text-group-left{
+    flex-direction: column;
+    width: 70rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .about-text-group-right{
+    flex-direction: column;
+    width: 70rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+  }
+  .about-text-1{
+    font-size: 2rem;
+    color: rgb(12, 36, 59);
+    font-weight: bolder;
+    display: flex;
+    line-height: 1.53;
+    margin: 0;
+  }
+  
+  .about-text-2{
+    font-size: 1.3rem;
+    color: rgb(12, 36, 59);
+    font-weight: bolder;
+    display: flex;
+    padding-top: 1rem;
+  }
+  
+  .about-text-3{
+    font-size: 1rem;
+    color: rgb(12, 36, 59);
+    font-weight: bolder;
+    display: flex;
+    padding-top: 2.5rem;
+    width: 40rem;
+    line-height: 1.94 !important;
+  }
+
+  .about-text-4{
+    font-size: 3rem;
+    color: rgb(12, 36, 59);
+    font-weight: bolder;
+    display: flex;
+    padding-top: 2.5rem;
+    text-align: right;
+  }
+
+  .about-text-5{
+    font-size: 1.3rem;
+    color: rgb(12, 36, 59);
+    font-weight: bolder;
+    display: flex;
+    padding-top: 1rem;
+    text-align: right;
+  }
+
+  .about-text-6{
+    font-size: 3rem;
+    color: red;
+    font-weight: bolder;
+    display: flex;
+    padding-top: 2.5rem;
   }
 }
