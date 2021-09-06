@@ -1,13 +1,19 @@
 import { React, useState } from 'react';
 import ChallengeListStyle from "../../styles/challenge/ChallengeList.scss";
 import List from './ChallengeListComponent';
-import { TextField, Select, FormControl, InputLabel, MenuItem } from "@material-ui/core"
+import { TextField, Select, FormControl, InputLabel, MenuItem, InputAdornment } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles';
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
     width: 120,
+  },
+  border: {
+    border: 'solid 2px #f04d4d',
+    borderRadius: '30px',
+    // height: '16px',
   },
 }));
 
@@ -116,7 +122,17 @@ const ChallengeList = () => {
           </FormControl>
         </section>
         <section className="search">
-          <TextField label="검색" variant="outlined" />
+          <TextField
+            label="검색"
+            size="small"
+            variant="outlined"
+            InputProps={{
+              endAdornment: <InputAdornment position="end"><SearchIcon /></InputAdornment>,
+              classes: {
+                root: classes.border,
+              },
+            }}
+          />
         </section>
       </section>
       <section className="challenge-active">
