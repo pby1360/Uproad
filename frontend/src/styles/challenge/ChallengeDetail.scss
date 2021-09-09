@@ -16,14 +16,71 @@
         }
       }
       .detail-desc {
+        padding: 1rem;
         flex: 1;
+
+        .detail-desc-category {
+          font-style: italic;
+          font-size: 0.75rem;
+        }
+
+        .detail-desc-title {
+          margin-top: 1rem;
+          margin-bottom: 0.25rem;
+          font-weight: bold;
+          font-size: 2rem;
+        }
+        .detail-desc-charger {
+          font-weight: bold;
+          font-size: 1.1rem;
+        }
+        .detail-desc-review {
+          margin-top: 1.5rem;
+          margin-bottom: 0.5rem;
+          .detail-desc-review-item {
+            margin-left: 1rem;
+            a {
+              text-decoration: none;
+              font-weight: 700;
+              color: mediumblue;
+            }
+          }
+        }
+        .detail-desc-hashtag {
+          font-size: 0.9rem;
+          font-weight: bold;
+        }
+        .detail-desc-button {
+          margin: 1.5rem 0 0 0;
+          .detail-desc-button-enter {
+            border-radius: 1rem;
+            width: 7.5rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #f04d4d;
+          }
+          .detail-desc-button-keep {
+            font-weight: bold;
+            color: #fff;
+            margin-left: 0.5rem;
+            border-radius: 1rem;
+            width: 7.5rem;
+            background-color: #333;
+          }
+          .detail-desc-button-share {
+            margin-left: 0.5rem;
+            border: solid 1px #c8c8c8;
+            height: 2.5rem;
+            width: 2.5rem;
+          }
+        }
       }
     }
   }
   .detail-lower {
-    padding: 1.5rem 5rem 0rem 5rem;
+    padding: 1.5rem 7.5rem 0rem 7.5rem;
   }
   .detail-tab-content {
-    padding: 1.5rem 5rem 0rem 5rem;
+    padding: 1.5rem 7.5rem 0rem 7.5rem;
   }
 }

@@ -3,8 +3,10 @@ import { useState } from "react";
 import detailStyle from '../../styles/challenge/ChallengeDetail.scss';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { Button, Paper, Tab, Tabs } from '@material-ui/core';
+import { IconButton, Button, Paper, Tab, Tabs } from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
 import PropTypes from 'prop-types';
+import ShareIcon from '@material-ui/icons/Share';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,7 +47,7 @@ const ChallengeDetail = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  return (
+  return ( 
     <div className={detailStyle}>
       <section className="detail-container">
         <article className="detail-upper">
@@ -54,19 +56,25 @@ const ChallengeDetail = () => {
               <img style={{width: '100%'}} src="https://cdn.pixabay.com/photo/2015/02/09/14/31/blonde-629726_960_720.jpg" alt="intro" />
             </section>
             <section className="detail-desc">
-              <span>category/category</span>
-              <h3>챌린지 이름</h3>
-              <span>담당자</span>
-              <section>
-                <span>별별별별별</span>
-                <span>16개의 리뷰</span>
-                <span>40명의 수강생</span>
+              <span  className="detail-desc-category">마케팅 / SNS</span>
+              <p className="detail-desc-title">나홀로 마케팅 3기</p>
+              <span className="detail-desc-charger">unbala</span>
+              <section className="detail-desc-review">
+                <span>
+                  평점 <Rating value={5} readOnly />
+                </span>
+                <span className="detail-desc-review-item">
+                  <a href="/">16개</a>의 리뷰
+                </span>
+                <span className="detail-desc-review-item">
+                  40명의 수강생
+                </span>
               </section>
-              <section>#hashtag #hashtag #hashtag #hashtag</section>
-              <section>
-                <Button>참여하기</Button>
-                <Button>찜하기</Button>
-                <Button>공유</Button>
+              <section className="detail-desc-hashtag">#마케팅 #SNS #네이버플레이스 #소상공인</section>
+              <section className="detail-desc-button">
+                <Button className="detail-desc-button-enter" variant="contained">참여하기</Button>
+                <Button className="detail-desc-button-keep" variant="contained">찜하기</Button>
+                <IconButton className="detail-desc-button-share"><ShareIcon /></IconButton>
               </section>
             </section>
           </article>

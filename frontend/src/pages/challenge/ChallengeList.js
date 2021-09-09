@@ -10,10 +10,17 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     width: 120,
   },
-  border: {
-    border: 'solid 2px #f04d4d',
-    borderRadius: '30px',
-    // height: '16px',
+  search: {
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#f04d4d',
+        borderRadius: '30px',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#f04d4d',
+        borderRadius: '30px',
+      },
+    },
   },
 }));
 
@@ -126,11 +133,9 @@ const ChallengeList = () => {
             label="검색"
             size="small"
             variant="outlined"
+            className={classes.search}
             InputProps={{
               endAdornment: <InputAdornment position="end"><SearchIcon /></InputAdornment>,
-              classes: {
-                root: classes.border,
-              },
             }}
           />
         </section>
