@@ -80,7 +80,20 @@
   .detail-lower {
     padding: 1.5rem 7.5rem 0rem 7.5rem;
   }
-  .detail-tab-content {
-    padding: 1.5rem 7.5rem 0rem 7.5rem;
+  .detail-content {
+    padding: 2rem 5rem;
+  }
+  .detail-content-community {
+    display: flex;
+
+    .detail-content-community-nav {
+      flex: 1;
+    }
+    .detail-content-community-content {
+      flex: 2;
+    }
+    .detail-content-community-etc {
+      flex: 1;
+    }
   }
 }
