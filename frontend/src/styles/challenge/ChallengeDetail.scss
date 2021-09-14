@@ -82,12 +82,17 @@
   }
   .detail-content {
     padding: 2rem 5rem;
+    .detail-content-panel {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
   .detail-content-community {
     display: flex;
 
     .detail-content-community-nav {
       flex: 1;
+      min-width: 10rem;
     }
     .detail-content-community-content {
       flex: 2;

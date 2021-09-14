@@ -1,0 +1,32 @@
+.review-container {
+  // border: solid 1px #c8c8c8;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fafafa;
+
+  .review-user {
+    display: flex;
+    margin-bottom: 0.5rem;
+
+    .review-user-info {
+      margin-left: 0.5rem;
+      .review-user-id {
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      .review-user-bottom {
+        display: flex;
+        align-items: center;
+        .review-user-date {
+          color: gray;
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+  .review-text {
+    word-break: keep-all;
+  }
+}

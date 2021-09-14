@@ -38,10 +38,11 @@ const Navigation = () => {
             </li>
             <li><Link to="/vision">스토어</Link></li>
             <li><Link to="/mypage">마이페이지</Link></li>
+            <li><Link to="/admin">관리자</Link></li>
           </ul>
         </nav>
         <section className="navigation-login">
-          <Link to="/">로그인</Link>
+          <Link to="/login">로그인</Link>
           <Link to="/">회원가입</Link>
         </section>
       </section>

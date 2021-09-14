@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import ChallengeListStyle from "../../styles/challenge/ChallengeList.scss";
+import "../../styles/challenge/ChallengeList.scss";
 import List from './ChallengeListComponent';
 import { TextField, Select, FormControl, InputLabel, MenuItem, InputAdornment } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles';
