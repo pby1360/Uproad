@@ -6,11 +6,14 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
-import Room from "@material-ui/icons/Room";
-import CreateIcon from '@material-ui/icons/Create';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 // import axios from "../components/AxiosInstance";
+// import Room from "@material-ui/icons/Room";
+// import CreateIcon from '@material-ui/icons/Create';
+// import MailOutlineIcon from '@material-ui/icons/MailOutline';
+// import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+// import axios from "../components/AxiosInstance";
+
+const { Kakao } = window;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,26 +49,47 @@ function a11yProps(index) {
 }
 
 const MyPage = ({match}) => {
-  const { id } = match.params;
-
+  // const { id } = match.params;
+  let userInfo = {
+    id: "bb17",
+    name: "박병윤",
+    job: "developer",
+    years: "3",
+  };
+  
   const preceding = 27;
   const follower = 2169;
   const following = 685;
 
+  const [value, setValue] = React.useState(0);
+  const [profileImage, setProfileImage] = React.useState("");
+
   useEffect(() => {
+
+    const getUser = () => {
+      Kakao.API.request({
+        url: '/v2/user/me',
+        success: function(response) {
+          console.log(response);
+          setProfileImage(response.properties.thumbnail_image);
+        },
+        fail: function(error) {
+          console.log(error);
+        },
+      });
+    }
+
     // async function getUser() {
     //   await axios.get(`/api/user/${id}`)
     //     .then((response) => {
-    //       // console.log(response);
+    //       userInfo = response;
     //     }).catch((error) => {
     //       // console.error(error);
     //       // alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
     //     });
     // }
-    // getUser();
-  });
-
-  const [value, setValue] = React.useState(0);
+    getUser();
+  }); 
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -76,9 +100,9 @@ const MyPage = ({match}) => {
       <section className="user-home-container">
         <article className="top-banner">배너 이미지 추가</article>
         <article className="center-profile">
-          <section className="user-profile-img"><img src="/assets/ceo_info2.jpg" alt="ceo"></img></section>
+          <section className="user-profile-img"><img src={ profileImage ? profileImage : "/assets/ceo_info2.jpg" } alt="ceo"></img></section>
           <section className="user-profile-info">
-            <section className="user-name">언발라</section>
+            <section className="user-name">{userInfo.id}</section>
             <section className="user-id">@unbalance_life</section>
             <section className="user-subscrip-period">Cafe,For 3 years</section>
           </section>
@@ -97,7 +121,7 @@ const MyPage = ({match}) => {
                 <span className="following-count">{following.toLocaleString()}</span>
               </section>
             </section>
-            <Button className="edit-profile" href={"/profile/" + id} variant="contained">내 프로필 편집</Button>
+            <Button className="edit-profile" href={"/profile/" + userInfo.id} variant="contained">내 프로필 편집</Button>
             <Button className="edit-availability" variant="contained">커뮤니티 이동하기</Button>
           </section>
         </article>
