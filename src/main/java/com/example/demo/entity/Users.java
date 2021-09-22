@@ -7,17 +7,19 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Table("users")
+@Table("USERS")
 public class Users implements Persistable<String> {
 	
 	@Id
 	private String id;
+	private String nickName;
 	private String name;
 	private String email;
 	private String password;
 	private String birth;
 	private String phoneNumber;
 	private String address;
+	private String joinPath;
 	
 	@Transient
 	@JsonIgnore
@@ -28,6 +30,12 @@ public class Users implements Persistable<String> {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public String getNickName() {
+		return nickName;
+	}
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
 	public String getName() {
 		return name;
@@ -74,4 +82,19 @@ public class Users implements Persistable<String> {
 	public boolean isNew() {
 		return isNew;
 	}
+	public String getJoinPath() {
+		return joinPath;
+	}
+	public void setJoinPath(String joinPath) {
+		this.joinPath = joinPath;
+	}
+	public Users(String id, String nickName, String email, String joinPath) {
+		super();
+		this.id = id;
+		this.nickName = nickName;
+		this.email = email;
+		this.joinPath = joinPath;
+	}
+	
+	
 }
