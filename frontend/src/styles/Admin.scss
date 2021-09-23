@@ -1,0 +1,49 @@
+.admin-container {
+  display: flex;
+  padding: 1.5rem;
+
+  .admin-navigation {
+    width: 10rem;
+    padding: 0 0.5rem;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        padding: 0.25rem;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+
+      li:hover {
+        background-color: #f04d4d;
+        color: #fff;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .admin-page {
+    .admin-challenge {
+      .admin-challenge-top {
+        display: flex;
+
+        .admin-challenge-top-title {
+          flex: 1;
+        }
+
+        .admin-challenge-top-controls {
+          flex: 1;
+
+          button {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ import ChallengeList from "./challenge/ChallengeList.js";
 import ChallengeDetail from "./challenge/ChallengeDetail";
 import About from "./introduction/About.js"
 import MyPage from "./user/MyPage.js"
-import Admin from "./admin/Admin.js"
+import Admin from "./admin/Admin"
 import Login from "./Login.js"
 // import AuthenticationService from "../components/AuthenticationService";
 
@@ -22,7 +22,7 @@ const MainPage = () => {
         <Route path="/challenge-list" exact={true} component={ChallengeList} />
         <Route path="/challenge-detail/:id" exact={true} component={ChallengeDetail} />
         <Route path="/mypage" exact={true} component={MyPage} />
-        <Route path="/admin" exact={true} component={Admin} />
+        <Route path="/admin" component={Admin} />
         <Route path="/Login" exact={true} component={Login} />
       </section>
     </div>

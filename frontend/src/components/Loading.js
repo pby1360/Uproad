@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Loading = (props) => {
   const { active } = props;
-  console.log(active);
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   

@@ -6,7 +6,6 @@ import { useState, forwardRef, useImperativeHandle } from "react";
 const SnackbarAlert = forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
     handleClick(alertType, message) {
-      console.log(message);
       setState({ ...state, open: true, alertType: alertType, message: message });
     }
   }));

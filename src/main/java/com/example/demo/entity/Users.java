@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.domain.Persistable;
@@ -17,9 +19,11 @@ public class Users implements Persistable<String> {
 	private String email;
 	private String password;
 	private String birth;
+	private String gender;
 	private String phoneNumber;
 	private String address;
 	private String joinPath;
+	private Date crtDt;
 	
 	@Transient
 	@JsonIgnore
@@ -61,6 +65,12 @@ public class Users implements Persistable<String> {
 	public void setBirth(String birth) {
 		this.birth = birth;
 	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -88,10 +98,17 @@ public class Users implements Persistable<String> {
 	public void setJoinPath(String joinPath) {
 		this.joinPath = joinPath;
 	}
-	public Users(String id, String nickName, String email, String joinPath) {
+	public Date getCrtDt() {
+		return crtDt;
+	}
+	public void setCrtDt(Date crtDt) {
+		this.crtDt = crtDt;
+	}
+	public Users(String id, String nickName, String gender, String email, String joinPath) {
 		super();
 		this.id = id;
 		this.nickName = nickName;
+		this.gender = gender;
 		this.email = email;
 		this.joinPath = joinPath;
 	}

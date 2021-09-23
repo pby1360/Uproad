@@ -82,7 +82,6 @@ const Navigation = () => {
         console.log("getKakaoUserInfo");
         console.log(response);
         getUproadUserInfo(response);
-        // window.location.replace("/");
       },
       fail: function(error) {
         console.log("getKakaoUserInfo");
@@ -98,6 +97,7 @@ const Navigation = () => {
       nick_name: info.properties.nickname,
       gender: info.kakao_account.gender,
       email: info.kakao_account.email,
+      join_path: "kakao",
     }
     await axios.post("/api/user/join", data, {
       headers: {
@@ -182,10 +182,10 @@ const Navigation = () => {
             <li>
               { Kakao.Auth.getAccessToken() ? <Link to="/mypage">마이페이지</Link> : "" }
             </li>
-            {/* <li><Link to="/admin">관리자</Link></li> */}
           </ul>
         </nav>
-        <section className="navigation-login">
+        <section className="navigation-login">          
+          { Kakao.Auth.getAccessToken() ? <Link to="/admin">관리자</Link> : "" }
           { Kakao.Auth.getAccessToken() ? <Link to="#" onClick={ () => logout() }>로그아웃</Link> : <Link to="#" onClick={handleOpenJoin}>로그인</Link>}
           { Kakao.Auth.getAccessToken() ? <Link to="#" onClick= { () => unlink() }>연결끊기</Link> : <Link to="/">회원가입</Link> }
         </section>
