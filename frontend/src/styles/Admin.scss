@@ -3,7 +3,8 @@
   padding: 1.5rem;
 
   .admin-navigation {
-    width: 10rem;
+    flex: 1;
+    min-width: 10rem;
     padding: 0 0.5rem;
 
     ul {
@@ -28,6 +29,8 @@
   }
 
   .admin-page {
+    flex: 9;
+
     .admin-challenge {
       .admin-challenge-top {
         display: flex;

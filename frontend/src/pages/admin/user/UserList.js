@@ -7,47 +7,47 @@ import { useRef } from "react";
 import Alert from "../../../components/SnackBarAlert";
 
 const columns = [
-  { id: 'no', label: 'No', minWidth: 50 },
-  { id: 'id', label: '아이디', minWidth: 100 },
+  { id: 'no', label: 'No', width: 50 },
+  { id: 'id', label: '아이디', width: 100 },
   {
     id: 'nickName',
     label: '닉네임',
-    minWidth: 100,
+    width: 100,
   },
   {
     id: 'name',
     label: '이름',
-    minWidth: 100,
+    width: 100,
   },
   {
     id: 'gender',
     label: '성별',
-    minWidth: 100,
+    width: 100,
   },
   {
     id: 'birth',
     label: '생년월일',
-    minWidth: 100,
+    width: 100,
   },
   {
     id: 'address',
     label: '주소',
-    minWidth: 200,
+    width: 200,
   },
   {
     id: 'email',
     label: '이메일',
-    minWidth: 100,
+    width: 100,
   },
   {
     id: 'joinPath',
     label: '가입경로',
-    minWidth: 100,
+    width: 100,
   },
   {
     id: 'crtDt',
     label: '가입일시',
-    minWidth: 150,
+    width: 150,
     // align: 'right',
     // format: (value) => value.toLocaleString('en-US'),
   },
