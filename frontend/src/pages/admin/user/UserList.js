@@ -3,7 +3,7 @@ import Table from '../../../components/Table';
 import axios from '../../../components/AxiosInstance';
 import { useEffect } from 'react';
 import { useRef } from "react";
-// import Loading from "../../../components/Loading";
+import Loading from "../../../components/Loading";
 import Alert from "../../../components/SnackBarAlert";
 
 const columns = [
@@ -55,13 +55,13 @@ const columns = [
 
 const UserList = () => {
 
-  // const [isLoading, setLoading] = React.useState(false);
+  const [isLoading, setLoading] = React.useState(false);
   const alertRef = useRef();
   const [rows, setRows] = React.useState([]);
 
   useEffect(() => {
     async function getUser() {
-      // setLoading(true);
+      setLoading(true);
       await axios.get("/api/user/users")
         .then( async (response) => {
           const data = await response.data;
@@ -71,11 +71,11 @@ const UserList = () => {
           console.error(error);
           alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
         }).finally(() => {
-          // setLoading(false);
+          setLoading(false);
         })
     }
     getUser();
-  });
+  }, []);
 
   
 

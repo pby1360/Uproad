@@ -1,0 +1,29 @@
+.add-chln-form {
+  padding: 1rem;
+
+  .add-chln-form-input {
+    display: flex;
+    flex-flow: column;
+    font-size: 0.9rem;
+
+    label {
+      margin: 0.5rem 0;
+    }
+
+    .MuiOutlinedInput-root {
+      input {
+        // height: 1rem;
+      }
+    }
+    .MuiSelect-select {
+      // height: 1rem;
+    }
+    // input {
+    //   font-size: 0.75rem;
+    // }
+
+    // input:disabled {
+    //   background-color: #e9e9e9;
+    // }
+  }
+}

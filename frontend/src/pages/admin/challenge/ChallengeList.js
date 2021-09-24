@@ -3,7 +3,7 @@ import Table from '../../../components/Table';
 import axios from '../../../components/AxiosInstance';
 import { useEffect } from 'react';
 import { useRef } from "react";
-// import Loading from "../../../components/Loading";
+import Loading from "../../../components/Loading";
 import Alert from "../../../components/SnackBarAlert";
 import { Button } from '@material-ui/core';
 
@@ -56,13 +56,13 @@ const columns = [
 
 const ChallengeList = () => {
 
-  // const [isLoading, setLoading] = React.useState(false);
+  const [isLoading, setLoading] = React.useState(false);
   const alertRef = useRef();
   const [rows, setRows] = React.useState([]);
 
   useEffect(() => {
     async function getUser() {
-      // setLoading(true);
+      setLoading(true);
       await axios.get("/api/user/users")
         .then( async (response) => {
           const data = await response.data;
@@ -72,11 +72,11 @@ const ChallengeList = () => {
           console.error(error);
           alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
         }).finally(() => {
-          // setLoading(false);
+          setLoading(false);
         })
     }
     getUser();
-  });
+  }, []);
 
   
 
@@ -89,7 +89,7 @@ const ChallengeList = () => {
           <p>챌린지 목록</p>
         </section>
         <section className="admin-challenge-top-controls">
-        <Button variant="contained" color="primary" type="button">생성</Button>
+        <Button className="admin-challenge-top-controls-btn-add" href="/admin/add-challenge" variant="contained" color="primary" type="button">생성</Button>
         </section>
       </section>
       <section>

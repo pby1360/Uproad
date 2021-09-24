@@ -1,0 +1,19 @@
+.title-bar {
+  display: flex;
+  border-bottom: solid 2px #f04d4d;
+
+  .title-bar-title {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .title-bar-controls {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    .title-bar-controls-btn {
+    }
+  }
+}
