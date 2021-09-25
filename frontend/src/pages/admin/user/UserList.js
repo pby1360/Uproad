@@ -81,7 +81,7 @@ const UserList = () => {
 
   return (
     <div>
-      {/* <Loading active={isLoading} /> */}
+      <Loading active={isLoading} />
       <Alert ref={alertRef} />
       <p>사용자 목록</p>
       <section>

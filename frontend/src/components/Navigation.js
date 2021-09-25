@@ -5,6 +5,7 @@ import { Modal, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import axios from "../components/AxiosInstance";
 import Loading from "../components/Loading";
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 const { Kakao } = window;
 
@@ -28,27 +29,25 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
+  btnJoinTitle: {
+    // borderBottom: "solid 2px #f04d4d",
+    // paddingBottom: "0.25rem",
+  },
+  btnJoin: {
+    display: "flex",
+    flexFlow: "column",
+  },
   btnJoinUproad : {
     backgroundColor: '#f04d4d',
     color: 'white',
-    width: '100%',
-    fontWeight: 'bold',
+    height: "2.75rem",
     marginBottom: '0.5rem',
-    fontSize: '1.1rem',
+    fontSize: '0.8rem',
     "&:hover": {
       backgroundColor: '#d93b3b',
     }
   },
-  btnJoinKakao : {
-    backgroundColor: '#f9e000',
-    width: '100%',
-    fontWeight: 'bold',
-    marginBottom: '0.5rem',
-    fontSize: '1.1rem',
-    "&:hover": {
-      backgroundColor: '#ffd500',
-    }
-  },
+  btnJoinKakao : {},
 }));
 
 const Navigation = () => {
@@ -68,8 +67,7 @@ const Navigation = () => {
     setLoading(true);
     Kakao.Auth.login({
       success: function(authObj) {
-        console.log("loginWithKakao");
-        console.log(authObj);
+        // console.log(authObj);
         getKakaoUserInfo();
       },
     })
@@ -79,12 +77,11 @@ const Navigation = () => {
     Kakao.API.request({
       url: '/v2/user/me',
       success: function(response) {
-        console.log("getKakaoUserInfo");
-        console.log(response);
+        // console.log(response);
         getUproadUserInfo(response);
       },
       fail: function(error) {
-        console.log("getKakaoUserInfo");
+        // console.log("getKakaoUserInfo");
         console.error(error);
       },
     });
@@ -137,10 +134,10 @@ const Navigation = () => {
 
   const joinBody = (
     <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">로그인</h2>
-      <section>
-        <Button className={classes.btnJoinKakao} onClick={loginWithKakao}>카카오로 로그인</Button>
-        <Button className={classes.btnJoinUproad}>이메일로 로그인</Button>
+      <h2 className={classes.btnJoinTitle}>로그인</h2>
+      <section className={classes.btnJoin}>
+        <a href="#$" className={classes.btnJoinKakao} onClick={loginWithKakao}><img src="/assets/kakao_login_medium_wide.png" alt="카카오 로그인" /></a>
+        <Button startIcon={<MailOutlineIcon/>} className={classes.btnJoinUproad}>이메일 로그인</Button>
       </section>
     </div>
   );

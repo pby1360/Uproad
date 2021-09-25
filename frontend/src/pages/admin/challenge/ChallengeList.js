@@ -82,7 +82,7 @@ const ChallengeList = () => {
 
   return (
     <div className="admin-challenge">
-      {/* <Loading active={isLoading} /> */}
+      <Loading active={isLoading} />
       <Alert ref={alertRef} />
       <section className="admin-challenge-top">
         <section className="admin-challenge-top-title">
