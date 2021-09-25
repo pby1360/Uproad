@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRef, useState } from "react";
+import { useHistory } from 'react-router-dom';
 import axios from "../../../components/AxiosInstance";
 import Alert from "../../../components/SnackBarAlert";
 import Loading from "../../../components/Loading";
@@ -13,8 +14,9 @@ const AddChallenge = () => {
   const [isLoading, setLoading] = React.useState(false);
   
   const alertRef = useRef();
+  const history = useHistory();
 
-  const saveChallenge = (e) => {
+  const saveChallenge =  async (e) => {
     e.preventDefault();
     // setLoading(true);
     const data = {
@@ -29,7 +31,23 @@ const AddChallenge = () => {
       chlnEndDt: e.target.chlnEndDt.value,
       chlnPlnNum: e.target.chlnPlnNum.value,
     }
-    console.log(data);
+    setLoading(true);
+    await axios.post("/api/admin/challenge/save", data, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+    })
+    .then((response) => {
+      console.log(response);
+      alertRef.current.handleClick("success", "저장을 성공했습니다.");
+      // history.push('/admin/challenges');
+    }).catch((error) => {
+      console.error(error);
+      alertRef.current.handleClick("error", "저장을 실패했습니다.");
+    })
+    .finally(() => {
+      setLoading(false);
+    });
   };
 
   return (
@@ -52,19 +70,19 @@ const AddChallenge = () => {
           </article>
           <article className="add-chln-form-input">
             <label>챌린지명</label>
-            <TextField name="chlnNm" variant="outlined"></TextField>
+            <TextField required name="chlnNm" variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 소개</label>
-            <TextField name="chlnDesc" variant="outlined"></TextField>
+            <TextField required name="chlnDesc" variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 운영자</label>
-            <TextField name="chlnMngr" variant="outlined"></TextField>
+            <TextField required name="chlnMngr" variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 카테고리1</label>
-            <Select name="chlnCat1" displayEmpty variant="outlined">
+            <Select required name="chlnCat1" displayEmpty variant="outlined">
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
@@ -75,7 +93,7 @@ const AddChallenge = () => {
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 카테고리2</label>
-            <Select name="chlnCat2" displayEmpty variant="outlined">
+            <Select required name="chlnCat2" displayEmpty variant="outlined">
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
@@ -86,7 +104,7 @@ const AddChallenge = () => {
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 레벨</label>
-            <Select name="chlnLevel" displayEmpty variant="outlined">
+            <Select required name="chlnLevel" displayEmpty variant="outlined">
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
@@ -97,11 +115,12 @@ const AddChallenge = () => {
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 비용</label>
-            <TextField name="chlnPrice" variant="outlined"></TextField>
+            <TextField required type="number" name="chlnPrice" variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>시작일자</label>
             <TextField
+              required
               variant="outlined"
               name="chlnStrDt"
               type="date"
@@ -113,6 +132,7 @@ const AddChallenge = () => {
           <article className="add-chln-form-input">
             <label>종료일자</label>
             <TextField
+              required
               variant="outlined"
               name="chlnEndDt"
               type="date"
@@ -123,7 +143,7 @@ const AddChallenge = () => {
           </article>
           <article className="add-chln-form-input">
             <label>모집인원</label>
-            <TextField type="number" name="chlnPlnNum" variant="outlined"></TextField>
+            <TextField required type="number" name="chlnPlnNum" variant="outlined"></TextField>
           </article>
         </section>
       </form>

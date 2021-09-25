@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import axios from "../components/AxiosInstance";
 import Loading from "../components/Loading";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Alert from "../components/SnackBarAlert";
+import { useRef } from "react";
 
 const { Kakao } = window;
 
@@ -51,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navigation = () => {
+
+  const alertRef = useRef();
 
   const [modalStyle] = React.useState(getModalStyle);
   const [openJoin, setOpenJoin] = React.useState(false);
@@ -137,13 +141,15 @@ const Navigation = () => {
       <h2 className={classes.btnJoinTitle}>로그인</h2>
       <section className={classes.btnJoin}>
         <a href="#$" className={classes.btnJoinKakao} onClick={loginWithKakao}><img src="/assets/kakao_login_medium_wide.png" alt="카카오 로그인" /></a>
-        <Button startIcon={<MailOutlineIcon/>} className={classes.btnJoinUproad}>이메일 로그인</Button>
+        <Button startIcon={<MailOutlineIcon/>} className={classes.btnJoinUproad} onClick={ () => alertRef.current.handleClick("info", "서비스 준비 중 입니다. 카카오 로그인을 이용해 주세요.") }>이메일 로그인</Button>
       </section>
     </div>
   );
   
   return (
     <div className={NavigationStyle}>
+      <Loading active={isLoading} />
+      <Alert ref={alertRef} />
       <section className="navigation-bar">
         <section className="navigation-logo">
           <Link to="/">uproad</Link>
@@ -184,7 +190,7 @@ const Navigation = () => {
         <section className="navigation-login">          
           { Kakao.Auth.getAccessToken() ? <Link to="/admin">관리자</Link> : "" }
           { Kakao.Auth.getAccessToken() ? <Link to="#" onClick={ () => logout() }>로그아웃</Link> : <Link to="#" onClick={handleOpenJoin}>로그인</Link>}
-          { Kakao.Auth.getAccessToken() ? <Link to="#" onClick= { () => unlink() }>연결끊기</Link> : <Link to="/">회원가입</Link> }
+          { Kakao.Auth.getAccessToken() ? <Link to="#" onClick= { () => unlink() }>연결끊기</Link> : "" }
         </section>
       </section>
       <Modal
@@ -195,7 +201,6 @@ const Navigation = () => {
       >
         {joinBody}
       </Modal>
-      <Loading active={isLoading} />
     </div>
   );
 };

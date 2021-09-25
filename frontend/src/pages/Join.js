@@ -8,6 +8,7 @@ import { useRef } from "react";
 import { useHistory } from 'react-router-dom';
 import Loading from "../components/Loading";
 
+
 const Join = () => {
   // userNamebirthphoneNumberemail
   // states
