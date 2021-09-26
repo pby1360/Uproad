@@ -16,6 +16,7 @@ public class Challenge implements Persistable<String> {
 	private String chlnNo;
 	private String chlnNm;
 	private String chlnDesc;
+	private String chlnMngr;
 	private String chlnCat1;
 	private String chlnCat2;
 	private String chlnLevel;
@@ -54,6 +55,14 @@ public class Challenge implements Persistable<String> {
 
 	public void setChlnDesc(String chlnDesc) {
 		this.chlnDesc = chlnDesc;
+	}
+
+	public String getChlnMngr() {
+		return chlnMngr;
+	}
+
+	public void setChlnMngr(String chlnMngr) {
+		this.chlnMngr = chlnMngr;
 	}
 
 	public String getChlnCat1() {
@@ -179,7 +188,6 @@ public class Challenge implements Persistable<String> {
 	@Transient
 	@JsonIgnore
 	private Boolean isNew = false;
-	
 
 	@Override
 	public String getId() {
@@ -191,6 +199,10 @@ public class Challenge implements Persistable<String> {
 	public boolean isNew() {
 		// TODO Auto-generated method stub
 		return isNew;
+	}
+
+	public void setIsNew(Boolean isNew) {
+		this.isNew = isNew;
 	}
 
 }

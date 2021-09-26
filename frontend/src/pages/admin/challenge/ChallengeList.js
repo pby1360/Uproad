@@ -8,49 +8,57 @@ import Alert from "../../../components/SnackBarAlert";
 import { Button } from '@material-ui/core';
 
 const columns = [
-  { id: 'no', label: 'No', width: 50 },
-  { id: 'id', label: '아이디', width: 100 },
   {
-    id: 'nickName',
-    label: '닉네임',
+     id: 'no',
+     label: 'No',
+     width: 50
+  },
+  {
+     id: 'chlnNo',
+     label: '챌린지 번호',
+     width: 100
+  },
+  {
+    id: 'chlnNm',
+    label: '챌린지명',
     width: 100,
   },
   {
-    id: 'name',
-    label: '이름',
+    id: 'chlnMngr',
+    label: '챌린지 운영자',
     width: 100,
   },
   {
-    id: 'gender',
-    label: '성별',
+    id: 'chlnCat1',
+    label: '챌린지 카테고리1',
     width: 100,
   },
   {
-    id: 'birth',
-    label: '생년월일',
+    id: 'chlnCat2',
+    label: '챌린지 카테고리2',
     width: 100,
   },
   {
-    id: 'address',
-    label: '주소',
-    width: 200,
-  },
-  {
-    id: 'email',
-    label: '이메일',
+    id: 'chlnStrDt',
+    label: '시작일자',
     width: 100,
   },
   {
-    id: 'joinPath',
-    label: '가입경로',
+    id: 'chlnEndDt',
+    label: '종료일자',
     width: 100,
   },
   {
-    id: 'crtDt',
-    label: '가입일시',
+    id: 'chlnPlnNum',
+    label: '모집인원',
     width: 150,
-    // align: 'right',
-    // format: (value) => value.toLocaleString('en-US'),
+    align: 'right',
+  },
+  {
+    id: 'chlnMemNum',
+    label: '참여인원',
+    width: 150,
+    align: 'right',
   },
 ];
 
@@ -63,11 +71,15 @@ const ChallengeList = () => {
   useEffect(() => {
     async function getUser() {
       setLoading(true);
-      await axios.get("/api/user/users")
+      await axios.get("/api/admin/challenge")
         .then( async (response) => {
           const data = await response.data;
+          data.forEach((item, index) => {
+            item.no = index + 1;
+            item.chlnStrDt = new Date(item.chlnStrDt).toLocaleDateString("en-CA", { timezome: "UTC" });
+            item.chlnEndDt = new Date(item.chlnEndDt).toLocaleDateString("en-CA", { timezome: "UTC" });
+          });
           setRows(data);
-          console.log(rows);
         }).catch((error) => {
           console.error(error);
           alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);

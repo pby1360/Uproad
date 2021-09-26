@@ -5,7 +5,9 @@
     display: flex;
     flex-flow: column;
     font-size: 0.9rem;
-    margin: 1rem 0;
+    // margin: 1rem 0;
+    margin: auto;
+    max-width: 50rem;
 
     label {
       margin: 0.5rem 0;
@@ -17,6 +19,7 @@
 
     .MuiOutlinedInput-root {
       height: 2rem;
+      // max-width: 30rem;
       // font-size: 0.9rem;
       // background-color: red;
     }

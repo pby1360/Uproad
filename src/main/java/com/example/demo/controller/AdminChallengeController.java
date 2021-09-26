@@ -23,20 +23,42 @@ public class AdminChallengeController {
 	@Autowired
 	AdminChallengeRepository repository;
 	
-//	@GetMapping
-//	public String hello () {
-//		return "hello";
-//	}
+	@GetMapping
+	public Iterable<Challenge> getChallenges () {
+		return repository.findAll();
+	}
 	
 	@PostMapping("/save")
 	public String saveChallenge(@RequestBody Challenge challenge) {
-		log.info("save");
-		log.info("name: " + challenge.getChlnNm());
-		log.info("strDt: " + challenge.getChlnStrDt());
 		
-		//GET ID MAX + 1
+		String result = null;
+		String nextNo = null;
 		
-		return "success";
+		try {
+			
+			//GET ID MAX + 1
+			nextNo = repository.findNextNo();
+			log.info("nextNo: " + nextNo);
+			if (nextNo.length() == 1) {
+				nextNo = "000" + nextNo;
+			} else if (nextNo.length() == 2) {
+				nextNo = "00" + nextNo;
+			} else if (nextNo.length() == 3) {
+				nextNo = "0" + nextNo;
+			}
+			
+			challenge.setChlnNo(nextNo);
+			challenge.setIsNew(true);
+			repository.save(challenge);
+			
+			result = "success";
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			result = "fail";
+		}
+
+		return result;
 	}
 
 }

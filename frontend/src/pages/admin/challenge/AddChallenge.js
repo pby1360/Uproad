@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 import axios from "../../../components/AxiosInstance";
 import Alert from "../../../components/SnackBarAlert";
@@ -15,6 +15,34 @@ const AddChallenge = () => {
   
   const alertRef = useRef();
   const history = useHistory();
+
+  const [catList1, setCatList1] = useState([]);
+  const [catList2, setCatList2] = useState([]);
+  const [selectInputs, setSelectInputs] = useState({
+    chlnCat1: "",
+    chlnCat2: "",
+    chlnLvl: "",
+  });
+
+  const getComCd = async (comTyp, comSty) => {
+    let url = "/api/common/getComCd?";
+    comSty? url += `comTyp=${comTyp}&comSty=${comSty}` : url += `comTyp=${comTyp}`;
+    let data = [];
+    await axios.get(url)
+    .then(async (response) => {
+      data = await response.data;
+      return data;
+    }).catch((error) => {
+      console.error(error);
+    });
+    return data;
+  }
+
+  useEffect(async() => {
+    const list = await getComCd("COM_CAT1");
+    list.unshift({comCd:"", comNm: "선택"});
+    setCatList1(list);
+  }, []);
 
   const saveChallenge =  async (e) => {
     e.preventDefault();
@@ -38,9 +66,8 @@ const AddChallenge = () => {
       },
     })
     .then((response) => {
-      console.log(response);
       alertRef.current.handleClick("success", "저장을 성공했습니다.");
-      // history.push('/admin/challenges');
+      history.push('/admin/challenges');
     }).catch((error) => {
       console.error(error);
       alertRef.current.handleClick("error", "저장을 실패했습니다.");
@@ -49,6 +76,20 @@ const AddChallenge = () => {
       setLoading(false);
     });
   };
+
+  const onChange = async (e) => {
+    console.log(selectInputs);
+    setSelectInputs({
+      ...selectInputs,
+      [e.target.name]: e.target.value
+    });
+
+    if (e.target.name === "chlnCat1") {
+      const list = await getComCd("COM_CAT2", e.target.value);
+      list.unshift({comCd:"", comNm: "선택"});
+      setCatList2(list);
+    }
+  }
 
   return (
     <div>
@@ -82,35 +123,30 @@ const AddChallenge = () => {
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 카테고리1</label>
-            <Select required name="chlnCat1" displayEmpty variant="outlined">
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+            <Select onChange={onChange} value={selectInputs.cat1} required name="chlnCat1" variant="outlined">
+              {catList1.map((item) => {
+                return (
+                  <MenuItem key={item.comCd} value={item.comCd}>{item.comNm}</MenuItem>
+                )
+              })}
             </Select>
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 카테고리2</label>
-            <Select required name="chlnCat2" displayEmpty variant="outlined">
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+            <Select onChange={onChange} required name="chlnCat2" value={selectInputs.cat2} displayEmpty variant="outlined">
+            {catList2.map((item) => {
+                return (
+                  <MenuItem key={item.comCd} value={item.comCd}>{item.comNm}</MenuItem>
+                )
+              })}
             </Select>
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 레벨</label>
-            <Select required name="chlnLevel" displayEmpty variant="outlined">
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+            <Select onChange={onChange} required name="chlnLevel" value={selectInputs.lvl} displayEmpty variant="outlined">
+              <MenuItem value={10}>초급</MenuItem>
+              <MenuItem value={20}>중급</MenuItem>
+              <MenuItem value={30}>고급</MenuItem>
             </Select>
           </article>
           <article className="add-chln-form-input">

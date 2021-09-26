@@ -38,18 +38,4 @@ public class UserController {
 		log.info("getUserInfo");
 		return repository.findAll();
 	}
-	
-	@PostMapping("/join")
-	public Users joinUser(@RequestBody Map<String,String> info) {
-		log.info("joinUser");
-		
-		if(!repository.existsById(info.get("email"))) {
-			Users newUsers = new Users(info.get("email"), info.get("nick_name"), info.get("gender"), info.get("email"), info.get("join_path"));
-			newUsers.setNew(true);
-			repository.save(newUsers);
-		}
-		
-		return repository.findById(info.get("email")).get();
-	}
-
 }

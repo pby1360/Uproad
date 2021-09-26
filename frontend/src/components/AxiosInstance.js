@@ -1,9 +1,10 @@
 import axios from 'axios'
 
+const url = process.env.NODE_ENV === "production" ? "http://13.125.230.251:8080" : 'http://localhost:8080';
+console.log(url);
 // axios 인스턴스를 생성합니다.
 const instance = axios.create({
-    // baseURL: 'https://api.hnpwa.com',
-    baseURL: 'http://localhost:8080',
+    baseURL: url,
     timeout: 1000
   });
 
@@ -43,7 +44,7 @@ instance.interceptors.response.use(
     function (error) {
         if(error.response.data.error === "Unauthorized") {
             localStorage.clear();
-            window.location.replace("/");
+            // window.location.replace("/");
         }
     /*
         http status가 200이 아닌 경우

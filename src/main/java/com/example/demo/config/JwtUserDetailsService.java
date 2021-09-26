@@ -30,4 +30,16 @@ public class JwtUserDetailsService implements UserDetailsService {
 			throw new UsernameNotFoundException("User not found with username: " + username);
 		}
 	}
+	
+	public UserDetails loadUserByUsernameWithKakao(String username) throws UsernameNotFoundException {
+
+		if (repository.existsById(username)) {
+			
+			Users users = repository.findById(username).stream().collect(Collectors.toList()).get(0);
+
+			return new User(users.getId(), "", new ArrayList<>());
+		} else {
+			throw new UsernameNotFoundException("User not found with username: " + username);
+		}
+	}
 }
