@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Challenge;
-import com.example.demo.repository.AdminChallengeRepository;
+import com.example.demo.repository.ChallengeRepository;
 
 @RestController
 @RequestMapping("/api/admin/challenge")
@@ -21,7 +22,7 @@ public class AdminChallengeController {
 	private Logger log = LoggerFactory.getLogger("AdminChallengeController");
 	
 	@Autowired
-	AdminChallengeRepository repository;
+	ChallengeRepository repository;
 	
 	@GetMapping
 	public Iterable<Challenge> getChallenges () {
@@ -37,7 +38,8 @@ public class AdminChallengeController {
 		try {
 			
 			//GET ID MAX + 1
-			nextNo = repository.findNextNo();
+//			nextNo = repository.getNextNo().get(0);
+			nextNo  = repository.getNextNo().get(0);
 			log.info("nextNo: " + nextNo);
 			if (nextNo.length() == 1) {
 				nextNo = "000" + nextNo;
@@ -48,7 +50,6 @@ public class AdminChallengeController {
 			}
 			
 			challenge.setChlnNo(nextNo);
-			challenge.setIsNew(true);
 			repository.save(challenge);
 			
 			result = "success";

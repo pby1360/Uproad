@@ -2,207 +2,56 @@ package com.example.demo.entity;
 
 import java.util.Date;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Transient;
-import org.springframework.data.domain.Persistable;
-import org.springframework.data.relational.core.mapping.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 
-@Table("CHALLENGE_MASTER")
-public class Challenge implements Persistable<String> {
+@Data
+@Entity(name = "CHALLENGE_MASTER")
+@Table(name = "CHALLENGE_MASTER")
+public class Challenge {
 	
 	@Id
+	@Column(name = "CHLN_NO")
 	private String chlnNo;
+	@Column(name = "CHLN_NM")
 	private String chlnNm;
+	@Column(name = "CHLN_DESC")
 	private String chlnDesc;
+	@Column(name = "CHLN_MNGR")
 	private String chlnMngr;
+	@Column(name = "CHLN_CAT1")
 	private String chlnCat1;
+	@Column(name = "CHLN_CAT2")
 	private String chlnCat2;
+	@Column(name = "CHLN_LEVEL")
 	private String chlnLevel;
+	@Column(name = "CHLN_PRICE")
 	private String chlnPrice;
+	@Column(name = "CHLN_PLACE")
 	private String chlnPlace;
+	@Column(name = "CHLN_STR_DT")
 	private Date chlnStrDt;
+	@Column(name = "CHLN_END_DT")
 	private Date chlnEndDt;
+	@Column(name = "CHLN_PLN_NUM")
 	private int chlnPlnNum;
+	@Column(name = "CHLN_MEM_NUM")
 	private int chlnMemNum;
+	@Column(name = "CHLN_YN")
 	private String chlnYn;
+	@Column(name = "CHLN_TAG")
 	private String chlnTag;
+	@Column(name = "CRT_DT")
 	private Date crtDt;
+	@Column(name = "CRT_USR")
 	private String crtUsr;
+	@Column(name = "UPD_DT")
 	private Date updDt;
+	@Column(name = "UPD_USR")
 	private String updUsr;
 	
-	public String getChlnNo() {
-		return chlnNo;
-	}
-
-	public void setChlnNo(String chlnNo) {
-		this.chlnNo = chlnNo;
-	}
-
-	public String getChlnNm() {
-		return chlnNm;
-	}
-
-	public void setChlnNm(String chlnNm) {
-		this.chlnNm = chlnNm;
-	}
-
-	public String getChlnDesc() {
-		return chlnDesc;
-	}
-
-	public void setChlnDesc(String chlnDesc) {
-		this.chlnDesc = chlnDesc;
-	}
-
-	public String getChlnMngr() {
-		return chlnMngr;
-	}
-
-	public void setChlnMngr(String chlnMngr) {
-		this.chlnMngr = chlnMngr;
-	}
-
-	public String getChlnCat1() {
-		return chlnCat1;
-	}
-
-	public void setChlnCat1(String chlnCat1) {
-		this.chlnCat1 = chlnCat1;
-	}
-
-	public String getChlnCat2() {
-		return chlnCat2;
-	}
-
-	public void setChlnCat2(String chlnCat2) {
-		this.chlnCat2 = chlnCat2;
-	}
-
-	public String getChlnLevel() {
-		return chlnLevel;
-	}
-
-	public void setChlnLevel(String chlnLevel) {
-		this.chlnLevel = chlnLevel;
-	}
-
-	public String getChlnPrice() {
-		return chlnPrice;
-	}
-
-	public void setChlnPrice(String chlnPrice) {
-		this.chlnPrice = chlnPrice;
-	}
-
-	public String getChlnPlace() {
-		return chlnPlace;
-	}
-
-	public void setChlnPlace(String chlnPlace) {
-		this.chlnPlace = chlnPlace;
-	}
-
-	public Date getChlnStrDt() {
-		return chlnStrDt;
-	}
-
-	public void setChlnStrDt(Date chlnStrDt) {
-		this.chlnStrDt = chlnStrDt;
-	}
-
-	public Date getChlnEndDt() {
-		return chlnEndDt;
-	}
-
-	public void setChlnEndDt(Date chlnEndDt) {
-		this.chlnEndDt = chlnEndDt;
-	}
-
-	public int getChlnPlnNum() {
-		return chlnPlnNum;
-	}
-
-	public void setChlnPlnNum(int chlnPlnNum) {
-		this.chlnPlnNum = chlnPlnNum;
-	}
-
-	public int getChlnMemNum() {
-		return chlnMemNum;
-	}
-
-	public void setChlnMemNum(int chlnMemNum) {
-		this.chlnMemNum = chlnMemNum;
-	}
-
-	public String getChlnYn() {
-		return chlnYn;
-	}
-
-	public void setChlnYn(String chlnYn) {
-		this.chlnYn = chlnYn;
-	}
-
-	public String getChlnTag() {
-		return chlnTag;
-	}
-
-	public void setChlnTag(String chlnTag) {
-		this.chlnTag = chlnTag;
-	}
-
-	public Date getCrtDt() {
-		return crtDt;
-	}
-
-	public void setCrtDt(Date crtDt) {
-		this.crtDt = crtDt;
-	}
-
-	public String getCrtUsr() {
-		return crtUsr;
-	}
-
-	public void setCrtUsr(String crtUsr) {
-		this.crtUsr = crtUsr;
-	}
-
-	public Date getUpdDt() {
-		return updDt;
-	}
-
-	public void setUpdDt(Date updDt) {
-		this.updDt = updDt;
-	}
-
-	public String getUpdUsr() {
-		return updUsr;
-	}
-
-	public void setUpdUsr(String updUsr) {
-		this.updUsr = updUsr;
-	}
-
-	@Transient
-	@JsonIgnore
-	private Boolean isNew = false;
-
-	@Override
-	public String getId() {
-		// TODO Auto-generated method stub
-		return chlnNo;
-	}
-
-	@Override
-	public boolean isNew() {
-		// TODO Auto-generated method stub
-		return isNew;
-	}
-
-	public void setIsNew(Boolean isNew) {
-		this.isNew = isNew;
-	}
-
 }

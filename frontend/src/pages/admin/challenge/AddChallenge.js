@@ -67,7 +67,7 @@ const AddChallenge = () => {
     })
     .then((response) => {
       alertRef.current.handleClick("success", "저장을 성공했습니다.");
-      history.push('/admin/challenges');
+      // history.push('/admin/challenges');
     }).catch((error) => {
       console.error(error);
       alertRef.current.handleClick("error", "저장을 실패했습니다.");

@@ -59,7 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             // dont authenticate this particular request
         	.authorizeRequests().antMatchers("/auth/**").permitAll()
         	.antMatchers("/api/**").authenticated()
-            .anyRequest().authenticated().and().
+            .anyRequest().permitAll().and().
             // stateless session 
             exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS);

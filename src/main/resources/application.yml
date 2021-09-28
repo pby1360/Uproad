@@ -9,6 +9,24 @@ spring:
     multipart:
       max-file-size: 50MB
       max-request-size: 50MB
+#  jpa:
+#    database: mysql
+#    database-platform: org.hibernate.dialect.MySQL8Dialect
+#    open-in-view: false
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: none
+#      format_sql: true
+#      naming:
+#        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+#        physical-strategy: com.halfjang.food.mapapi.common.config.NamingStrategy
+  jpa:
+    show-sql: true
+    hibernate:
+#      format_sql: true
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
 jwt:
   header: Authorization
   secret: UPROADSECURITYKEY

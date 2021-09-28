@@ -18,7 +18,6 @@ class AuthenticationService {
     }
 
     registerSuccessfulLoginForJwt(data) {
-        console.log("===registerSuccessfulLoginForJwt===")
         localStorage.setItem('token', data.t);
         localStorage.setItem('info', JSON.stringify(data.d));
         localStorage.setItem('id', data.i);
@@ -27,7 +26,6 @@ class AuthenticationService {
     }
 
     // setupAxiosInterceptors() {
-    //     console.log("===setupAxiosInterceptors===");
     //     axios.interceptors.request.use(
     //         config => {
     //             const token = localStorage.getItem('token');
@@ -43,16 +41,16 @@ class AuthenticationService {
     // }
 
     logout() {
-        localStorage.removeItem("token");
-        localStorage.removeItem("info");
-        localStorage.removeItem("id");
-        localStorage.removeItem("name");
-        localStorage.removeItem("expire");
+        // localStorage.removeItem("token");
+        // localStorage.removeItem("info");
+        // localStorage.removeItem("id");
+        // localStorage.removeItem("name");
+        // localStorage.removeItem("expire");
+        localStorage.clear();
     }
 
     isUserLoggedIn() {
         const token = localStorage.getItem('token');
-        console.log("===UserloggedInCheck===");
         if (token) {
             return true;
         }

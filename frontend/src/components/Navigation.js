@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import NavigationStyle from '../styles/components/Navigation.scss';
 import { Modal, Button, TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import axios from "../components/AxiosInstance";
+// import axios from "../components/AxiosInstance";
 import Loading from "../components/Loading";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
@@ -68,6 +68,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Navigation = () => {
 
+  console.log(Kakao.Auth.getAccessToken());
+
   const alertRef = useRef();
 
   const [modalStyle] = React.useState(getModalStyle);
@@ -77,9 +79,6 @@ const Navigation = () => {
   const classes = useStyles();
 
   const logout = () => {
-    // Kakao.Auth.logout(function() {
-    //   window.location.replace("/");
-    // });
     Auth.logout();
     if (Kakao.Auth.getAccessToken()) {
       Kakao.Auth.logout();

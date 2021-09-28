@@ -111,8 +111,14 @@ public class JwtAuthenticationController {
 	private void addUser(String token) {
 		log.info("addUser");
 		HashMap<String, Object> userInfo = getUserInfo(token);
-		Users user = new Users(userInfo.get("email").toString(), userInfo.get("nickname").toString(), userInfo.get("gender").toString(), userInfo.get("email").toString(), "kakao");
-		user.setNew(true);
+//		Users user = new Users(userInfo.get("email").toString(), userInfo.get("nickname").toString(), userInfo.get("gender").toString(), userInfo.get("email").toString(), "kakao");
+		Users user = new Users();
+		user.setId(userInfo.get("email").toString());
+		user.setNickName(userInfo.get("nickname").toString());
+		user.setGender(userInfo.get("gender").toString());
+		user.setEmail(userInfo.get("email").toString());
+		user.setJoinPath("kakao");
+//		user.setNew(true);
 		repository.save(user);
 	};
 	

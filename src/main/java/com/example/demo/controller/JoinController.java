@@ -41,7 +41,7 @@ public class JoinController {
 		String result = "";
 		
 		try {
-			user.setNew(true);
+//			user.setNew(true);
 			user.setJoinPath("uproad");
 			user.setPassword(encoder.encode(user.getPassword()));
 			repository.save(user);

@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const url = process.env.NODE_ENV === "production" ? "http://13.125.230.251:8080" : 'http://localhost:8080';
+// const url = 'http://localhost:8080';
 console.log(url);
 // axios 인스턴스를 생성합니다.
 const instance = axios.create({
