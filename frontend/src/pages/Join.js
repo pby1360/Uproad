@@ -7,6 +7,8 @@ import Alert from "../components/SnackBarAlert";
 import { useRef } from "react";
 import { useHistory } from 'react-router-dom';
 import Loading from "../components/Loading";
+import "../styles/Join.scss";
+import "../styles/components/TitleBar.scss";
 
 
 const Join = () => {
@@ -214,94 +216,106 @@ const Join = () => {
     <div className="join-container">
       <Loading active={isLoading} />
       <Alert ref={alertRef} />
-      <h1>Uproad에 가입하기</h1>
-      <div>
-          <form onSubmit={join} className="input-form">
-            <section className="button-sumbit">
-              <Button variant="contained" color="primary" type="submit">가입하기</Button>
+      <section className="title-bar">
+          <section className="title-bar-title">
+            <h3>Uproad 가입</h3>
+          </section>
+          <section className="title-bar-controls">
+            {/* <Button type="submit" className="title-bar-controls-btn" variant="contained" color="primary">저장</Button> */}
+          </section>
+        </section>
+      <section className="join-form-wrap">
+        <form onSubmit={join} className="input-form">
+          <section className="input-form-wrap">
+            <section className="input-items">
+              <article className="input-items-check">
+                {checked.checkId ? checkComplete : null}
+              </article>
+              <article className="input-items-first">
+                <label>아이디</label>
+              </article>
+              <article className="input-items-second">
+                <TextField placeholder="이메일 주소를 입력하세요." type="email" name="id" value={userId} variant="outlined" size="small" onChange={onIdChanged} fullWidth></TextField>
+              </article>
+              <article className="input-items-third">
+                <Button variant="outlined" color="primary" onClick={checkIdDuplicate}>중복확인</Button>
+              </article>
             </section>
-            <section className="input-form-wrap">
-              <section className="input-items">
-                <article className="input-items-check">
-                  {checked.checkId ? checkComplete : null}
-                </article>
-                <article className="input-items-first">
-                  <label>아이디</label>
-                </article>
-                <article className="input-items-second">
-                  <TextField name="id" value={userId} variant="outlined" size="small" onChange={onIdChanged} fullWidth></TextField>
-                </article>
-                <article className="input-items-third">
-                  <Button variant="outlined" color="primary" onClick={checkIdDuplicate}>중복확인</Button>
-                </article>
-              </section>
-              <section className="input-items">
-                <article className="input-items-check">
-                  {checked.checkPw1 ? checkComplete : null}
-                </article>
-                <article className="input-items-first"><label>비밀번호</label></article>
-                <article className="input-items-second">
-                  <TextField type="password" name="password1" value={password1} onChange={onPw1Changed} variant="outlined" size="small" fullWidth></TextField>
-                </article>
-                <article className="input-items-third">
-                  {pw1Wanring}
-                </article>
-              </section>
-              <section className="input-items">
-                <article className="input-items-check">
-                  {checked.checkPw2 ? checkComplete : null}
-                </article>
-                <article className="input-items-first"><label>비밀번호 확인</label></article>
-                <article className="input-items-second">
-                  <TextField type="password" name="password2" value={password2} onChange={onPw2Changed} variant="outlined" size="small" fullWidth></TextField>
-                </article>
-                <article className="input-items-third">
-                  {pw2Wanring}
-                </article>
-              </section>
-              <section className="input-items">
-                <article className="input-items-check">
-                  {checked.checkName ? checkComplete : null}
-                </article>
-                <article className="input-items-first"><label>이름</label></article>
-                <article className="input-items-second">
-                  <TextField name="name" value={userName} onChange={onNameChanged} variant="outlined" size="small" fullWidth></TextField>
-                </article>
-                <article className="input-items-third"></article>
-              </section>
-              <section className="input-items">
-                <article className="input-items-check">
-                  {checked.checkBirth ? checkComplete : null}
-                </article>
-                <article className="input-items-first"><label>생년월일</label></article>
-                <article className="input-items-second">
-                  <TextField name="birth" value={birth} onChange={onBirthChanged} variant="outlined" size="small" fullWidth></TextField>
-                </article>
-                <article className="input-items-third"></article>
-              </section>
-              <section className="input-items">
-                <article className="input-items-check">
-                  {checked.checkPhone ? checkComplete : null}
-                </article>
-                <article className="input-items-first"><label>연락처</label></article>
-                <article className="input-items-second">
-                  <TextField name="phoneNumber" value={phoneNumber} onChange={onNumberChanged} variant="outlined" size="small" fullWidth></TextField>
-                </article>
-                <article className="input-items-third"></article>
-              </section>
-              <section className="input-items">
-                <article className="input-items-check">
-                  {checked.checkEmail ? checkComplete : null}
-                </article>
-                <article className="input-items-first"><label>이메일</label></article>
-                <article className="input-items-second">
-                  <TextField name="email"  value={email} onChange={onEmailChanged} variant="outlined" size="small" fullWidth></TextField>
-                </article>
-                <article className="input-items-third"></article>
-              </section>
+            <section className="input-items">
+              <article className="input-items-check">
+                {checked.checkPw1 ? checkComplete : null}
+              </article>
+              <article className="input-items-first"><label>비밀번호</label></article>
+              <article className="input-items-second">
+                <TextField type="password" name="password1" value={password1} onChange={onPw1Changed} variant="outlined" size="small" fullWidth></TextField>
+              </article>
+              <article className="input-items-third">
+                {pw1Wanring}
+              </article>
             </section>
-          </form>
-      </div>
+            <section className="input-items">
+              <article className="input-items-check">
+                {checked.checkPw2 ? checkComplete : null}
+              </article>
+              <article className="input-items-first"><label>비밀번호 확인</label></article>
+              <article className="input-items-second">
+                <TextField type="password" name="password2" value={password2} onChange={onPw2Changed} variant="outlined" size="small" fullWidth></TextField>
+              </article>
+              <article className="input-items-third">
+                {pw2Wanring}
+              </article>
+            </section>
+            <section className="input-items">
+              <article className="input-items-check">
+                {checked.checkName ? checkComplete : null}
+              </article>
+              <article className="input-items-first"><label>이름</label></article>
+              <article className="input-items-second">
+                <TextField name="name" value={userName} onChange={onNameChanged} variant="outlined" size="small" fullWidth></TextField>
+              </article>
+              <article className="input-items-third"></article>
+            </section>
+            <section className="input-items">
+              <article className="input-items-check">
+                {checked.checkBirth ? checkComplete : null}
+              </article>
+              <article className="input-items-first"><label>생년월일</label></article>
+              <article className="input-items-second">
+                <TextField name="birth" value={birth} onChange={onBirthChanged} variant="outlined" size="small" fullWidth></TextField>
+              </article>
+              <article className="input-items-third"></article>
+            </section>
+            <section className="input-items">
+              <article className="input-items-check">
+                {checked.checkPhone ? checkComplete : null}
+              </article>
+              <article className="input-items-first"><label>연락처</label></article>
+              <article className="input-items-second">
+                <TextField name="phoneNumber" value={phoneNumber} onChange={onNumberChanged} variant="outlined" size="small" fullWidth></TextField>
+              </article>
+              <article className="input-items-third"></article>
+            </section>
+            <section className="input-items">
+              <article className="input-items-check">
+                {checked.checkEmail ? checkComplete : null}
+              </article>
+              <article className="input-items-first"><label>이메일</label></article>
+              <article className="input-items-second">
+                <TextField name="email"  value={email} onChange={onEmailChanged} variant="outlined" size="small" fullWidth></TextField>
+              </article>
+              <article className="input-items-third"></article>
+            </section>
+            <section className="input-items">
+              <article className="input-items-check"></article>
+              <article className="input-items-first"></article>
+              <article className="input-items-second">
+                <Button className="input-items-submit" size="large" variant="contained" color="primary" type="submit">가입하기</Button>
+              </article>
+              <article className="input-items-third"></article>
+            </section>
+          </section>
+        </form>
+      </section>
     </div>
   )
 }

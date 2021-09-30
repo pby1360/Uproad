@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -23,9 +25,9 @@ public class Challenge {
 	private String chlnDesc;
 	@Column(name = "CHLN_MNGR")
 	private String chlnMngr;
-	@Column(name = "CHLN_CAT1")
+	@Column(name = "CHLN_CAT1", insertable = false, updatable = false)
 	private String chlnCat1;
-	@Column(name = "CHLN_CAT2")
+	@Column(name = "CHLN_CAT2", insertable = false, updatable = false)
 	private String chlnCat2;
 	@Column(name = "CHLN_LEVEL")
 	private String chlnLevel;
@@ -53,5 +55,13 @@ public class Challenge {
 	private Date updDt;
 	@Column(name = "UPD_USR")
 	private String updUsr;
+	
+	@OneToOne
+	@JoinColumn(name = "CHLN_CAT1")
+	private CommonCode commonCode1;
+	
+	@OneToOne
+	@JoinColumn(name = "CHLN_CAT2")
+	private CommonCode commonCode2;
 	
 }

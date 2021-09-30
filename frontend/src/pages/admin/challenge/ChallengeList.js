@@ -29,12 +29,14 @@ const columns = [
     width: 100,
   },
   {
-    id: 'chlnCat1',
+    // id: 'chlnCat1',
+    id: 'chlnCat1Nm',
     label: '챌린지 카테고리1',
     width: 100,
   },
   {
-    id: 'chlnCat2',
+    // id: 'chlnCat2',
+    id: 'chlnCat2Nm',
     label: '챌린지 카테고리2',
     width: 100,
   },
@@ -76,6 +78,8 @@ const ChallengeList = () => {
           const data = await response.data;
           data.forEach((item, index) => {
             item.no = index + 1;
+            item.chlnCat1Nm = item.commonCode1.comNm;
+            item.chlnCat2Nm = item.commonCode2.comNm;
             item.chlnStrDt = new Date(item.chlnStrDt).toLocaleDateString("en-CA", { timezome: "UTC" });
             item.chlnEndDt = new Date(item.chlnEndDt).toLocaleDateString("en-CA", { timezome: "UTC" });
           });

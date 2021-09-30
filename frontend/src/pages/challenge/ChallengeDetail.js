@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import detailStyle from '../../styles/challenge/ChallengeDetail.scss';
 import { IconButton, Button, Paper, Tab, Tabs } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
@@ -7,6 +7,10 @@ import Rating from '@material-ui/lab/Rating';
 import ShareIcon from '@material-ui/icons/Share';
 import Table from '../../components/Table';
 import Review from '../../components/Review';
+
+import Loading from "../../components/Loading";
+import axios from '../../components/AxiosInstance';
+import Alert from "../../components/SnackBarAlert";
 
 const columns = [
   { id: 'name', label: 'Name', minWidth: 170 },
@@ -131,9 +135,31 @@ function TablePanel(props) {
 //   };
 // }
 
-const ChallengeDetail = () => {
+const ChallengeDetail = ({match}) => {
+  const { id } = match.params
+  const alertRef = useRef();
+
   const [value, setValue] = useState(0);
   const [tableIndex, setTableIndex] = useState(0);
+
+  const [isLoading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    async function getChallengeDetail() {
+      await axios.get(`/challenge/${id}`)
+        .then( async (response) => {
+          const data = await response.data;
+          console.log(data);
+        }).catch((error) => {
+          console.error(error);
+          alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
+        }).finally(() => {
+          setLoading(false);
+        })
+    }
+    getChallengeDetail();
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -143,6 +169,8 @@ const ChallengeDetail = () => {
   };
   return ( 
     <div className={detailStyle}>
+      <Loading active={isLoading} />
+      <Alert ref={alertRef} />
       <section className="detail-container">
         <article className="detail-upper">
           <article className="detail-intro">

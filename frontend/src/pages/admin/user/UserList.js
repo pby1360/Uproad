@@ -65,6 +65,7 @@ const UserList = () => {
       await axios.get("/api/user/users")
         .then( async (response) => {
           const data = await response.data;
+          data.forEach((item, index) => item.no = index + 1);
           setRows(data);
           console.log(rows);
         }).catch((error) => {

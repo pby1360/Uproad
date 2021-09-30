@@ -1,9 +1,12 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState, useRef } from 'react';
 import "../../styles/challenge/ChallengeList.scss";
 import List from './ChallengeListComponent';
 import { TextField, Select, FormControl, InputLabel, MenuItem, InputAdornment } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles';
+import Loading from "../../components/Loading";
+import Alert from "../../components/SnackBarAlert";
 import SearchIcon from '@material-ui/icons/Search';
+import axios from '../../components/AxiosInstance';
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -24,73 +27,68 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const activeItems = [
-  {
-    id: "1",
-    name: "챌린지1",
-    desc: "이것저것하는 챌린지1",
-    user: "unbala",
-  },
-  {
-    id: "2",
-    name: "챌린지2",
-    desc: "이것저것하는 챌린지2",
-    user: "unbala",
-  },
-  {
-    id: "2",
-    name: "챌린지3",
-    desc: "이것저것하는 챌린지3",
-    user: "unbala",
-  },
-  {
-    id: "2",
-    name: "챌린지4",
-    desc: "이것저것하는 챌린지4",
-    user: "unbala",
-  },
-];
-
-const finishedItems = [
-  {
-    id: "1",
-    name: "챌린지1",
-    desc: "이것저것하는 챌린지1",
-    user: "unbala",
-  },
-  {
-    id: "2",
-    name: "챌린지2",
-    desc: "이것저것하는 챌린지2",
-    user: "unbala",
-  },
-];
-
-const activeList = activeItems.map((item, index) => {
-  return (
-    <div key={index} className="items">
-      <List item={item} active={true} />
-    </div>
-  )
-});
-const finishedList = finishedItems.map((item, index) => {
-  return (
-    <div key={index} className="items">
-      <List item={item} active={false} />
-    </div>
-  )
-});
-
 const ChallengeList = () => {
+  const alertRef = useRef();
   const [selectAcitve, setSelectAcitve] = useState('all');
+  const [isLoading, setLoading] = useState(false);
+  const [opendItems, setOpendItems] = useState([]);
+  const [closedItems, setClosedItems] = useState([]);
+
   const classes = useStyles();
+
+  useEffect(() => {
+    setLoading(true);
+    async function getOpend() {
+      await axios.get("/challenge/opendChallenges")
+        .then( async (response) => {
+          const data = await response.data;
+          setOpendItems(data);
+        }).catch((error) => {
+          console.error(error);
+          alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
+        }).finally(() => {
+          // setLoading(false);
+        })
+    }
+    async function getClosed() {
+      await axios.get("/challenge/closedChallenges")
+        .then( async (response) => {
+          const data = await response.data;
+          setClosedItems(data);
+        }).catch((error) => {
+          console.error(error);
+          alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
+        }).finally(() => {
+          // setLoading(false);
+        })
+    }
+    Promise.all([getOpend(), getClosed()]).then(() => setLoading(false));
+  }, []);
 
   const changeAcitve = (event) => {
     setSelectAcitve(event.target.value);
   }
 
+  const opendList = opendItems.map((item, index) => {
+    return (
+      <div key={index} className="items">
+        <List item={item} active={true} />
+      </div>
+    )
+  });
+
+  const closedList = closedItems.map((item, index) => {
+    return (
+      <div key={index} className="items">
+        <List item={item} active={true} />
+      </div>
+    )
+  });
+
   return (
     <div className="challenge-container">
+      <Loading active={isLoading} />
+      <Alert ref={alertRef} />
       <section className="challenge-search">
         <section className="combos">
           <FormControl className={classes.margin}>
@@ -143,13 +141,13 @@ const ChallengeList = () => {
       <section className="challenge-active">
         <h3 className="title">진행중인 챌린지 🚀</h3>
         <section className="challenge-list">
-          {activeList}
+          {opendList}
         </section>
       </section>
       <section className="challenge-finished">
         <h3 className="title">종료된 챌린지 😴</h3>
         <section className="challenge-list">
-          {finishedList}
+          {closedList}
         </section>
       </section>
     </div>

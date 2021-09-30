@@ -16,7 +16,8 @@ import com.example.demo.repository.UsersRepository;
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
 	
-	@Autowired UsersRepository repository;
+	@Autowired
+	private UsersRepository repository;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

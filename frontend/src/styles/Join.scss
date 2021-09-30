@@ -1,0 +1,61 @@
+// 회원가입
+.join-container {
+  padding: 1rem;
+
+  .join-form-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .input-form {
+    // align-items: center;
+    flex-flow: column;
+    width: 80rem;
+    // width: 100%;
+
+    .input-form-wrap {
+      // border: solid 1px black;
+      // border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1rem;
+
+      .input-items {
+        margin: 1.5rem 0rem;
+        display: flex;
+
+        .input-items-submit {
+          width: 100%;
+        }
+
+        .input-items-check {
+          flex: 1;
+          text-align: center;
+        }
+        .input-items-first {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .input-items-second {
+          flex: 2;
+        }
+        .input-items-third {
+          flex: 2;
+          padding: 0 1rem;
+
+          .password-passed {
+            font-size: 0.8rem;
+            color: green;
+          }
+          .password-not-passed {
+            font-size: 0.8rem;
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

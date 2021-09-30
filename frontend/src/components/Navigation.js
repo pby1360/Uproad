@@ -221,7 +221,7 @@ const Navigation = () => {
         <Button type="submit" startIcon={<LockOpenIcon/>} className={classes.btnJoinUproad}>로그인</Button>
         <section className={classes.btnLoginFooter}>
           <a href="#$">아이디 찾기</a>
-          <a style={{marginLeft: "0.5rem"}} href="#$">회원가입</a>
+          <a style={{marginLeft: "0.5rem"}} href="/join">회원가입</a>
         </section>
       </form>
     </div>

@@ -34,13 +34,13 @@ const ChallengeListComponent = ({item, active}) => {
           />
           <CardContent>
             <Typography gutterBottom variant="h7" component="h3">
-              {item.name}
+              {item.chlnNm}
             </Typography>
             <Typography gutterBottom variant="h7" component="p">
-              {item.user}
+              {item.chlnMngr}
             </Typography>
-            <Typography variant="body3" color="textSecondary" component="p">
-              {item.desc}
+            <Typography style={{height: "2rem"}} variant="body3" color="textSecondary" component="p">
+              {item.chlnDesc}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -48,7 +48,7 @@ const ChallengeListComponent = ({item, active}) => {
           <Button size="small" color="primary">
             찜하기 <FavoriteBorderIcon />
           </Button>
-          <Button size="small" color="primary" onClick={ () => history.push(`/challenge-detail/${item.id}`) }>
+          <Button size="small" color="primary" onClick={ () => history.push(`/challenge-detail/${item.chlnNo}`) }>
             상세보기 <AddIcon />
           </Button>
         </CardActions>
