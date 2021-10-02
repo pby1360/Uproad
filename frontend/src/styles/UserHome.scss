@@ -18,16 +18,152 @@
     position: absolute;
     left: 30.5rem;
     top: 8rem;
-    width: 65rem;
+    width: 56rem;
     height: 9rem;
-    border: solid 2px #e8e8e8;
     box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.514);
     display: flex;
     flex-flow: column;
-    padding: 2rem 1rem;
 
   }
+  .all-list-content {
+    display: flex;
+    align-items: stretch;
+    list-style-type: disc;
+    padding-inline-start: 0rem;
+    padding-inline-end: 0rem;
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+  }
+  .list-content-certification-rate {
+      flex: 1;
+      width: 14rem;
+      height: 9rem;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #f5cbcb;
+      overflow: hidden;
+      border-right: 0.1rem solid rgba(0, 0, 0, 0.05);
+    }
+    .list-content-post-count {
+      flex: 1;
+      width: 14rem;
+      height: 9rem;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      overflow: hidden;
+      border-right: 0.1rem solid rgba(0, 0, 0, 0.05);
+    }
+    .list-content-preceding-count {
+      flex: 1;
+      width: 14rem;
+      height: 9rem;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      overflow: hidden;
+      border-right: 0.1rem solid rgba(0, 0, 0, 0.05);
+    }
+    .list-content-goal-achievement-rate {
+      flex: 1;
+      width: 14rem;
+      height: 9rem;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      overflow: hidden;
+      border-right: 0.1rem solid rgba(0, 0, 0, 0.05);
+    }
 
+    .list-title-certification-rate {
+      width: fit-content;
+      height: 2rem;
+      display: flex;
+      font-size: 1rem;
+      padding: 1rem 1rem;
+      font-weight: bold;
+    }
+    .list-title-post-count {
+      width: fit-content;
+      height: 2rem;
+      display: flex;
+      font-size: 1rem;
+      padding: 1rem 1rem;
+      font-weight: bold;
+    }
+    .list-title-preceding-count {
+      width: fit-content;
+      height: 2rem;
+      display: flex;
+      font-size: 1rem;
+      padding: 1rem 1rem;
+      font-weight: bold;
+    }
+    .list-title-goal-achievement-rate {
+      width: fit-content;
+      height: 2rem;
+      display: flex;
+      font-size: 1rem;
+      padding: 1rem 1rem;
+      font-weight: bold;
+    }
+    .list-value-content {
+      float: left;
+      height: 6.5rem;
+      display: flex;
+      .list-certification-rate {
+        width: fit-content;
+        font-size: 2rem;
+        margin-left: 1rem;
+        font-weight: bold;
+        margin-top: 2rem;
+        align-content: flex-end;
+      }
+      .list-post-count {
+        width: fit-content;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        align-content: flex-end;
+      }
+      .list-preceding-count {
+        width: fit-content;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        align-content: flex-end;
+      }
+      .list-goal-achievement-count {
+        width: fit-content;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        align-content: flex-end;
+      }
+      .list-unit {
+        height: fit-content;
+        width: fit-content;
+        margin-top: 3rem;
+      }
+    }
+    .list-content-bottom {
+      height: 0.5rem;
+      background-color: #f04d4d;
+      
+    }
+  
   .bottom-dashboard {
     flex: 7;
     text-align: center;

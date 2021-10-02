@@ -55,11 +55,14 @@ const MyPage = ({match}) => {
     name: "박병윤",
     job: "developer",
     years: "3",
+    proceding: "27",
+    follower: "2169",
+    following: "685",
+    certification_rate: "42",
+    total_post: "36",
+    goal_achievement_rate:"77",
   };
-  
-  const preceding = 27;
-  const follower = 2169;
-  const following = 685;
+
 
   const [value, setValue] = React.useState(0);
   const [profileImage, setProfileImage] = React.useState("");
@@ -102,30 +105,62 @@ const MyPage = ({match}) => {
         <article className="center-profile">
           <section className="user-profile-img"><img src={ profileImage ? profileImage : "/assets/ceo_info2.jpg" } alt="ceo"></img></section>
           <section className="user-profile-info">
-            <section className="user-name">{userInfo.id}</section>
-            <section className="user-id">@unbalance_life</section>
-            <section className="user-subscrip-period">Cafe,For 3 years</section>
+            <section className="user-name">{userInfo.name}</section>
+            <section className="user-id">@{userInfo.id}</section>
+            <section className="user-subscrip-period">{userInfo.job}, For {userInfo.years} years</section>
           </section>
           <section className="user-profile-buttons">
             <section className="count-container">
               <section className="preceding-container">
                 <span>선행</span>
-                <span className="preceding-count">{preceding.toLocaleString()}</span>
+                <span className="preceding-count">{userInfo.proceding.toLocaleString()}</span>
               </section>
               <section className="follower-container">
                 <span>팔로워</span>
-                <span className="follower-count">{follower.toLocaleString()}</span>
+                <span className="follower-count">{userInfo.follower.toLocaleString()}</span>
               </section>
               <section className="following-container">
                 <span>팔로잉</span>
-                <span className="following-count">{following.toLocaleString()}</span>
+                <span className="following-count">{userInfo.following.toLocaleString()}</span>
               </section>
             </section>
-            <Button className="edit-profile" href={"/profile/" + userInfo.id} variant="contained">내 프로필 편집</Button>
+            <Button className="edit-profile" href={"/editprofile/" + userInfo.id} variant="contained">내 프로필 편집</Button>
             <Button className="edit-availability" variant="contained">커뮤니티 이동하기</Button>
           </section>
         </article>
-        <article className="top-dashboard"></article>
+        <article className="top-dashboard">
+          <ul className="all-list-content">
+            <li className="list-content-certification-rate">
+              <section className="list-title-certification-rate">📈 인증률</section>
+              <section className="list-value-content">
+                <section className="list-certification-rate">{userInfo.certification_rate.toLocaleString()}</section>
+                <section className="list-unit">%</section>
+              </section>  
+              <section className="list-content-bottom"></section>
+            </li>
+            <li className="list-content-post-count">
+              <section className="list-title-post-count">📌 작성글</section>
+              <section className="list-value-content">
+                <section className="list-post-count">{userInfo.total_post.toLocaleString()}</section>
+                <section className="list-unit">개</section>
+              </section>
+            </li>
+            <li className="list-content-preceding-count">
+              <section className="list-title-preceding-count">🎈 선행수</section>
+              <section className="list-value-content">
+                <section className="list-preceding-count">{userInfo.proceding.toLocaleString()}</section>
+                <section className="list-unit">개</section>
+              </section>
+            </li>
+            <li className="list-content-goal-achievement-rate">
+              <section className="list-title-goal-achievement-rate">📊 목표달성여부</section>
+              <section className="list-value-content">
+                <section className="list-goal-achievement-count">{userInfo.goal_achievement_rate.toLocaleString()}</section>
+                <section className="list-unit">%</section>
+              </section>
+            </li>
+          </ul>
+        </article>
         <article className="bottom-dashboard">
         <article className="user-tabs-dummy"></article>
           <article className="user-tabs">
