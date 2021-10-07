@@ -10,6 +10,7 @@ import MyPage from "./user/MyPage.js"
 import Admin from "./admin/Admin"
 import Login from "./Login.js"
 import Join from "./Join.js"
+import PrivateRoute from "../components/PrivateRoute";
 // import AuthenticationService from "../components/AuthenticationService";
 
 const MainPage = () => {
@@ -22,8 +23,8 @@ const MainPage = () => {
         <Route path="/about" exact={true} component={About} />
         <Route path="/challenge-list" exact={true} component={ChallengeList} />
         <Route path="/challenge-detail/:id" exact={true} component={ChallengeDetail} />
-        <Route path="/mypage" exact={true} component={MyPage} />
-        <Route path="/admin" component={Admin} />
+        <PrivateRoute path="/mypage" exact={true} component={MyPage} />
+        <PrivateRoute path="/admin" component={Admin} />
         <Route path="/Login" exact={true} component={Login} />
         <Route path="/Join" exact={true} component={Join} />
       </section>

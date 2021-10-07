@@ -68,8 +68,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Navigation = () => {
 
-  console.log(Kakao.Auth.getAccessToken());
-
   const alertRef = useRef();
 
   const [modalStyle] = React.useState(getModalStyle);
@@ -125,30 +123,6 @@ const Navigation = () => {
       },
     });
   };
-
-  // const getUproadUserInfo = async (info) => {
-  //   console.log("getUproadUserInfo");
-  //   const data = {
-  //     nick_name: info.properties.nickname,
-  //     gender: info.kakao_account.gender,
-  //     email: info.kakao_account.email,
-  //     join_path: "kakao",
-  //   }
-  //   await axios.post("/api/user/join", data, {
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //   })
-  //   .then((response) => {
-  //     console.log(response);
-  //     // window.location.replace("/");
-  //   }).catch((error) => {
-  //     console.error(error);
-  //   })
-  //   .finally(() => {
-  //     setLoading(false);
-  //   });
-  // }
 
   const unlink = () => {
     Kakao.API.request({

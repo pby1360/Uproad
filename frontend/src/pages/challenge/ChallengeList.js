@@ -80,7 +80,7 @@ const ChallengeList = () => {
   const closedList = closedItems.map((item, index) => {
     return (
       <div key={index} className="items">
-        <List item={item} active={true} />
+        <List item={item} active={false} />
       </div>
     )
   });

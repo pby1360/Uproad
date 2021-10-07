@@ -57,6 +57,14 @@ class AuthenticationService {
         return false;
     }
 
+    isExpired() {
+        const expired = localStorage.getItem('expire');
+        if (new Date().getTime() > expired) {
+            return true;
+        }
+        return false;
+    }
+
     getLoggedInUserName() {
         //let user = sessionStorage.getItem('authenticatedUser')
         let user = localStorage.getItem('authenticatedUser');

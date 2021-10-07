@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRef, useState, useEffect } from "react";
-import { useHistory } from 'react-router-dom';
 import axios from "../../../components/AxiosInstance";
 import Alert from "../../../components/SnackBarAlert";
 import Loading from "../../../components/Loading";
@@ -14,7 +13,6 @@ const AddChallenge = () => {
   const [isLoading, setLoading] = React.useState(false);
   
   const alertRef = useRef();
-  const history = useHistory();
 
   const [catList1, setCatList1] = useState([]);
   const [catList2, setCatList2] = useState([]);

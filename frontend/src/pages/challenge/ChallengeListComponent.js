@@ -20,7 +20,6 @@ const useStyles = makeStyles({
 });
 
 const ChallengeListComponent = ({item, active}) => {
-  console.log(item);
   const history = useHistory();
   const classes = useStyles();
   return (

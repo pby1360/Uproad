@@ -128,21 +128,36 @@ function TablePanel(props) {
   );
 }
 
-// function a11yProps(index) {
-//   return {
-//     id: `simple-tab-${index}`,
-//     'aria-controls': `simple-tabpanel-${index}`,
-//   };
-// }
-
 const ChallengeDetail = ({match}) => {
   const { id } = match.params
   const alertRef = useRef();
 
   const [value, setValue] = useState(0);
   const [tableIndex, setTableIndex] = useState(0);
-
   const [isLoading, setLoading] = useState(false);
+  const [challengeInfo, setInfo] = useState({
+    chlnCat1: "",
+    chlnCat2: "",
+    chlnDesc: "",
+    chlnEndDt: "",
+    chlnLevel: "",    
+    chlnMngr: "",
+    chlnNm: "",
+    chlnNo: "",
+    chlnPlace: "",
+    chlnMemNum: 0,
+    chlnPlnNum: 0,
+    chlnPrice: "",
+    chlnStrDt: "",
+    chlnTag: "",
+    chlnYn: "",
+    commonCode1: {},
+    commonCode2: {},
+    crtDt: "",
+    crtUsr: "",
+    updDt: "",
+    updUsr: ""
+  });
 
   useEffect(() => {
     setLoading(true);
@@ -150,7 +165,8 @@ const ChallengeDetail = ({match}) => {
       await axios.get(`/challenge/${id}`)
         .then( async (response) => {
           const data = await response.data;
-          console.log(data);
+          setInfo({ ...data });
+          console.log(challengeInfo);
         }).catch((error) => {
           console.error(error);
           alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
@@ -178,9 +194,9 @@ const ChallengeDetail = ({match}) => {
               <img style={{width: '100%'}} src="https://cdn.pixabay.com/photo/2015/02/09/14/31/blonde-629726_960_720.jpg" alt="intro" />
             </section>
             <section className="detail-desc">
-              <span  className="detail-desc-category">마케팅 / SNS</span>
-              <p className="detail-desc-title">나홀로 마케팅 3기</p>
-              <span className="detail-desc-charger">unbala</span>
+              <span  className="detail-desc-category">{challengeInfo.commonCode1.comNm} / {challengeInfo.commonCode2.comNm}</span>
+              <p className="detail-desc-title">{challengeInfo.chlnNm}</p>
+              <span className="detail-desc-charger">{challengeInfo.chlnMngr}</span>
               <section className="detail-desc-review">
                 <span>
                   평점 <Rating value={5} readOnly />
@@ -220,12 +236,12 @@ const ChallengeDetail = ({match}) => {
             <TabPanel value={value} index={0}>
               <p>챌린지소개</p>
               <ul>
-                <li>강사소개</li>
-                <li>목적</li>
-                <li>금액</li>
+                <li>강사소개 : </li>
+                <li>목적 : {challengeInfo.chlnDesc}</li>
+                <li>금액 : {challengeInfo.chlnPrice} 원</li>
               </ul>
-              <p>챌린지기간</p>
-              <p>모집인원</p>
+              <p>챌린지기간 : {challengeInfo.chlnStrDt} ~ {challengeInfo.chlnEndDt}</p>
+              <p>모집인원 : {challengeInfo.chlnPlnNum}</p>
               <p>챌린지 커리큘럼</p>
             </TabPanel>
             <TabPanel value={value} index={1}>
@@ -256,8 +272,8 @@ const ChallengeDetail = ({match}) => {
               <Table columns={columns3} rows={rows3} />
             </TabPanel>
             <TabPanel value={value} index={4}>
-              {reviews.map((item) => (
-                <Review item={item} />
+              {reviews.map((item, index) => (
+                <Review key={index} item={item} />
               ))}
             </TabPanel>
           </article>
