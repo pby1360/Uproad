@@ -94,6 +94,10 @@ const ChallengeList = () => {
     getUser();
   }, []);
 
+  const selectRow = (row) => {
+    console.log(row);
+  }
+
   
 
   return (
@@ -109,7 +113,7 @@ const ChallengeList = () => {
         </section>
       </section>
       <section>
-        <Table columns={columns} rows={rows} />
+        <Table columns={columns} rows={rows} selectRow={selectRow} />
       </section>
     </div>
   );

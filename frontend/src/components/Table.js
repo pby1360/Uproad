@@ -18,9 +18,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function StickyHtabeadTable(props) {
-  const columns = props.columns;
-  const rows = props.rows;
+const StickyHtabeadTable = ({columns, rows, selectRow}) => {
+  // const columns = props.columns;
+  // const rows = props.rows;
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const rowsPerPage = 10;
@@ -28,6 +28,10 @@ export default function StickyHtabeadTable(props) {
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
+
+  const clickRow = (row) => {
+    selectRow(row);
+  }
   
   return (
     <Paper className={classes.root}>
@@ -49,7 +53,7 @@ export default function StickyHtabeadTable(props) {
           <TableBody>
             {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, j) => {
               return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.j}>
+                <TableRow onClick={ () => clickRow(row) } hover role="checkbox" tabIndex={-1} key={j}>
                   {columns.map((column, k) => {
                     const value = row[column.id];
                     return (
@@ -75,3 +79,5 @@ export default function StickyHtabeadTable(props) {
     </Paper>
   );
 }
+
+export default StickyHtabeadTable;
