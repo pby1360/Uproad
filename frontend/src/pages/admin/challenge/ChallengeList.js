@@ -2,6 +2,7 @@ import React from 'react';
 import Table from '../../../components/Table';
 import axios from '../../../components/AxiosInstance';
 import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useRef } from "react";
 import Loading from "../../../components/Loading";
 import Alert from "../../../components/SnackBarAlert";
@@ -66,6 +67,8 @@ const columns = [
 
 const ChallengeList = () => {
 
+  const history = useHistory();
+
   const [isLoading, setLoading] = React.useState(false);
   const alertRef = useRef();
   const [rows, setRows] = React.useState([]);
@@ -96,6 +99,8 @@ const ChallengeList = () => {
 
   const selectRow = (row) => {
     console.log(row);
+    // console.log(history);
+    history.push(`/admin/challenges/${row.chlnNo}`);
   }
 
   

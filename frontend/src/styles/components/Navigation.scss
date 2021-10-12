@@ -10,6 +10,7 @@
   background-color: #fafafa;
   // border-bottom: solid 1px #333333;
   display: flex;
+  z-index: 20000;
 
   .navigation-logo {
     flex: 3;
@@ -66,6 +67,7 @@
         padding: 0.25rem 0;
         width: fit-content;
         background-color: #fff;
+        z-index: 20000;
 
         li {
           padding: 0.25rem 2rem 0.25rem 1rem;

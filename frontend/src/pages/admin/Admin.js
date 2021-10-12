@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from "react-router-dom";
 import ChallengeList from './challenge/ChallengeList.js';
-// import ChallengeDetail from './challenge/ChallengeDetail.js';
+import ChallengeDetail from './challenge/ChallengeDetail.js';
 import AddChallenge from './challenge/AddChallenge.js';
 import UserList from './user/UserList.js';
 import PageManagement from './page/PageManagement.js';
@@ -22,7 +22,7 @@ const Admin = () => {
         <Route exact path="/admin" render={ () => <div><p>관리자 홈화면</p></div> } />
         <Route exact path="/admin/users" component={UserList} />
         <Route exact path="/admin/challenges" component={ChallengeList} />
-        {/* <Route exact path="/admin/challenges" component={ChallengeDetail} /> */}
+        <Route exact path="/admin/challenges/:id" component={ChallengeDetail} />
         <Route exact path="/admin/add-challenge" component={AddChallenge} />
         <Route exact path="/admin/page-management" component={PageManagement} />
       </article>
