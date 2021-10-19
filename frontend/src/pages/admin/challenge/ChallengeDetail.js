@@ -14,6 +14,11 @@ const ChallengeDetail = ({match}) => {
   const [isLoading, setLoading] = React.useState(false);
   
   const alertRef = useRef();
+  const [bgImg, setBgImg] = useState("");
+  const [cardImg, setCardImg] = useState("");
+
+  const [bgImgFile, setBgImgFile] = useState({});
+  const [cardImgFile, setCardImgFile] = useState({});
 
   const [catList1, setCatList1] = useState([]);
   const [catList2, setCatList2] = useState([]);
@@ -61,20 +66,39 @@ const ChallengeDetail = ({match}) => {
       .then( async (response) => {
         const data = await response.data;
         setInfo({ ...data });
-        console.log(data);
       }).catch((error) => {
         console.error(error);
         alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
-      }).finally(() => {
-        setLoading(false);
-      })
+      });
+  }
+
+  const getImages = async () => {
+    await axios.get(`/api/admin/challenge/getImages/${id}`)
+      .then( async (response) => {
+        const data = await response.data;
+        data.forEach(item => {
+          console.log(item);
+          if (item.imgTyp === "bg") {
+            setBgImg(item.filePath);
+          } else if (item.imgTyp === "card") {
+            setCardImg(item.filePath);
+          }
+        })
+      }).catch((error) => {
+        console.error(error);
+        alertRef.current.handleClick("error", <span>에러가 발생 했습니다. <br />{error.message}</span>);
+      });
   }
 
   useEffect(async() => {
+    setLoading(true);
     const list = await getComCd("COM_CAT1");
     list.unshift({comCd:"", comNm: "선택"});
     setCatList1(list);
     getChallengeDetail();
+    Promise.all([getChallengeDetail(), getImages()]).then(() => {
+      setLoading(false);
+    });
     const list2 = await getComCd("COM_CAT2", challengeInfo.chlnCat1);
     list2.unshift({comCd:"", comNm: "선택"});
     setCatList2(list2);
@@ -82,8 +106,8 @@ const ChallengeDetail = ({match}) => {
 
   const saveChallenge =  async (e) => {
     e.preventDefault();
-    // setLoading(true);
     const data = {
+      chlnNo: e.target.chlnNo.value,
       chlnNm: e.target.chlnNm.value,
       chlnDesc: e.target.chlnDesc.value,
       chlnMngr: e.target.chlnMngr.value,
@@ -103,7 +127,6 @@ const ChallengeDetail = ({match}) => {
     })
     .then((response) => {
       alertRef.current.handleClick("success", "저장을 성공했습니다.");
-      // history.push('/admin/challenges');
     }).catch((error) => {
       console.error(error);
       alertRef.current.handleClick("error", "저장을 실패했습니다.");
@@ -114,7 +137,6 @@ const ChallengeDetail = ({match}) => {
   };
 
   const onChange = async (e) => {
-    console.log(challengeInfo);
     setInfo({
       ...challengeInfo,
       [e.target.name]: e.target.value
@@ -127,6 +149,55 @@ const ChallengeDetail = ({match}) => {
     }
   }
 
+  const uploldImg = (e, typ) => {
+    if (typ === 'bg') {
+      setBgImgFile(e.target.files[0]);
+      const imageUrl = URL.createObjectURL(e.target.files[0]);
+      console.log(imageUrl);
+      setBgImg(imageUrl);
+    } else if (typ === 'card') {
+      setCardImgFile(e.target.files[0]);
+      const imageUrl = URL.createObjectURL(e.target.files[0]);
+      setCardImg(imageUrl);
+    }
+  }
+
+  const saveImg = async(typ) => {
+    let formData = new FormData();
+    if (typ === 'bg') {
+      if(!bgImgFile.name) {
+        alert("이미지를 선택하세요.");
+        return;
+      }
+      formData.append('file', bgImgFile);
+      formData.append('fileNm', bgImgFile.name);
+      formData.append('fileTyp', bgImgFile.type);
+    } else if (typ === 'card') {
+      if(!cardImgFile.name) {
+        alert("이미지를 선택하세요.");
+        return;
+      }
+      formData.append('file', cardImgFile);
+      formData.append('fileNm', cardImgFile.name);
+      formData.append('fileTyp', cardImgFile.type);
+    }
+    formData.append('chlnNo', challengeInfo.chlnNo);
+    formData.append('imgTyp', typ);
+
+    setLoading(true);
+    await axios.post("/api/admin/challenge/saveImage", formData).then(() => {
+      alertRef.current.handleClick("success", "저장을 성공했습니다.");
+      setBgImgFile({});
+      setCardImgFile({});
+      setBgImg("");
+      setCardImg("");
+      getImages();
+    }).catch((error) => {
+      alert(error);
+    }).finally(() => {
+      setLoading(false);
+    });
+  }
   return (
     <div>
       <Loading active={isLoading} />
@@ -134,13 +205,16 @@ const ChallengeDetail = ({match}) => {
       <form onSubmit={saveChallenge}>
         <section className="title-bar">
           <section className="title-bar-title">
-            <h3>챌린지 상세정보</h3>
-          </section>
-          <section className="title-bar-controls">
-            <Button type="submit" className="title-bar-controls-btn" variant="contained" color="primary">저장</Button>
+            <h3>챌린지 정보</h3>
           </section>
         </section>
         <section className="add-chln-form">
+          <article className="add-chln-form-input">
+            <article className="add-chln-form-sub-title">
+              <h4>챌린지 상세정보</h4>
+              <Button type="submit" variant="contained" color="primary">저장</Button>
+            </article>
+          </article>
           <article className="add-chln-form-input">
             <label>챌린지 번호</label>
             <TextField disabled name="chlnNo" value={challengeInfo.chlnNo} variant="outlined"></TextField>
@@ -223,13 +297,22 @@ const ChallengeDetail = ({match}) => {
             <label>현재인원</label>
             <TextField required type="number" name="chlnMemNum" value={challengeInfo.chlnMemNum} variant="outlined"></TextField>
           </article>
+          <article style={{marginTop: "2rem"}} className="add-chln-form-input">
+            <article className="add-chln-form-sub-title">
+              <h4>챌린지 이미지</h4>
+            </article>
+          </article>
           <article className="add-chln-form-input">
             <label>배경이미지</label>
-            <TextField name="chlnMemNum" value={challengeInfo.chlnImg1} variant="outlined"></TextField>
+            <input type="file" accept="image/*" name="bgImg" onChange={ (e) => uploldImg(e, 'bg') } />
+            { bgImg === "" ? <p>이미지 없음</p> : <img className="preview" src={bgImg} alt="배경이미지" /> }
+            <Button variant="contained" onClick={() => saveImg('bg')}>이미지 저장</Button>
           </article>
           <article className="add-chln-form-input">
             <label>카드이미지</label>
-            <TextField name="chlnMemNum" value={challengeInfo.chlnImg2} variant="outlined"></TextField>
+            <input type="file" accept="image/*" name="cardImg" onChange={ (e) => uploldImg(e, 'card') } />
+            { cardImg === "" ? <p>이미지 없음</p> : <img className="preview" src={cardImg} alt="카드이미지" /> }
+            <Button variant="contained" onClick={() => saveImg('card')}>이미지 저장</Button>
           </article>
         </section>
       </form>

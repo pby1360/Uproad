@@ -9,6 +9,15 @@
     margin: auto;
     max-width: 50rem;
 
+    .add-chln-form-sub-title {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        height: 2.5rem;
+      }
+    }
+
     label {
       margin: 0.5rem 0;
     }
@@ -25,6 +34,11 @@
     }
     .MuiInputBase-input.Mui-disabled {
       // background-color: red;
+    }
+
+    img.preview {
+      max-width: 15rem;
+      margin: 1rem;
     }
   }
 }

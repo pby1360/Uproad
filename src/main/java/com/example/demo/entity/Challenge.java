@@ -36,7 +36,7 @@ public class Challenge {
 	@Column(name = "CHLN_PLACE")
 	private String chlnPlace;
 	@Column(name = "CHLN_STR_DT")
-	private Date chlnStrDt;
+	private String chlnStrDt;
 	@Column(name = "CHLN_END_DT")
 	private Date chlnEndDt;
 	@Column(name = "CHLN_PLN_NUM")
