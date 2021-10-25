@@ -65,6 +65,8 @@ const ChallengeDetail = ({match}) => {
     await axios.get(`/challenge/${id}`)
       .then( async (response) => {
         const data = await response.data;
+        data.chlnStrDt = new Date(data.chlnStrDt).toLocaleDateString("en-CA", { timezome: "UTC" });
+        data.chlnEndDt = new Date(data.chlnEndDt).toLocaleDateString("en-CA", { timezome: "UTC" });
         setInfo({ ...data });
       }).catch((error) => {
         console.error(error);
@@ -91,20 +93,25 @@ const ChallengeDetail = ({match}) => {
   }
 
   useEffect(async() => {
+
     setLoading(true);
+
     const list = await getComCd("COM_CAT1");
     list.unshift({comCd:"", comNm: "선택"});
     setCatList1(list);
-    getChallengeDetail();
+
     Promise.all([getChallengeDetail(), getImages()]).then(() => {
       setLoading(false);
     });
+
     const list2 = await getComCd("COM_CAT2", challengeInfo.chlnCat1);
     list2.unshift({comCd:"", comNm: "선택"});
     setCatList2(list2);
+
   }, []);
 
   const saveChallenge =  async (e) => {
+    console.log(e);
     e.preventDefault();
     const data = {
       chlnNo: e.target.chlnNo.value,
@@ -120,7 +127,7 @@ const ChallengeDetail = ({match}) => {
       chlnPlnNum: e.target.chlnPlnNum.value,
     }
     setLoading(true);
-    await axios.post("/api/admin/challenge/save", data, {
+    await axios.put("/api/admin/challenge/update", data, {
       headers: {
         "Content-Type": "application/json"
       },
@@ -153,7 +160,6 @@ const ChallengeDetail = ({match}) => {
     if (typ === 'bg') {
       setBgImgFile(e.target.files[0]);
       const imageUrl = URL.createObjectURL(e.target.files[0]);
-      console.log(imageUrl);
       setBgImg(imageUrl);
     } else if (typ === 'card') {
       setCardImgFile(e.target.files[0]);
@@ -212,7 +218,10 @@ const ChallengeDetail = ({match}) => {
           <article className="add-chln-form-input">
             <article className="add-chln-form-sub-title">
               <h4>챌린지 상세정보</h4>
-              <Button type="submit" variant="contained" color="primary">저장</Button>
+              <section className="add-chln-form-buttons">
+                <Button type="submit" variant="contained" color="primary">저장</Button>
+                <Button type="button" variant="contained" color="secondary">삭제</Button>
+              </section>
             </article>
           </article>
           <article className="add-chln-form-input">
@@ -221,15 +230,15 @@ const ChallengeDetail = ({match}) => {
           </article>
           <article className="add-chln-form-input">
             <label>챌린지명</label>
-            <TextField required name="chlnNm" value={challengeInfo.chlnNm} variant="outlined"></TextField>
+            <TextField onChange={onChange} required name="chlnNm" value={challengeInfo.chlnNm} variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 소개</label>
-            <TextField required name="chlnDesc" value={challengeInfo.chlnDesc} variant="outlined"></TextField>
+            <TextField onChange={onChange} required name="chlnDesc" value={challengeInfo.chlnDesc} variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 운영자</label>
-            <TextField required name="chlnMngr" value={challengeInfo.chlnMngr} variant="outlined"></TextField>
+            <TextField onChange={onChange} required name="chlnMngr" value={challengeInfo.chlnMngr} variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 카테고리1</label>
@@ -261,11 +270,12 @@ const ChallengeDetail = ({match}) => {
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 비용</label>
-            <TextField required type="number" name="chlnPrice" value={challengeInfo.chlnPrice} variant="outlined"></TextField>
+            <TextField onChange={onChange} required type="number" name="chlnPrice" value={challengeInfo.chlnPrice} variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>시작일자</label>
             <TextField
+              onChange={onChange}
               required
               variant="outlined"
               name="chlnStrDt"
@@ -279,6 +289,7 @@ const ChallengeDetail = ({match}) => {
           <article className="add-chln-form-input">
             <label>종료일자</label>
             <TextField
+              onChange={onChange}
               required
               variant="outlined"
               name="chlnEndDt"
@@ -291,11 +302,11 @@ const ChallengeDetail = ({match}) => {
           </article>
           <article className="add-chln-form-input">
             <label>모집인원</label>
-            <TextField required type="number" name="chlnPlnNum" value={challengeInfo.chlnPlnNum} variant="outlined"></TextField>
+            <TextField onChange={onChange} required type="number" name="chlnPlnNum" value={challengeInfo.chlnPlnNum} variant="outlined"></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>현재인원</label>
-            <TextField required type="number" name="chlnMemNum" value={challengeInfo.chlnMemNum} variant="outlined"></TextField>
+            <TextField disabled type="number" name="chlnMemNum" value={challengeInfo.chlnMemNum} variant="outlined"></TextField>
           </article>
           <article style={{marginTop: "2rem"}} className="add-chln-form-input">
             <article className="add-chln-form-sub-title">

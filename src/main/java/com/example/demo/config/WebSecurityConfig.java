@@ -3,6 +3,7 @@ package com.example.demo.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -53,16 +54,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         // For CORS error
-        httpSecurity.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues());
+//        httpSecurity.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues());
+
         // We don't need CSRF for this example
         httpSecurity.csrf().disable()
             // dont authenticate this particular request
         	.authorizeRequests().antMatchers("/auth/**").permitAll()
-        	.antMatchers("/api/**").authenticated()
+        	.antMatchers(HttpMethod.POST,"/api/**").authenticated()
+        	.antMatchers(HttpMethod.PUT,"/api/**").authenticated()
+        	.antMatchers(HttpMethod.DELETE,"/api/**").authenticated()
             .anyRequest().permitAll().and().
             // stateless session 
             exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        
+        
 
         // Add a filter to validate the tokens with every request
         httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);

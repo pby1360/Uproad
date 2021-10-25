@@ -11,6 +11,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -83,6 +84,29 @@ public class AdminChallengeController {
 		return result;
 	}
 	
+	@PutMapping("/update")
+	public String modifyChallenge(@RequestBody Challenge challenge) {
+		
+		log.info("modify");
+		log.info("cat1: " + challenge.getChlnCat1());
+		log.info("cat2: " + challenge.getChlnCat2());
+		
+		String result = null;
+				
+		try {
+			
+			repository.save(challenge);
+
+			result = "success";
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			result = "fail";
+		}
+
+		return result;
+	}
+	
 	@PostMapping("/saveImage")
 	public String saveImage(
 			@RequestParam("chlnNo") String chlnNo,
@@ -104,7 +128,15 @@ public class AdminChallengeController {
 			
 			preImage = imageRepository.findByChlnNoAndImgTyp(chlnNo, imgTyp);
 			
-			String url = s3Uploader.upload(file, "user/profile");
+			String dir = null;
+			
+			if (imgTyp.equals("bg")) {
+				dir = "challenge/background";
+			} else if (imgTyp.equals("card")) {
+				dir = "challenge/card";
+			}
+			
+			String url = s3Uploader.upload(file, dir);
 			log.info("url: " + url);
 			
 			if (null != preImage) {
