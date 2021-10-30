@@ -19,7 +19,8 @@ public class ChallengeCustomRepositoryImpl implements ChallengeCustomRepository{
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<String> getNextNo() {
-		return entityManager.createQuery("SELECT CAST(IFNULL(MAX(CHLN_NO) + 1, 1) AS char) AS CHLN_NO FROM CHALLENGE_MASTER").getResultList();
+//		return entityManager.createQuery("SELECT CAST(IFNULL(MAX(CHLN_NO) + 1, 1) AS char) AS CHLN_NO FROM CHALLENGE_MASTER").getResultList();
+		return entityManager.createQuery("SELECT MAX(CHLN_NO) + 1 AS CHLN_NO FROM CHALLENGE_MASTER").getResultList();
 	}
 
 }

@@ -43,3 +43,14 @@ logging:
 #    kr.co.accurasoft.kcs: DEBUG
 #    kr.co.accurasoft.mes.gsg: DEBUG
 debug: true
+cloud:
+  aws:
+    credentials:
+      accessKey: AKIA4C4YAAU6NDLPWV45
+      secretKey: YOUR_SECRET_KEY
+    s3:
+      bucket: uproad
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false

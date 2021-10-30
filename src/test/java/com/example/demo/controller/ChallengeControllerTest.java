@@ -29,9 +29,10 @@ public class ChallengeControllerTest {
 	
 	@Test
 	public void test_activeChallenges () throws Exception {
-		log.info("new date : " + new Date());
-		repository.findByChlnEndDtAfter(new Date()).forEach(item -> log.info("종료일: " + item.getChlnEndDt()));
-		repository.findByChlnEndDtBefore(new Date()).forEach(item -> log.info("종료일: " + item.getChlnEndDt()));
+//		log.info("new date : " + new Date());
+//		repository.findByChlnEndDtAfter(new Date()).forEach(item -> log.info("종료일: " + item.getChlnEndDt()));
+//		repository.findByChlnEndDtBefore(new Date()).forEach(item -> log.info("종료일: " + item.getChlnEndDt()));
+		repository.findAll().forEach(item -> log.info(item.getChlnNm()));
 	}
 
 }

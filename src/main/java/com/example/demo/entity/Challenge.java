@@ -2,18 +2,25 @@ package com.example.demo.entity;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.transaction.Transactional;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity(name = "CHALLENGE_MASTER")
-@Table(name = "CHALLENGE_MASTER")
+@NoArgsConstructor
+@Transactional
+//@Table(name = "CHALLENGE_MASTER")
 public class Challenge {
 	
 	@Id
@@ -56,12 +63,12 @@ public class Challenge {
 	@Column(name = "UPD_USR")
 	private String updUsr;
 	
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "CHLN_CAT1")
-	private CommonCode commonCode1;
+	private CommonCode comCd1;
 	
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "CHLN_CAT2")
-	private CommonCode commonCode2;
+	private CommonCode comCd2;
 	
 }

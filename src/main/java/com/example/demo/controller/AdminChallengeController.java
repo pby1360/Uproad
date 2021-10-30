@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.demo.config.S3Uploader;
 import com.example.demo.entity.Challenge;
 import com.example.demo.entity.ChallengeImage;
+import com.example.demo.entity.CommonCode;
 import com.example.demo.repository.ChallengeImageRepository;
 import com.example.demo.repository.ChallengeRepository;
 
@@ -43,7 +44,17 @@ public class AdminChallengeController {
 	
 	@GetMapping
 	public Iterable<Challenge> getChallenges () {
-		return repository.findAll();
+		
+		Iterable<Challenge> challenges = null;
+		try {
+			
+			challenges = repository.findAll();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return challenges;
+		
 	}
 	
 	@GetMapping("/{chlnNo}")
@@ -55,13 +66,13 @@ public class AdminChallengeController {
 	public String saveChallenge(@RequestBody Challenge challenge) {
 		
 		String result = null;
-		String nextNo = null;
+		String nextNo = "";
 		
 		try {
 			
 			//GET ID MAX + 1
-//			nextNo = repository.getNextNo().get(0);
-			nextNo  = repository.getNextNo().get(0);
+
+			nextNo = repository.getNextNo().get(0);
 			log.info("nextNo: " + nextNo);
 			if (nextNo.length() == 1) {
 				nextNo = "000" + nextNo;
@@ -70,6 +81,14 @@ public class AdminChallengeController {
 			} else if (nextNo.length() == 3) {
 				nextNo = "0" + nextNo;
 			}
+			
+			CommonCode cat1 = new CommonCode();
+			cat1.setComCd(challenge.getChlnCat1());
+			CommonCode cat2 = new CommonCode();
+			cat2.setComCd(challenge.getChlnCat2());
+			
+			challenge.setComCd1(cat1);
+			challenge.setComCd2(cat2);
 			
 			challenge.setChlnNo(nextNo);
 			repository.save(challenge);
@@ -86,15 +105,19 @@ public class AdminChallengeController {
 	
 	@PutMapping("/update")
 	public String modifyChallenge(@RequestBody Challenge challenge) {
-		
-		log.info("modify");
-		log.info("cat1: " + challenge.getChlnCat1());
-		log.info("cat2: " + challenge.getChlnCat2());
-		
+
 		String result = null;
 				
 		try {
 			
+			CommonCode cat1 = new CommonCode();
+			cat1.setComCd(challenge.getChlnCat1());
+			CommonCode cat2 = new CommonCode();
+			cat2.setComCd(challenge.getChlnCat2());
+			
+			challenge.setComCd1(cat1);
+			challenge.setComCd2(cat2);
+
 			repository.save(challenge);
 
 			result = "success";

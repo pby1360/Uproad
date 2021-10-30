@@ -6,7 +6,7 @@ console.log(url);
 // axios 인스턴스를 생성합니다.
 const instance = axios.create({
     baseURL: url,
-    timeout: 1000
+    timeout: 5000
   });
 
 /*
@@ -43,10 +43,11 @@ instance.interceptors.response.use(
     },
 
     function (error) {
-        if(error.response.data.error === "Unauthorized") {
-            localStorage.clear();
+        console.error(error);
+        // if(error.response.data.error === "Unauthorized") {
+            // localStorage.clear();
             // window.location.replace("/");
-        }
+        // }
     /*
         http status가 200이 아닌 경우
         응답 에러 직전 호출됩니다.

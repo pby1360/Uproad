@@ -74,15 +74,15 @@ const ChallengeList = () => {
   const [rows, setRows] = React.useState([]);
 
   useEffect(() => {
-    async function getUser() {
+    async function getChallenge() {
       setLoading(true);
       await axios.get("/api/admin/challenge")
         .then( async (response) => {
           const data = await response.data;
           data.forEach((item, index) => {
             item.no = index + 1;
-            item.chlnCat1Nm = item.commonCode1.comNm;
-            item.chlnCat2Nm = item.commonCode2.comNm;
+            item.chlnCat1Nm = item.comCd1.comNm;
+            item.chlnCat2Nm = item.comCd2.comNm;
             item.chlnStrDt = new Date(item.chlnStrDt).toLocaleDateString("en-CA", { timezome: "UTC" });
             item.chlnEndDt = new Date(item.chlnEndDt).toLocaleDateString("en-CA", { timezome: "UTC" });
           });
@@ -94,12 +94,10 @@ const ChallengeList = () => {
           setLoading(false);
         })
     }
-    getUser();
+    getChallenge();
   }, []);
 
   const selectRow = (row) => {
-    console.log(row);
-    // console.log(history);
     history.push(`/admin/challenges/${row.chlnNo}`);
   }
 

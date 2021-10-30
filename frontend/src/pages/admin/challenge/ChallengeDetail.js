@@ -4,11 +4,14 @@ import axios from "../../../components/AxiosInstance";
 import Alert from "../../../components/SnackBarAlert";
 import Loading from "../../../components/Loading";
 import { Button, TextField, Select, MenuItem } from "@material-ui/core";
+import { useHistory } from 'react-router-dom';
 import "../../../styles/components/TitleBar.scss";
 import "../../../styles/admin/AddChallenge.scss";
 // import CheckIcon from '@material-ui/icons/Check';
 
 const ChallengeDetail = ({match}) => {
+
+  const history = useHistory();
   const { id } = match.params
 
   const [isLoading, setLoading] = React.useState(false);
@@ -39,8 +42,8 @@ const ChallengeDetail = ({match}) => {
     chlnStrDt: "",
     chlnTag: "",
     chlnYn: "",
-    commonCode1: {},
-    commonCode2: {},
+    comCd1: {},
+    comCd2: {},
     crtDt: "",
     crtUsr: "",
     updDt: "",
@@ -67,6 +70,8 @@ const ChallengeDetail = ({match}) => {
         const data = await response.data;
         data.chlnStrDt = new Date(data.chlnStrDt).toLocaleDateString("en-CA", { timezome: "UTC" });
         data.chlnEndDt = new Date(data.chlnEndDt).toLocaleDateString("en-CA", { timezome: "UTC" });
+        data.chlnCat1 = data.comCd1.comCd;
+        data.chlnCat2 = data.comCd2.comCd;
         setInfo({ ...data });
       }).catch((error) => {
         console.error(error);
@@ -133,7 +138,9 @@ const ChallengeDetail = ({match}) => {
       },
     })
     .then((response) => {
+      setLoading(false);
       alertRef.current.handleClick("success", "저장을 성공했습니다.");
+      // history.push(`/admin/challenges`);
     }).catch((error) => {
       console.error(error);
       alertRef.current.handleClick("error", "저장을 실패했습니다.");
