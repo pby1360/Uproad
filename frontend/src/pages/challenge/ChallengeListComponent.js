@@ -28,7 +28,7 @@ const ChallengeListComponent = ({item, active}) => {
         <CardActionArea>
           <CardMedia
             className={active ? classes.media : classes.mediaFilter}
-            image="/assets/ceo_info1.jpg"
+            image={item.cardImg}
             title="Contemplative Reptile"
           />
           <CardContent>

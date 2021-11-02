@@ -277,7 +277,14 @@ const ChallengeDetail = ({match}) => {
           </article>
           <article className="add-chln-form-input">
             <label>챌린지 비용</label>
-            <TextField onChange={onChange} required type="number" name="chlnPrice" value={challengeInfo.chlnPrice} variant="outlined"></TextField>
+            {/* <TextField onChange={onChange} required type="number" name="chlnPrice" value={challengeInfo.chlnPrice} variant="outlined"></TextField> */}
+            <TextField
+              onChange={onChange}
+              required
+              name="chlnPrice"
+              value={challengeInfo.chlnPrice}
+              variant="outlined"
+            ></TextField>
           </article>
           <article className="add-chln-form-input">
             <label>시작일자</label>

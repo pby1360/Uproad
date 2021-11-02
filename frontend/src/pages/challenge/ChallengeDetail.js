@@ -151,8 +151,8 @@ const ChallengeDetail = ({match}) => {
     chlnStrDt: "",
     chlnTag: "",
     chlnYn: "",
-    commonCode1: {},
-    commonCode2: {},
+    comCd1: {},
+    comCd2: {},
     crtDt: "",
     crtUsr: "",
     updDt: "",
@@ -194,7 +194,7 @@ const ChallengeDetail = ({match}) => {
               <img style={{width: '100%'}} src="https://cdn.pixabay.com/photo/2015/02/09/14/31/blonde-629726_960_720.jpg" alt="intro" />
             </section>
             <section className="detail-desc">
-              <span  className="detail-desc-category">{challengeInfo.commonCode1.comNm} / {challengeInfo.commonCode2.comNm}</span>
+              <span  className="detail-desc-category">{challengeInfo.comCd1.comNm} / {challengeInfo.comCd2.comNm}</span>
               <p className="detail-desc-title">{challengeInfo.chlnNm}</p>
               <span className="detail-desc-charger">{challengeInfo.chlnMngr}</span>
               <section className="detail-desc-review">

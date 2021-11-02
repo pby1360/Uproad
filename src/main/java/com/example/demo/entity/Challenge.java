@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,9 +10,13 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.transaction.Transactional;
+
+import org.springframework.data.relational.core.mapping.Embedded.Nullable;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -71,4 +76,9 @@ public class Challenge {
 	@JoinColumn(name = "CHLN_CAT2")
 	private CommonCode comCd2;
 	
+	@Transient
+	private String bgImg;
+	
+	@Transient
+	private String cardImg;
 }
